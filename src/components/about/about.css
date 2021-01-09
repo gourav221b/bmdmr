@@ -1,0 +1,36 @@
+.about
+{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+height: auto;
+align-items: center;
+
+}
+.aboutdetails
+{
+    width: 70vw;
+    margin: 0 25vw;
+    margin-top: 10vh;
+}
+h1
+{
+    margin-top: 10vh;
+}
+h2
+{
+ font-size: 4vh;
+ font-family: sans-serif;
+text-transform: uppercase;
+margin-top: 20px;
+color: rgb(18, 87, 165);
+}
+
+@media screen and (max-width:480px)
+{
+    .aboutdetails
+    {
+        width: 90vw;
+        margin: 0 5vw;
+    }
+}

@@ -1,0 +1,58 @@
+
+.landing
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background: url(https://images.pexels.com/photos/288477/pexels-photo-288477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940),#00000085;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+.row
+{
+    padding: 0 !important;
+    margin: 0;
+}
+.landing button
+{
+    height: auto;
+    width: 30%;
+}
+.landingdetails
+{
+ 
+    margin-left: 2%;
+    color: #fff;
+    
+}
+.btn
+{
+    border: 0.2px solid rgba(255, 255, 255, 0.068); 
+    color: #fff;
+    width: auto;
+    opacity: 0.8;
+}
+h1
+{
+    font-size: 9vh;
+}
+p,.btn
+{
+    font-size: 3vh;
+}
+@media screen and (max-width:480px)
+{
+    .landingdetails
+  {
+    margin-left: 0 !important;
+  }
+  .landingdetails .btn
+  {
+    width: 100%;
+  }
+}

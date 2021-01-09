@@ -1,0 +1,38 @@
+import React, {createContext, useReducer} from "react"
+import {ProductReducer} from "./productReducer"
+import iphone from "../assets/iphone.jpg";
+import headphones from "../assets/headphones.jpg"
+import microphone from "../assets/microphone.jpg"
+import rings from "../assets/rings.jpg"
+import shoes from "../assets/shoes.jpg"
+import watch from "../assets/watch.jpg"
+import perfum from "../assets/perfume.jpg"
+import dslr from "../assets/dslr.jpg"
+import document from "../assets/Untitled.png"
+import document2 from "../assets/Untitled2.png"
+export const productContext = createContext();
+
+
+const ProductContextProvider = (props) => {
+
+    const [products] = useReducer(ProductReducer, [
+        {id: 1, name: ' Chemicals & Materials', price: 40, image: document, productStatus: 'pptx'},
+        {id: 2, name: 'Consumer Goods', price: 200, image: document2,productStatus: 'pdf'},
+        {id: 3, name: 'Consumer Goods', price: 300, image: document,productStatus: 'pdf'},
+        {id: 4, name: 'Food & Beverages', price: 150, image: document2,productStatus: 'pdf'},
+        {id: 5, name: 'HealthCare', price: 160, image: document,productStatus: 'pptx'},
+        {id: 6, name: 'Food & Beverages', price: 500, image: document2,productStatus: 'pdf'},
+        {id: 7, name: 'HealthCare', price: 240, image: document,productStatus: 'pptx'},
+        {id: 8, name: 'Food & Beverages', price: 120, image: document2,productStatus: 'pdf'},
+      ])
+      
+      
+    return(
+        <productContext.Provider value={{products}}>
+           {props.children}
+        </productContext.Provider>
+    )
+
+}
+
+export default ProductContextProvider;

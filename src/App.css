@@ -1,0 +1,211 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  background: #EEF2F7;
+  padding: 0;
+  margin: 0;
+}
+#root,.container{
+  background: transparent;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(85, 85, 238);
+  color: white;
+  padding-top: 20px;
+}
+nav h3{
+  width: 10%;
+  position: absolute;
+  margin-left: 12px;
+
+}
+.cart
+{ 
+  width: auto;
+  display: flex;
+  background: transparent !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.shoppingCartTotal
+{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.floating
+{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 2px 12px -4px rgba(0,0,0,0.75));
+
+}
+
+.shoppingCartIcon
+{
+  font-size: 30px;
+}
+.floating .shoppingCartIcon
+{
+  font-size: 60px;
+}
+.fa-bars
+{
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  position: fixed;
+  background-color: #000;
+  padding: 8px 12px;
+  z-index: 3;
+  cursor: pointer;
+  /* display: none; */
+}
+.dollor {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.fa-cart-plus
+{
+  color: #fff;
+  font-size: 50px;
+}
+/* nav h3,.navlinks */
+.navlinks{
+  width: auto;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  right: 30px;
+  top: 0;
+}
+.navlinks li
+{
+  padding: 0 15px;
+  font-size: 2.7vh;
+}
+.home{
+  color:rgba(0, 0, 255, 0)
+}
+
+#hamMenu
+{
+  display: none;
+  transition: all 0.84s ease;
+ 
+  /* top: 5px; */
+}
+.sidenav
+{
+  width: 0;
+  height: 100vh;
+  background: #151515;
+  position: fixed;
+ 
+
+  right: 0;
+  top: 0;
+  z-index: 4;
+  /* display: none; */
+  transition: all 0.36s ease;
+
+}
+
+.closebtn
+{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.sidenavlinks
+{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: start;
+  display: none;
+}
+.sidenavlinks li
+{
+  font-size: 30px;
+  font-family: sans-serif;
+  padding:  20px 0;
+}
+
+ .shoppingCartTotal {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #f57224;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 35px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+}
+@media screen and (max-width:1100px)
+{
+  .navlinks
+  {
+    display: none;
+  }
+  #hamMenu
+  {
+    display: block;
+  }
+  #cartPc
+  {
+    display: none;
+  }
+  .floating
+  {
+    right: 2vw;
+    bottom: 0;
+  }
+ .floating .shoppingCartIcon
+  {
+    font-size: 6vh;
+  }
+  .floating .shoppingCartTotal
+  {
+transform: scale(1.12);
+font-size: 2vh;
+  }
+  
+  nav h3
+  {
+    font-size: 1.5rem;
+  }
+  .fa-bars
+  {
+    font-size: 4vh;
+    top: 2vh;
+    right: 5vw;
+  }
+}
