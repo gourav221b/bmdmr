@@ -96,6 +96,10 @@ p,.btn
     
     background-position: center;
   }
+  .landingdetails p
+  {
+      font-size: 2.6vh;
+  }
   .landingdetails .btn
   {
     width: 100%;
