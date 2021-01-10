@@ -15,7 +15,7 @@ const Products = () => {
             <div className="productImage">
               <img src={product.image} alt="Not found"/>
             </div>
-            <div className="productDetails">
+            <div className="productDetails ">
                 <div className="proName">
                  <h4>{product.name}</h4>
                 </div>
@@ -26,8 +26,8 @@ const Products = () => {
             <div className="proButton" onClick={() => dispatch({type: 'ADD_TO_CART', id: product.id, products})}>
                  <button className="buyNow" >add to cart</button>
                </div>
-               {product.productStatus === 'pptx' ? <div className="new">Ppt</div>: ''}
-               {product.productStatus === 'pdf' ? <div className="hot">Pdf</div>: ''}
+               {product.productStatus === 'Chemicals & Materials' ? <div className="new">Chemicals & Materials</div>: ''}
+               {product.productStatus === 'Consumer Goods' ? <div className="hot">Consumer Goods</div>: ''}
             </div>
             </div>
         ))}

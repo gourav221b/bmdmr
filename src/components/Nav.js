@@ -11,7 +11,7 @@ const Nav= ({cartToggle})=> {
         textDecoration: 'none'
     };
     // const{shopping} = useContext(cartContext);
-
+   
     
     window.onscroll = function() {
 
@@ -35,6 +35,18 @@ if(window.innerWidth>1100)
       const menu=document.getElementById('sidenav');
       const closebtn=document.getElementById('closebtn');
       const sidenavlinks=document.getElementById('sidenavlinks');
+      const sidenavlinkcomponent=document.querySelectorAll('.sidenavlinkcomponent');
+
+    
+      sidenavlinkcomponent.forEach(function(link) {
+        link.addEventListener("click", function() {
+            closeNav();
+            window.scrollTo(0, 0);
+        });
+    });
+ 
+
+
       menuIcon.addEventListener('click',()=>{
        openNav();
 
@@ -43,6 +55,9 @@ if(window.innerWidth>1100)
      closeNav();
    
     });
+
+   
+
     function openNav()
     {
       menu.style.width="300px";
@@ -67,19 +82,22 @@ if(window.innerWidth>1100)
         <div className="closebtn" id="closebtn">&times;</div>
         <ul className="sidenavlinks" id="sidenavlinks">
             <Link style={navStyle} to='/'>
-            <li>Home</li>
+            <li className="sidenavlinkcomponent">Home</li>
             </Link>
             <Link style={navStyle} to='/about'>
-            <li>About</li>
+            <li className="sidenavlinkcomponent">About</li>
             </Link>
             <Link style={navStyle} to='/shop'>
-            <li>Shop</li>
+            <li className="sidenavlinkcomponent">Shop</li>
             </Link>
             <Link style={navStyle} to='/solution'>
-            <li>Solutions</li>
+            <li className="sidenavlinkcomponent">Solutions</li>
             </Link>
             <Link style={navStyle} to='/contact'>
-            <li>Contact</li>
+            <li className="sidenavlinkcomponent">Contact</li>
+            </Link>
+            <Link style={navStyle} to=''>
+            <li className="sidenavlinkcomponent">Login</li>
             </Link>
             </ul>
       </div> 
@@ -99,6 +117,9 @@ if(window.innerWidth>1100)
             </Link>
             <Link style={navStyle} to='/contact'>
             <li>Contact</li>
+            </Link>
+            <Link style={navStyle} to=''>
+            <li className="sidenavlinkcomponent">Login</li>
             </Link>
     
     <li onClick={cartToggle}>

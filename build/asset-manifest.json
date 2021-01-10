@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b08f5cf.chunk.css",
-    "main.js": "/static/js/main.a67620c1.chunk.js",
-    "main.js.map": "/static/js/main.a67620c1.chunk.js.map",
+    "main.css": "/static/css/main.1ddced57.chunk.css",
+    "main.js": "/static/js/main.abc8a378.chunk.js",
+    "main.js.map": "/static/js/main.abc8a378.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.642ff2a3.js",
     "runtime-main.js.map": "/static/js/runtime-main.642ff2a3.js.map",
-    "static/css/2.505d8e97.chunk.css": "/static/css/2.505d8e97.chunk.css",
-    "static/js/2.85119fe3.chunk.js": "/static/js/2.85119fe3.chunk.js",
-    "static/js/2.85119fe3.chunk.js.map": "/static/js/2.85119fe3.chunk.js.map",
+    "static/css/2.475b9e94.chunk.css": "/static/css/2.475b9e94.chunk.css",
+    "static/js/2.57ece415.chunk.js": "/static/js/2.57ece415.chunk.js",
+    "static/js/2.57ece415.chunk.js.map": "/static/js/2.57ece415.chunk.js.map",
     "static/js/3.9abfdae9.chunk.js": "/static/js/3.9abfdae9.chunk.js",
     "static/js/3.9abfdae9.chunk.js.map": "/static/js/3.9abfdae9.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.505d8e97.chunk.css.map": "/static/css/2.505d8e97.chunk.css.map",
-    "static/css/main.4b08f5cf.chunk.css.map": "/static/css/main.4b08f5cf.chunk.css.map",
-    "static/js/2.85119fe3.chunk.js.LICENSE.txt": "/static/js/2.85119fe3.chunk.js.LICENSE.txt",
+    "static/css/2.475b9e94.chunk.css.map": "/static/css/2.475b9e94.chunk.css.map",
+    "static/css/main.1ddced57.chunk.css.map": "/static/css/main.1ddced57.chunk.css.map",
+    "static/js/2.57ece415.chunk.js.LICENSE.txt": "/static/js/2.57ece415.chunk.js.LICENSE.txt",
     "static/media/Untitled.5c9b505b.png": "/static/media/Untitled.5c9b505b.png",
     "static/media/Untitled2.aa46c3e7.png": "/static/media/Untitled2.aa46c3e7.png",
+    "static/media/landing.css": "/static/media/slider-m-1.a2b2396e.webp",
     "static/media/dslr.a1516502.jpg": "/static/media/dslr.a1516502.jpg",
     "static/media/iphone.03c118a8.jpg": "/static/media/iphone.03c118a8.jpg",
     "static/media/microphone.6a82ab39.jpg": "/static/media/microphone.6a82ab39.jpg",
@@ -26,9 +27,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.642ff2a3.js",
-    "static/css/2.505d8e97.chunk.css",
-    "static/js/2.85119fe3.chunk.js",
-    "static/css/main.4b08f5cf.chunk.css",
-    "static/js/main.a67620c1.chunk.js"
+    "static/css/2.475b9e94.chunk.css",
+    "static/js/2.57ece415.chunk.js",
+    "static/css/main.1ddced57.chunk.css",
+    "static/js/main.abc8a378.chunk.js"
   ]
 }
