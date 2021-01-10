@@ -84,7 +84,7 @@ if(window.innerWidth>1100)
             </ul>
       </div> 
 
-        <ul class="navlinks">
+        <ul className="navlinks">
             <Link style={navStyle} to='/'>
             <li>Home</li>
             </Link>
