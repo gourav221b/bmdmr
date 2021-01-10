@@ -19,11 +19,11 @@ if(window.innerWidth>1100)
 {
       if (window.pageYOffset > document.getElementById("hamMenu").offsetTop) {
          document.getElementById("hamMenu").style.display = "block";
-         document.getElementById("cartMob").style.display = "flex";         
+                
          document.getElementById("hamMenu").style.background = "#000";
       } else {
          document.getElementById("hamMenu").style.display = "none";
-         document.getElementById("cartMob").style.display = "none";
+  
          document.getElementById("hamMenu").style.background = "transparent";
       }}
       else
@@ -129,10 +129,7 @@ if(window.innerWidth>1100)
       </div>
       </li>
  </ul>
- <div className="cart floating" id="cartMob">
-      <span className="shoppingCartIcon ">🛒</span>         
-      <span className="shoppingCartTotal ">2</span>
-      </div>
+
     </nav>
   );
 }

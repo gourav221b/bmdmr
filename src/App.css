@@ -206,7 +206,10 @@ nav li:hover
   top: 0;
 
 }
-
+.bought
+{
+  background-color: rgb(24, 168, 60);
+}
 
 @media screen and (max-width:1100px)
 {

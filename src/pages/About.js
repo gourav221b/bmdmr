@@ -8,7 +8,7 @@ function About() {
                 <div className="landingdetails col-lg-6">
                 <h1>About Us</h1>
                 <p>Know who is in the business by your side</p>
-                                </div>
+                </div>
                 
             </div>
          

@@ -5,9 +5,22 @@ import Banner from "./Banner"
 const Products = () => {
    const {products} = useContext(productContext);
    const {dispatch} = useContext(cartContext);
+   const bought=document.querySelectorAll('.proButton');
+   bought.forEach((buy)=>
+   {
+     buy.addEventListener('click',()=>
+     {
+       if(buy.innerHTML="add to cart")
+       {
+         buy.style.background="rgb(24, 168, 60)";
+         buy.style.color="#fff";
+         buy.innerHTML="IN CART";
+       }
+     })
+   })
     return(
         <>
-        <Banner />
+        {/* <Banner /> */}
         <div className="products" style={{marginTop: '30px'}}>
         {products.map(product => (
             <div className="product" key={product.id}>
@@ -24,7 +37,7 @@ const Products = () => {
                </div>
             </div>
             <div className="proButton" onClick={() => dispatch({type: 'ADD_TO_CART', id: product.id, products})}>
-                 <button className="buyNow" >add to cart</button>
+                 <button className="buyNow ">add to cart</button>
                </div>
                {product.productStatus === 'Chemicals & Materials' ? <div className="new">Chemicals & Materials</div>: ''}
                {product.productStatus === 'Consumer Goods' ? <div className="hot">Consumer Goods</div>: ''}
