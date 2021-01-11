@@ -2,16 +2,16 @@ import React, { useState, useEffect,useContext } from 'react';
 import './App.css';
 import './shop.css';
 import './components/Landing/landing.css';
-import {cartContext} from "./Global/cartContext.js"
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Products from "./components/Products"
 import Cart from "./components/Cart"
 import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext"
 function Shop() {
-  return (
-    <div>
+  return ( <div>
+    <ProductContextProvider>
+    <CartContextProvider>
+   
     <div className="div_big landing secondarylanding row" id="top">
                 <div className="landingdetails col-lg-6">
                 <h1>Listings</h1>
@@ -20,19 +20,18 @@ function Shop() {
                 </div>
                 
             </div>
-      <ProductContextProvider>
-      <CartContextProvider>
+  
       <Router>
           <Switch>
           <Route path="/shop" exact component={Products} />
           <Route path="/cart" exact component={Cart} />
         </Switch>
       </Router>
-      </CartContextProvider>
-      </ProductContextProvider>  
-    </div>
     
-  );
+    
+    </CartContextProvider>
+      </ProductContextProvider>  
+  </div>);
 }
 
 export default Shop;

@@ -81,6 +81,11 @@ nav li:hover
 .shoppingCartIcon
 {
   font-size: 30px;
+  text-decoration: none;
+}
+.shoppingCartIcon:hover
+{
+  text-decoration: none;
 }
 .floating .shoppingCartIcon
 {
@@ -170,7 +175,7 @@ nav li:hover
   list-style: none;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 80vh;
   margin-top: 10vh;
   align-items: center;
   justify-content: start;
@@ -180,7 +185,7 @@ nav li:hover
 {
   font-size: 25px;
   font-family: sans-serif;
-  padding:  20px 0;
+  padding:  10px 0;
 }
 
  .shoppingCartTotal {
@@ -230,15 +235,7 @@ nav li:hover
     right: 2vw;
     bottom: 0;
   }
- .floating .shoppingCartIcon
-  {
-    font-size: 6vh;
-  }
-  .floating .shoppingCartTotal
-  {
-transform: scale(1.12);
-font-size: 2vh;
-  }
+ 
   
   nav h3
   {

@@ -1,10 +1,12 @@
 import React, {useContext} from "react"
 import {productContext} from "../Global/productContext"
 import {cartContext} from "../Global/cartContext"
-import Banner from "./Banner"
+
 const Products = () => {
    const {products} = useContext(productContext);
-   const {dispatch} = useContext(cartContext);
+   const {dispatch}= useContext(cartContext);
+
+  
   //  const bought=document.querySelectorAll('.proButton');
   //  bought.forEach((buy)=>
   //  {
@@ -18,9 +20,10 @@ const Products = () => {
   //      }
   //    })
   //  })
+ 
     return(
         <>
-        {/* <Banner /> */}
+        
         <div className="products" style={{marginTop: '30px'}}>
         {products.map(product => (
             <div className="product" key={product.id}>
@@ -36,8 +39,14 @@ const Products = () => {
                    ${product.price}.00
                </div>
             </div>
-            <div className="proButton" onClick={() => dispatch({type: 'ADD_TO_CART', id: product.id, products})}>
-                 <button className="buyNow" >add to cart</button>
+            <div className="proButton" onClick={() =>
+              {
+                 dispatch({type:'ADD_TO_CART', id: product.id, products})
+                
+                 
+           }
+            }>
+                 <button className="buyNow">add to cart</button>
                </div>
                {product.productStatus === 'Chemicals & Materials' ? <div className="new">Chemicals & Materials</div>: ''}
                {product.productStatus === 'Consumer Goods' ? <div className="hot">Consumer Goods</div>: ''}

@@ -11,6 +11,7 @@ import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext"
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
       <Route path="/cart" component={Cart} />
       </Switch>
       <Footer/>
-    
+
     </Router>
     </CartContextProvider>
     </ProductContextProvider>

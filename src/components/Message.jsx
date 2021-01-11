@@ -8,10 +8,12 @@ const Message = ({type, message}) => {
         toast.success(message, {
             position: toast.POSITION.TOP_RIGHT
           })
+          alert('Payment successful');
        } else if(type === "error"){
         toast.error(message, {
             position: toast.POSITION.TOP_RIGHT
           })
+          alert('Payment failed');
        }
    }
    return(

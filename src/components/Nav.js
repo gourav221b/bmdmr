@@ -14,7 +14,7 @@ const Nav= ({cartToggle})=> {
     };
 
    
-   
+   console.log(shoppingCart.length)
   
     window.onscroll = function() {
 
@@ -102,6 +102,13 @@ if(window.innerWidth>1100)
             <Link style={navStyle} to=''>
             <li className="sidenavlinkcomponent">Login</li>
             </Link>
+            <li onClick={cartToggle}>
+    
+    <Link to="/cart">
+      <span className="shoppingCartIcon">Your Cart ({shoppingCart ? shoppingCart.length : 0})</span>         
+            </Link>
+     
+      </li>
             </ul>
       </div> 
 

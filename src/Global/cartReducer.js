@@ -6,15 +6,20 @@ export const CartReducer = (state, action) => {
     let updatedQty;
     switch(action.type){
         case 'ADD_TO_CART': 
+        
         const check = shoppingCart.find(cart => cart.id === action.id);
         if(check){
             // return state;
+            console.log(action.id + ' Is Already in it')
             return {shoppingCart: [...shoppingCart], totalPrice, message: 'This is product is already in the cart!', qty};
         } else {
             product = action.products.find(product => product.id === action.id);
             product['qty'] = 1;
-            updatedQty = qty + 1;
-            return {shoppingCart: [product,...shoppingCart], totalPrice: totalPrice+product.price, message: '', qty: updatedQty};
+            updatedQty = qty + 1;  
+            updatedPrice=totalPrice+product.price
+          console.log("Current cart is");console.log(shoppingCart); console.log(shoppingCart.length)
+            return {shoppingCart: [product,...shoppingCart], totalPrice: updatedPrice, message: '', qty: updatedQty};
+         
         }
         break;
         case 'DELETE_PRODUCT':
