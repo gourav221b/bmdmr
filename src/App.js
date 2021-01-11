@@ -9,12 +9,17 @@ import Details from './components/about/About';
 import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ProductContextProvider from "./Global/productContext"
+import CartContextProvider from "./Global/cartContext"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
+  return ( 
+  <div className="App">
+    <ProductContextProvider>
+    <CartContextProvider>
     <Router>
-    <div className="App">
+   
       <Nav />  
       <Switch> 
       
@@ -26,8 +31,11 @@ function App() {
       <Route path="/cart" component={Cart} />
       </Switch>
       <Footer/>
-    </div>
+    
     </Router>
+    </CartContextProvider>
+    </ProductContextProvider>
+    </div>
   );
 }
 

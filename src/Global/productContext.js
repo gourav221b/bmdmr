@@ -1,13 +1,6 @@
 import React, {createContext, useReducer} from "react"
 import {ProductReducer} from "./productReducer"
-import iphone from "../assets/iphone.jpg";
-import headphones from "../assets/headphones.jpg"
-import microphone from "../assets/microphone.jpg"
-import rings from "../assets/rings.jpg"
-import shoes from "../assets/shoes.jpg"
-import watch from "../assets/watch.jpg"
-import perfum from "../assets/perfume.jpg"
-import dslr from "../assets/dslr.jpg"
+
 import document from "../assets/Untitled.png"
 import document2 from "../assets/Untitled2.png"
 export const productContext = createContext();

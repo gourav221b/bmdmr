@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React, {useContext} from "react";
 import StripeCheckout from "react-stripe-checkout"
 import axios from "axios"
 import {cartContext} from "../Global/cartContext"
@@ -47,9 +47,9 @@ const Cart = (props) => {
         <span className="productQuantity">{product.qty}</span>
         <span className="dec" onClick={() => dispatch({type: 'DEC', id: product.id})}><i className="fas fa-minus"></i></span>
         <span className="productTotalPrice">${product.qty * product.price}.00</span> */}
-        <button onClick={() => dispatch({type: 'DELETE_PRODUCT', id: product.id})} className="deleteCartPro"><i className="fas fa-trash-alt"></i></button>
+        <button onClick={() => dispatch({type: 'DELETE_PRODUCT', id: product.id})} className="deleteCartPro"><i className="fa fa-trash-alt"></i></button>
            </div>  
-        )) : 'Yourr Cart is currently empty!'}
+        )) :<div> Your Cart is currently empty! Return to shop to buy something <br/><br/></div>}
         
         </div>
         {shoppingCart.length ? <div className="cartSummary">

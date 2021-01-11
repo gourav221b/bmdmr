@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.acd80c23.chunk.css",
-    "main.js": "/static/js/main.d5d66445.chunk.js",
-    "main.js.map": "/static/js/main.d5d66445.chunk.js.map",
+    "main.js": "/static/js/main.6f55bffc.chunk.js",
+    "main.js.map": "/static/js/main.6f55bffc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.642ff2a3.js",
     "runtime-main.js.map": "/static/js/runtime-main.642ff2a3.js.map",
     "static/css/2.475b9e94.chunk.css": "/static/css/2.475b9e94.chunk.css",
@@ -17,20 +17,13 @@
     "static/media/Untitled.5c9b505b.png": "/static/media/Untitled.5c9b505b.png",
     "static/media/Untitled2.aa46c3e7.png": "/static/media/Untitled2.aa46c3e7.png",
     "static/media/App.css": "/static/media/banner-bg.83806bab.webp",
-    "static/media/dslr.a1516502.jpg": "/static/media/dslr.a1516502.jpg",
-    "static/media/iphone.03c118a8.jpg": "/static/media/iphone.03c118a8.jpg",
-    "static/media/microphone.6a82ab39.jpg": "/static/media/microphone.6a82ab39.jpg",
-    "static/media/perfume.4a8665f2.jpg": "/static/media/perfume.4a8665f2.jpg",
-    "static/media/rings.6f9d579a.jpg": "/static/media/rings.6f9d579a.jpg",
-    "static/media/shoes.3be50997.jpg": "/static/media/shoes.3be50997.jpg",
-    "static/media/landing.css": "/static/media/slider-m-1.a2b2396e.webp",
-    "static/media/watch.80f2eae6.jpg": "/static/media/watch.80f2eae6.jpg"
+    "static/media/landing.css": "/static/media/slider-m-1.a2b2396e.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.642ff2a3.js",
     "static/css/2.475b9e94.chunk.css",
     "static/js/2.1ff75cc8.chunk.js",
     "static/css/main.acd80c23.chunk.css",
-    "static/js/main.d5d66445.chunk.js"
+    "static/js/main.6f55bffc.chunk.js"
   ]
 }

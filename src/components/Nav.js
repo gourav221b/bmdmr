@@ -2,17 +2,20 @@ import React, {useContext} from "react"
 import {cartContext} from "../Global/cartContext.js"
 import {Link} from "react-router-dom"
 import '../App.css';
+import ProductContextProvider from "../Global/productContext"
 
 
-
-const Nav= ({cartToggle})=> {
+const Nav= ({cartToggle})=> {    
+  
+  const {shoppingCart} = useContext(cartContext);
     const navStyle = {
         color: 'white',
         textDecoration: 'none'
     };
-    // const{shopping} = useContext(cartContext);
+
    
-    
+   
+  
     window.onscroll = function() {
 
 if(window.innerWidth>1100)
@@ -123,9 +126,13 @@ if(window.innerWidth>1100)
             </Link>
     
     <li onClick={cartToggle}>
-    <div className="cart" id="cartPc">
+    <div className="cart" id="cartPc" onClick={cartToggle}>
+    <Link to="/cart">
       <span className="shoppingCartIcon">🛒</span>         
-      <span className="shoppingCartTotal">2</span>
+      <span className="shoppingCartTotal">
+        {shoppingCart ? shoppingCart.length : 0}
+        </span>
+      </Link>
       </div>
       </li>
  </ul>
