@@ -465,3 +465,28 @@
 
   }
 
+
+  .readMore
+  {
+    text-align: right;
+    margin-top: 12px;
+    cursor: pointer;
+    color: rgb(22, 22, 153);
+   
+  }
+  .readMore:hover
+  {
+    color: rgb(22, 153, 98);
+    text-decoration: underline;
+    transition: all 0.25s ease;
+  }
+  
+ .block
+ {
+   display: block !important;
+ } 
+ 
+ .prodDetails
+ {
+   display: none;
+ }

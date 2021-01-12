@@ -3,7 +3,7 @@ import './about.css';
 function About() {
     return (
         <div className="about ">
-            <h1>ABOUT US</h1>
+            {/* <h1>ABOUT US</h1>
             <div className="aboutdetails">
             <h2>About BMA Market Research:</h2>
             <p>BMA Market Research is an India based research and consulting company. The company provides
@@ -20,7 +20,7 @@ forecasters, analysts and researchers who engaged in diligent research on differ
 emerging opportunities to cater your business needs. BMA research focus to make your organization
 well familiarize with intense knowledge of the global and local markets.
 </p>
-</div>
+</div> */}
         </div>
     )
 }

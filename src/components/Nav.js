@@ -99,16 +99,15 @@ if(window.innerWidth>1100)
             <Link style={navStyle} to='/contact'>
             <li className="sidenavlinkcomponent">Contact</li>
             </Link>
-            <Link style={navStyle} to=''>
+            <Link style={navStyle} to='/login'>
             <li className="sidenavlinkcomponent">Login</li>
             </Link>
+            <Link to="/cart" className="sidenavlinkcomponent">
             <li onClick={cartToggle}>
-    
-    <Link to="/cart">
-      <span className="shoppingCartIcon">Your Cart ({shoppingCart ? shoppingCart.length : 0})</span>         
-            </Link>
+          <span className="shoppingCartIcon">Your Cart ({shoppingCart ? shoppingCart.length : 0})</span>         
+          
      
-      </li>
+      </li>  </Link>
             </ul>
       </div> 
 
@@ -128,20 +127,20 @@ if(window.innerWidth>1100)
             <Link style={navStyle} to='/contact'>
             <li>Contact</li>
             </Link>
-            <Link style={navStyle} to=''>
+            <Link style={navStyle} to='/login'>
             <li className="sidenavlinkcomponent">Login</li>
             </Link>
-    
-    <li onClick={cartToggle}>
-    <div className="cart" id="cartPc" onClick={cartToggle}>
-    <Link to="/cart">
+     <Link to="/cart">
+    <li onClick={cartToggle} className="sidenavlinkcomponent">
+    <div className=" cart" id="cartPc" onClick={cartToggle}>
+   
       <span className="shoppingCartIcon">🛒</span>         
       <span className="shoppingCartTotal">
         {shoppingCart ? shoppingCart.length : 0}
         </span>
-      </Link>
+     
       </div>
-      </li>
+      </li> </Link>
  </ul>
 
     </nav>

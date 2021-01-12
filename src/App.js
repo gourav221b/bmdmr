@@ -4,8 +4,9 @@ import About from './pages/About';
 import Shop from './Shop';
 import Solution from './pages/Solution';
 import Contact from './pages/Contact';
+// import Details from './components/about/About';
 import Landing from './components/Landing/Landing';
-import Details from './components/about/About';
+import Login from './pages/Login';
 import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -30,6 +31,7 @@ function App() {
       <Route path="/solution" component={Solution} />
       <Route path="/contact" component={Contact} />
       <Route path="/cart" component={Cart} />
+      <Route path="/login" component={Login} />
       </Switch>
       <Footer/>
 
@@ -45,7 +47,7 @@ const Home = () => {
     <>
   <div>
    <Landing/>
-   <Details/>
+   {/* <Details/> */}
    
   </div>
   </>

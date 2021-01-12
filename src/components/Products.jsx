@@ -8,19 +8,15 @@ const Products = () => {
    const {dispatch}= useContext(cartContext);
 
   
-  //  const bought=document.querySelectorAll('.proButton');
-  //  bought.forEach((buy)=>
-  //  {
-  //    buy.addEventListener('click',()=>
-  //    {
-  //      if(buy.innerHTML="add to cart")
-  //      {
-  //        buy.style.background="rgb(24, 168, 60)";
-  //        buy.style.color="#fff";
-  //        buy.innerHTML="IN CART";
-  //      }
-  //    })
-  //  })
+   const bought=document.querySelectorAll('.readMore');
+   bought.forEach((buy)=>
+   {
+     buy.addEventListener('click',()=>
+     { console.log('click')
+      console.log(buy.nextElementSibling);
+      buy.nextElementSibling.classList.add('block');
+     })
+   })
  
     return(
         <>
@@ -49,6 +45,13 @@ const Products = () => {
             }>
                  <button className="buyNow">add to cart</button>
                </div>
+               <div className="readMore">Read More...</div>
+               <div className="prodDetails">
+                 <p className="descriptions">{product.id}</p>
+                 <p className="format">Format: pptx</p>
+             <p className="category">Category: {product.productStatus}</p>
+             <a className="samplelink"><i className="fa fa-download" aria-hidden="true"></i> Download Sample Document</a>
+                 </div>
                {product.productStatus === 'Chemicals & Materials' ? <div className="new">Chemicals & Materials</div>: ''}
                {product.productStatus === 'Consumer Goods' ? <div className="hot">Consumer Goods</div>: ''}
             </div>
