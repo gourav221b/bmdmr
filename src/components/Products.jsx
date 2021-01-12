@@ -36,7 +36,7 @@ const Products = () => {
                  <h4>{product.name}</h4>
                 </div>
                <div className="proPrice">
-                   ${product.price}.00
+                   Rs.{product.price}.00
                </div>
             </div>
             <div className="proButton" onClick={() =>

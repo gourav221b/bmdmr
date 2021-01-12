@@ -9,7 +9,7 @@ import document2 from "../assets/Untitled2.png"
 toast.configure();
 const Cart = (props) => {
  
-    const {shoppingCart, totalPrice,qty,dispatch} = useContext(cartContext);
+    const {shoppingCart, totalPrice , qty , dispatch} = useContext(cartContext);
         //  console.log("total qty: ",qty);
         console.log("cart.jsx");
         console.log(shoppingCart.length);
@@ -17,7 +17,7 @@ const Cart = (props) => {
     const handleToken = async (token) => {
 
         const product = {name: 'All Products', price: totalPrice}
-          const response = await axios.post('https://w7gqb.sse.codesandbox.io/checkout', {
+          const response = await axios.post('https://dzxyg.sse.codesandbox.io/', {
               token,
               product
           });
@@ -52,7 +52,7 @@ const Cart = (props) => {
            <span className="imageCount">{product.qty}</span>
         </span>
         <span className="cartProductName">{product.name}</span>
-        <span className="cartProductPrice">${product.price}.00</span>
+        <span className="cartProductPrice">Rs.{product.price}.00</span>
         {/* <span className="inc" onClick={() => dispatch({type: 'INC', id:product.id})}><i className="fas fa-plus"></i></span>
         <span className="productQuantity">{product.qty}</span>
         <span className="dec" onClick={() => dispatch({type: 'DEC', id: product.id})}><i className="fas fa-minus"></i></span>
@@ -71,11 +71,11 @@ const Cart = (props) => {
                 </div>
                 <div className="totalPriceSection">
                  <div className="justTitle">Total Price</div>
-        <div className="itemsPrice">${totalPrice}.00</div>
+        <div className="itemsPrice">Rs.{totalPrice}.00</div>
                 </div>
        <div className="stripSection">
        <StripeCheckout
-       stripeKey="pk_test_HnF0cQhq9UGw2GvWRltNiAQM00kn9HlRCg"
+       stripeKey="pk_test_51I8gTCAtMazwriAxOs3FJu0v5k25lha7Bkdd9Ly30vxHcoBQyvQRPKi29SfN0l13acESqrtu7TwIJcaEFFmCZ7e300Re1SNbUTk_test_HnF0cQhq9UGw2GvWRltNiAQM00kn9HlRCg"
        token={handleToken}
        billingAddress
        shippingAddress
