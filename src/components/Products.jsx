@@ -1,6 +1,7 @@
 import React, {useContext} from "react"
 import {productContext} from "../Global/productContext"
 import {cartContext} from "../Global/cartContext"
+import { Alert } from 'react-alert';
 
 const Products = () => {
    const {products} = useContext(productContext);
@@ -42,7 +43,7 @@ const Products = () => {
             <div className="proButton" onClick={() =>
               {
                  dispatch({type:'ADD_TO_CART', id: product.id, products})
-                
+                alert("Product has been added to the cart")
                  
            }
             }>

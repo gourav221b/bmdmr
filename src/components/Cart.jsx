@@ -17,7 +17,7 @@ const Cart = (props) => {
     const handleToken = async (token) => {
 
         const product = {name: 'All Products', price: totalPrice}
-          const response = await axios.post('https://dzxyg.sse.codesandbox.io/', {
+          const response = await axios.post('https://cbjn6.sse.codesandbox.io/', {
               token,
               product
           });
@@ -35,14 +35,7 @@ const Cart = (props) => {
           }
 
     }
-   var shoppingcart=[
-    {id: 1, name: ' Chemicals & Materials', price: 40, image: document, productStatus: 'Consumer Goods',qty:1},
-    {id: 2, name: 'Consumer Goods', price: 200, image: document2,productStatus: 'Chemicals & Materials',qty:1},
-    {id: 3, name: 'Consumer Goods', price: 300, image: document,productStatus: 'Chemicals & Materials',qty:1},
-    {id: 4, name: 'Food & Beverages', price: 150, image: document2,productStatus: 'Chemicals & Materials',qty:1},
-    {id: 5, name: 'HealthCare', price: 160, image: document,productStatus: 'Consumer Goods',qty:1},
-    {id: 6, name: 'Food & Beverages', price: 500, image: document2,productStatus: 'Chemicals & Materials',qty:1},
-   ]
+  
     return(
        <div className="cartContainer">
        <div className="cartDetails">
@@ -75,7 +68,7 @@ const Cart = (props) => {
                 </div>
        <div className="stripSection">
        <StripeCheckout
-       stripeKey="pk_test_51I8gTCAtMazwriAxOs3FJu0v5k25lha7Bkdd9Ly30vxHcoBQyvQRPKi29SfN0l13acESqrtu7TwIJcaEFFmCZ7e300Re1SNbUTk_test_HnF0cQhq9UGw2GvWRltNiAQM00kn9HlRCg"
+       stripeKey="pk_test_51I8gTCAtMazwriAxOs3FJu0v5k25lha7Bkdd9Ly30vxHcoBQyvQRPKi29SfN0l13acESqrtu7TwIJcaEFFmCZ7e300Re1SNbUT"
        token={handleToken}
        billingAddress
        shippingAddress
