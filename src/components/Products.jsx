@@ -11,10 +11,12 @@ const Products = () => {
    const bought=document.querySelectorAll('.readMore');
    bought.forEach((buy)=>
    {
+     
      buy.addEventListener('click',()=>
-     { console.log('click')
-      console.log(buy.nextElementSibling);
-      buy.nextElementSibling.classList.add('block');
+     { 
+      console.log(buy.nextElementSibling.classList);
+      console.log(buy.innerHTML);
+     buy.nextElementSibling.classList.add('block');
      })
    })
  
@@ -39,7 +41,7 @@ const Products = () => {
             <div className="proButton" onClick={() =>
               {
                  dispatch({type:'ADD_TO_CART', id: product.id, products})
-                alert("Product has been added to the cart")
+               
                  
            }
             }>

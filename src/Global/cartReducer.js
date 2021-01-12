@@ -17,7 +17,7 @@ export const CartReducer = (state, action) => {
             product['qty'] = 1;
             updatedQty = qty + 1;  
             updatedPrice=totalPrice+product.price
-          alert(product.name +' has been added to your cart');
+        //   alert(product.name +' has been added to your cart');
             return {shoppingCart: [product,...shoppingCart], totalPrice: updatedPrice, message: '', qty: updatedQty};
          
         }
