@@ -12,7 +12,8 @@ align-items: center;
 {
     width: 80vw;
     margin: 0 10vw;
-    margin-top: 10vh;
+    margin-left: 6%;
+    margin-top: 4vh;
     padding-bottom: 10vh;
 }
 h1
@@ -34,5 +35,9 @@ color: rgb(18, 87, 165);
     {
         width: 90vw;
         margin: 0 5vw;
+   
+      margin-left: 0 !important;
+      
+      background-position: center;
     }
 }

@@ -1,0 +1,84 @@
+@import '../../fonts.css';
+.industriesWrapper
+{
+    display: flex;
+    width: 90vw;
+    margin: 0 5vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.servicecard
+{
+    display: flex;
+    width: 23%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 !important;
+    padding: 0 !important;
+    word-wrap: break-word;
+    filter: brightness(70%);
+    cursor: pointer;
+    /* transition: filter 0.35s ease; */
+    transition: all 0.75s ease;
+    border-radius: 5px;
+    
+   
+}
+.servicecard:hover
+{
+    transform: scale(1.02);
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+    filter: brightness(100%);
+}
+.servicecard img
+{
+    width: 50%;
+    height: auto;
+}
+.servicecard span
+{
+    font-size: 3vh;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+@media screen and (max-width:1100px)
+{
+    .servicecard
+    {
+        margin: 30px;
+        width: 45% !important;
+    }
+}
+@media screen and (max-width:480px)
+{
+    .servicecard
+    {
+        margin: 30px;
+      
+        width: 100% !important;
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+      ;
+    }
+    .servicecard span {
+margin-bottom: 30px;
+    }
+}

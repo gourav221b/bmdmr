@@ -1,6 +1,6 @@
 import React, {useContext} from "react"
 import {cartContext} from "../Global/cartContext.js"
-import {Link} from "react-router-dom"
+import {Link,NavLink} from "react-router-dom"
 import '../App.css';
 import ProductContextProvider from "../Global/productContext"
 
@@ -75,7 +75,13 @@ if(window.innerWidth>1100)
     }
   };
 
- 
+  const checkActive = (match, location) => {
+    //some additional logic to verify you are in the home URI
+    if(!location) return false;
+    const {pathname} = location;
+    console.log(pathname);
+    return pathname === "/";
+}
   
   return (
     <nav>
@@ -84,54 +90,49 @@ if(window.innerWidth>1100)
       <div className="sidenav" id="sidenav">
         <div className="closebtn" id="closebtn">&times;</div>
         <ul className="sidenavlinks" id="sidenavlinks">
-            <Link style={navStyle} to='/'>
-            <li className="sidenavlinkcomponent">Home</li>
-            </Link>
-            <Link style={navStyle} to='/about'>
-            <li className="sidenavlinkcomponent">About</li>
-            </Link>
-            <Link style={navStyle} to='/shop'>
-            <li className="sidenavlinkcomponent">Shop</li>
-            </Link>
-            <Link style={navStyle} to='/solution'>
-            <li className="sidenavlinkcomponent">Solutions</li>
-            </Link>
-            <Link style={navStyle} to='/contact'>
-            <li className="sidenavlinkcomponent">Contact</li>
-            </Link>
-            <Link style={navStyle} to='/login'>
-            <li className="sidenavlinkcomponent">Login</li>
-            </Link>
-            <Link to="/cart" className="sidenavlinkcomponent">
-            <li onClick={cartToggle}>
-          <span className="shoppingCartIcon">Your Cart ({shoppingCart ? shoppingCart.length : 0})</span>         
-          
-     
-      </li>  </Link>
+            <li className="sidenavlinkcomponent" ><NavLink style={navStyle} exact to='/' activeClassName="SideActive" isActive={checkActive}>
+            Home
+            </NavLink></li>
+           <li className="sidenavlinkcomponent"><NavLink style={navStyle} to='/about' activeClassName="SideActive">
+            About
+            </NavLink></li>
+           <li className="sidenavlinkcomponent"><NavLink style={navStyle} to='/shop' activeClassName="SideActive">
+           Shop
+            </NavLink></li>
+            <li className="sidenavlinkcomponent"><NavLink style={navStyle} to='/solution' activeClassName="SideActive">
+            Solutions
+            </NavLink></li>
+          <li className="sidenavlinkcomponent">  <NavLink style={navStyle} to='/blogs' activeClassName="SideActive">
+            Blogs
+            </NavLink></li>
+             <li className="sidenavlinkcomponent"><NavLink style={navStyle} to='/login' activeClassName="SideActive">
+           Login
+            </NavLink></li>
+             <li onClick={cartToggle}><NavLink to="/cart" className="sidenavlinkcomponent">           
+          <span className="shoppingCartIcon">Your Cart ({shoppingCart ? shoppingCart.length : 0})</span>               
+            </NavLink> </li>
             </ul>
       </div> 
 
         <ul className="navlinks">
-            <Link style={navStyle} to='/'>
-            <li>Home</li>
-            </Link>
-            <Link style={navStyle} to='/about'>
-            <li>About</li>
-            </Link>
-            <Link style={navStyle} to='/shop'>
-            <li>Shop</li>
-            </Link>
-            <Link style={navStyle} to='/solution'>
-            <li>Solutions</li>
-            </Link>
-            <Link style={navStyle} to='/contact'>
-            <li>Contact</li>
-            </Link>
-            <Link style={navStyle} to='/login'>
-            <li className="sidenavlinkcomponent">Login</li>
-            </Link>
-     <Link to="/cart">
-    <li onClick={cartToggle} className="sidenavlinkcomponent">
+             <li><NavLink style={navStyle} exact to='/' activeClassName="active" isActive={checkActive}>
+           Home</NavLink></li>
+            <li><NavLink style={navStyle} to='/about' activeClassName="active">
+            About
+           </NavLink></li>
+            <li> <NavLink style={navStyle} to='/shop' activeClassName="active">
+           Shop
+           </NavLink></li>
+            <li><NavLink style={navStyle} to='/solution'activeClassName="active">
+           Solutions
+          </NavLink> </li>
+           <li> <NavLink style={navStyle} to='/blogs'activeClassName="active">
+            Blogs
+           </NavLink></li>
+           <li className="sidenavlinkcomponent"> <NavLink style={navStyle} to='/login'activeClassName="active">
+            Login
+            </NavLink></li>
+    <li onClick={cartToggle} className="sidenavlinkcomponent"> <NavLink to="/cart">
     <div className=" cart" id="cartPc" onClick={cartToggle}>
    
       <span className="shoppingCartIcon">🛒</span>         
@@ -140,7 +141,8 @@ if(window.innerWidth>1100)
         </span>
      
       </div>
-      </li> </Link>
+    
+       </NavLink></li>
  </ul>
 
     </nav>

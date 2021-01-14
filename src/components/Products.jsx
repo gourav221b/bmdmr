@@ -47,16 +47,17 @@ const Products = () => {
             }>
                  <button className="buyNow">add to cart</button>
                </div>
-               <div className="readMore">Read More...</div>
+              
+               {product.productStatus === 'Chemicals & Materials' ? <div className="new">Chemicals & Materials</div>: ''}
+               {product.productStatus === 'Consumer Goods' ? <div className="hot">Consumer Goods</div>: ''}
+            </div>
+            <div className="readMore">Read More...</div>
                <div className="prodDetails">
                  <p className="descriptions">{product.id}</p>
                  <p className="format">Format: pptx</p>
              <p className="category">Category: {product.productStatus}</p>
              <a className="samplelink"><i className="fa fa-download" aria-hidden="true"></i> Download Sample Document</a>
                  </div>
-               {product.productStatus === 'Chemicals & Materials' ? <div className="new">Chemicals & Materials</div>: ''}
-               {product.productStatus === 'Consumer Goods' ? <div className="hot">Consumer Goods</div>: ''}
-            </div>
             </div>
         ))}
         

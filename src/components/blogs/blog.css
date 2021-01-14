@@ -1,0 +1,392 @@
+@import '../../fonts.css';
+:root {
+    --primary-color: #436fc0 !important;
+    --secondary-color: #fff;
+    --lightfont: #fff;
+    --darkfont: #000;
+    --complementary-color: rgb(219, 226, 235);
+    --color: #3c3163;
+}
+
+.wrapTitle {
+    width: 80vw;
+    padding-top: 5vw;
+    margin-left: 7.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapTitle>span:hover {
+    animation: juggle 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes juggle {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.wrapLine {
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+#recentheader {
+    cursor: pointer;
+}
+
+.bloghead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 7vw !important;
+    width: 90vw;
+    /* border: 2px solid black; */
+    font-family: 'Open Sans';
+}
+
+.blogcard {
+    font-family: 'Heebo', sans-serif;
+    /* background-blend-mode: darken !important; */
+    height: 20em;
+    /* width: 13em; */
+    font-size: 1.5em;
+    color: white;
+    border-radius: 9q;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-top: 18%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+
+    ;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+    margin-left:-8px;
+    cursor: pointer;
+}
+
+.blogcard:hover {
+    transform: rotate(0);
+    text-decoration: none;
+}
+
+.blogcard h1 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.2em;
+    margin-top: 26px;
+}
+
+.blogcard p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+
+.blogcard .tags {
+    display: flex;
+}
+
+.blogcard .tags .tag {
+    font-size: 0.75em !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-radius: 0.3rem !important;
+    padding: 0 0.5em !important;
+    margin-right: 0.5em !important;
+    line-height: 1.5em !important;
+    transition: all 0.5s !important;
+    text-transform: capitalize !important;
+}
+
+.blogcard:hover .tags .tag {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+.blogcard .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.75em;
+    padding: 1em;
+    line-height: 1em;
+    opacity: .8;
+}
+
+.blogcard:before,
+.blogcard:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.blogcard:before {
+    background: #ddd;
+    background: #000;
+    width: 250%;
+    height: 250%;
+}
+
+.blogcard:after {
+    background: white;
+    background: #000;
+    width: 200%;
+    height: 200%;
+}
+
+.blogcard:hover {
+    /* color: var(--primary-color); */
+    color: var(--lightfont);
+}
+
+.blogcard:hover:before,
+.blogcard:hover:after {
+    transform: scale(1);
+}
+
+.blogcard-grid-space .num {
+    font-size: 3em;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+}
+
+#recentpost {
+    margin-top: -30px;
+}
+
+
+
+.categories {
+    margin-left: 7.5vw;
+    padding: 40px 0;
+    padding-bottom: 0;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.categorybuttons {
+    width: auto;
+    margin-left: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.category {
+    width: auto !important;
+    height: auto!important;
+    margin: 10px;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    font-size: 2.6vh;
+    padding: 8px 25px;
+    border-radius: 30px;
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.category:hover,
+.active {
+    /* background-color: var(--primary-color); */
+    background-color: #000;
+    color: var(--lightfont) !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.blogheader {
+    width: 100vw;
+    min-height: 50vh;
+    height: auto;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: -2px 22px 29px -20px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: -2px 22px 29px -20px rgba(0, 0, 0, 0.55);
+    box-shadow: -2px 22px 29px -20px rgba(0, 0, 0, 0.55);
+    color: var(--lightfont);
+}
+
+.headingtags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag1,
+.tag2 {
+    width: auto;
+    margin-top: 10px;
+}
+
+.headingtags span {
+    margin: 10px;
+}
+
+.headingtags span>i {
+    margin-right: 5px;
+}
+
+#blogtitle {
+    font-size: 207%;
+    text-align: center;
+    margin-top: 8vh;
+    color: #fff;
+}
+
+.heading {
+    margin: 3%;
+    margin-left: 5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vh;
+    font-weight: bolder;
+}
+
+.blogcontent {
+    margin: 2%;
+    text-align: justify;
+    font-size: 2.7vh;
+    word-wrap: break-word;
+    font-family: 'Raleway', 'Poppins', sans-serif;
+    line-height: 4.5vh;
+}
+.blogcontent p,.blogcontent h4
+{
+    margin: 20px auto;
+   
+}
+
+
+
+.right-head {
+    font-size: 3.8vh;
+    padding: 1%;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.blogheaderimage {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+
+
+.main {
+    width: 90vw;
+    margin: 10vh 5vw !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.listUlHead
+{
+    margin-top: 6vh;
+}
+.listUl ul
+{
+ 
+    list-style: none;
+}
+
+
+
+
+.blogimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
+.center {
+    height: 100%;
+    width: auto;
+}
+
+.strong {
+    font-weight: bolder;
+}
+
+table {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+}
+
+ol li {
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+table th,
+table td {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width:480px)
+{
+    .blogcontent 
+    {
+        text-align: left;
+    }
+    .blogcontent p 
+    {
+        font-size: 17px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+}

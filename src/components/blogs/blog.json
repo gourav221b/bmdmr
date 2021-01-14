@@ -1,0 +1,36 @@
+
+[
+    {
+        "id":4,
+        "name":"Electric Vehicles Industry: Analyst Insights ",
+        "url":"blog4",
+        "subtext":"The global electric vehicles market has taken a humongous step forward in the past few decades. Despite the fact that this market has been growing tremendously with rapid growth ....",
+        "category":"Consumer & goods",
+        "image":"https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+        "id":3,
+        "name":"Electric Vehicles Industry: Analyst Insights ",
+        "url":"blog3",
+        "subtext":"The global electric vehicles market has taken a humongous step forward in the past few decades. Despite the fact that this market has been growing tremendously with rapid growth ....",
+        "category":"Consumer & goods",
+        "image":"https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+        "id":2,
+        "name":"Electric Vehicles Industry: Analyst Insights",
+        "url":"blog2",
+        "subtext":"The global electric vehicles market has taken a humongous step forward in the past few decades. Despite the fact that this market has been growing tremendously with rapid growth ....",
+        "category":"Chemicals & Materials",
+        "image":"https://images.pexels.com/photos/267582/pexels-photo-267582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+    ,
+    {
+        "id":1,
+        "name":"Electric Vehicles Industry: Analyst Insights",
+        "url":"blog1",
+        "subtext":"The global electric vehicles market has taken a humongous step forward in the past few decades. Despite the fact that this market has been growing tremendously with rapid growth ....",
+        "category":"Food & Beverages",
+        "image":"https://images.pexels.com/photos/4476375/pexels-photo-4476375.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+]

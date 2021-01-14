@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway:wght@300&family=Roboto&display=swap');
+@import './fonts.css';
 
 *
 {
@@ -21,11 +21,12 @@ nav{
   justify-content: center;
   align-items: center;
   min-height: 10vh;
-  /* background: rgba(201, 74, 15, 0.87); */
-  background: transparent;
-  color: #000;
+  background: rgba(6, 41, 105, 0.87);
+  /* background: transparent; minimal */
+  /* color: #000; minimal */
+  color: #fff;
   padding-top: 20px;
-  margin-bottom: -10vh;
+  /* margin-bottom: -10vh; minimal */
 }
 nav h3{
   width: 10%;
@@ -116,6 +117,11 @@ nav li:hover
   font-size: 50px;
 }
 /* nav h3,.navlinks */
+.active,.SideActive
+{ 
+  background: transparent !important;
+  color: rgb(19, 158, 163) !important;
+}
 .navlinks{
   width: auto;
   display: flex;
@@ -132,7 +138,8 @@ nav li:hover
 {
   padding: 0 25px;
   font-size: 2.7vh;
-  color: #000;
+  /* color: #000; minimal */
+  color: #fff;
   font-weight: bolder;
 }
 .home{
@@ -247,4 +254,26 @@ nav li:hover
     top: 2vh;
     right: 5vw;
   }
+}
+.divHeading
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.divHeading>span
+{
+  font-size: 4vh;
+  text-transform: uppercase;font-weight: bolder;
+  text-align: center;
+
+}
+.divUnderline
+{
+  width: 80px;
+  height: 4px;
+  background: #000;
+  margin-top: 20px;
 }

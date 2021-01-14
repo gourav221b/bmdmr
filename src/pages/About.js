@@ -13,7 +13,6 @@ function About() {
                 
             </div>
             <div className="aboutdetails">
-            <h2>About BMA Market Research:</h2>
             <p>BMA Market Research is an India based research and consulting company. The company provides
 syndicated research reports, customized research reports, and consulting services. We are focused to
 exhume the excellent opportunities in the market and promote efficient information for your business
