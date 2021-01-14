@@ -123,4 +123,7 @@ p,.btn
   {
     width: 100%;
   }
+  .homelanding h1{
+      font-size: 6vh !important;
+  }
 }
