@@ -3,6 +3,7 @@ import { Button, Container,Row,Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js';
 import './landing.css';
+import { Link } from 'react-router-dom';
 // import '../App.css';
 function landing() {
 
@@ -12,7 +13,7 @@ function landing() {
     params={{
 	    "particles": {
 	        "number": {
-	            "value": 50
+	            "value": 30
 	        },
 	        "size": {
 	            "value": 3
@@ -31,10 +32,8 @@ function landing() {
                 <div className="landingdetails col-lg-7">
                 <h1>BMDMR.COM</h1>
                 <p>BMA Market Research is an India based research and consulting company. The company provides
-                    syndicated research reports, customized research reports, and consulting services. We are focused to
-                    exhume the excellent opportunities in the market and promote efficient information for your business
-                    to thrive in the market.</p>
-                <Button className=" btn"> Learn More</Button>
+                    syndicated research reports, customized research reports, and consulting services. </p>
+                <Link to="/about"><Button className=" btn"> Learn More</Button></Link>
                 </div>
                 <div className="landingphoto">
                     <img src="/src/assets/slider-m-1.webp" alt=""/>

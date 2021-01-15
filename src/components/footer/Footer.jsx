@@ -41,7 +41,7 @@ function Footer() {
                 </ul>
             </div>
             <div className="rightDiv ">
-                <div className="title ">Some Good Blogs To Read:</div>
+                <div className="title ">Important Links:</div>
                 <ul>
                     <li>
                         <a>Blog1</a>
@@ -92,8 +92,8 @@ function Footer() {
                     <h2 id="demonewsletter "></h2>
                 </div>
             </form>
-            <span id="copyright white-text" >
-          © Dmbmr 2021</span>
+            <span id="copyright" >
+          © BMDMR 2021</span>
       </section>
     </div>
     )

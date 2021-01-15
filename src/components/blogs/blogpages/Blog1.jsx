@@ -9,7 +9,7 @@ function Blog1() {
         <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Consumer Goods"/>
   
         <div className="main row" >
-        <div className="col-md-3">
+        <div className="col-md-3 recentcontent">
 <Bloglist/>
 </div> 
         <div className="blogcontent col-md-8">

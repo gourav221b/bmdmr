@@ -3,7 +3,7 @@ import {cartContext} from "../Global/cartContext.js"
 import {Link,NavLink} from "react-router-dom"
 import '../App.css';
 import ProductContextProvider from "../Global/productContext"
-
+import Chat from './chatsupport/Chat';
 
 const Nav= ({cartToggle})=> {    
   
@@ -84,8 +84,9 @@ if(window.innerWidth>1100)
 }
   
   return (
+    <>
     <nav>
-        <h3>Dhanania</h3>
+        <Link to="/" style={navStyle}><h3>Dhanania</h3></Link>
       <div className="hamburgerMenu" id="hamMenu"><i className="fa fa-bars"></i></div>
       <div className="sidenav" id="sidenav">
         <div className="closebtn" id="closebtn">&times;</div>
@@ -115,21 +116,21 @@ if(window.innerWidth>1100)
       </div> 
 
         <ul className="navlinks">
-             <li><NavLink style={navStyle} exact to='/' activeClassName="active" isActive={checkActive}>
+             <li><NavLink style={navStyle} exact to='/' activeClassName="SideActive" isActive={checkActive}>
            Home</NavLink></li>
-            <li><NavLink style={navStyle} to='/about' activeClassName="active">
+            <li><NavLink style={navStyle} to='/about' activeClassName="SideActive">
             About
            </NavLink></li>
-            <li> <NavLink style={navStyle} to='/shop' activeClassName="active">
+            <li> <NavLink style={navStyle} to='/shop' activeClassName="SideActive">
            Shop
            </NavLink></li>
-            <li><NavLink style={navStyle} to='/solution'activeClassName="active">
+            <li><NavLink style={navStyle} to='/solution'activeClassName="SideActive">
            Solutions
           </NavLink> </li>
-           <li> <NavLink style={navStyle} to='/blogs'activeClassName="active">
+           <li> <NavLink style={navStyle} to='/blogs'activeClassName="SideActive">
             Blogs
            </NavLink></li>
-           <li className="sidenavlinkcomponent"> <NavLink style={navStyle} to='/login'activeClassName="active">
+           <li className="sidenavlinkcomponent"> <NavLink style={navStyle} to='/login'activeClassName="SideActive">
             Login
             </NavLink></li>
     <li onClick={cartToggle} className="sidenavlinkcomponent"> <NavLink to="/cart">
@@ -146,6 +147,13 @@ if(window.innerWidth>1100)
  </ul>
 
     </nav>
+
+<Chat/>
+
+
+
+   
+    </>
   );
 }
 

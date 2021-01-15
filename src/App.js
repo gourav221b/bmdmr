@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import About from './pages/About';
 import Shop from './Shop';
 import Solution from './pages/Solution';
-import Contact from './pages/Blogs';
+import Contact from './components/contact/Contact';
 // import Details from './components/about/About';
 import Landing from './components/Landing/Landing';
 import Login from './pages/Login';
@@ -19,6 +19,7 @@ import Blog2 from './components/blogs/blogpages/Blog2'
 import Blog3 from './components/blogs/blogpages/Blog3'
 import Blog4 from './components/blogs/blogpages/Blog4'
 // import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return ( 
@@ -57,6 +58,7 @@ const Home = () => {
   <div>
    <Landing/>
   <Industries/>
+  <Contact/>
    
   </div>
   </>

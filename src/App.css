@@ -117,10 +117,10 @@ nav li:hover
   font-size: 50px;
 }
 /* nav h3,.navlinks */
-.active,.SideActive
+.SideActive
 { 
   background: transparent !important;
-  color: rgb(19, 158, 163) !important;
+  color:rgb(218, 165, 32) !important;
 }
 .navlinks{
   width: auto;

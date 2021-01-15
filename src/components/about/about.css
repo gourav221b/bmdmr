@@ -36,7 +36,7 @@ color: rgb(18, 87, 165);
         width: 90vw;
         margin: 0 5vw;
    
-      margin-left: 0 !important;
+      /* margin-left: 0 !important; */
       
       background-position: center;
     }

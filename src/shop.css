@@ -9,11 +9,13 @@
     justify-content: space-evenly;
   }
   .product {
-    width: 22%;
+   min-width: 22%;
+   width: auto;
     padding: 2px 12px;
     margin: 20px 6px;
     overflow: hidden;
     height: auto;  
+  display: flex;
     
    
    
@@ -23,26 +25,44 @@
     position: relative;
     width: 100%;
     height: 100%;
+    
   }
-  .new {
+  .chemical,.consumer,.food,.healthCare,.ICT,.banking,.automotive {
     position: absolute;
     top: 0;
     left: 0;
-    background:#bdd107;
+
     padding: 7px 15px;
     color: #fff;
     font-size: 14px;
   }
-  
-  .hot {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background:#E65100;
-    padding: 7px 15px;
-    color: #fff;
-    font-size: 14px;
+  .chemical{
+     background:#d18a07;
   }
+  .consumer
+  {
+    background: rgb(180, 154, 6);
+  }
+  .food
+{
+  background: rgb(226, 39, 70);
+}
+.healthCare
+{
+  background: green;
+}
+.ICT
+{
+  background: rgb(16, 190, 221);
+}
+.banking
+{
+  background: rgb(27, 92, 214);
+}
+.automotive
+{
+  background: rgb(97, 54, 138);
+}
   
   .pro {
    
@@ -51,9 +71,12 @@
     background-color: #fafafa;
     width: auto;
     padding: 1%;
+    cursor: pointer;
+   
+  
   
   }
-  
+
   .productImage {
     background:#fafafa;
     width: 100%;
@@ -107,6 +130,29 @@
       cursor: pointer;
   }
   
+  .prodDetails
+  {
+    display: none; 
+    
+  }
+  .samplelink
+  {
+    cursor: pointer;
+  }
+.less
+{
+  display: none;
+}
+  .proDate
+  {
+    text-align: left;
+    font-family: 'Montserrat',sans-serif;
+  }
+  .toc
+  {
+    white-space: pre-line;  
+vertical-align: bottom;
+  }
   /* Cart */
   
   .cartContainer {
@@ -486,7 +532,3 @@
    display: block !important;
  } 
  
- .prodDetails
- {
-   display: none;
- }

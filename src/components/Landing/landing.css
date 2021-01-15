@@ -9,9 +9,9 @@
     align-items: left;
     justify-content: center;
     /* background: url('/src/assets/slider-bg-1.webp') no-repeat scroll center center; */
-    background: url('https://images.pexels.com/photos/4476375/pexels-photo-4476375.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') rgba(0, 0, 0, 0.486);
+    background: url('https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') rgba(0, 0, 0, 0.486);
   
-    background-size: cover !important;
+    background-size: cover ;
     background-attachment: fixed;
     background-blend-mode: darken;
     
@@ -54,7 +54,7 @@ color: #000;
     color: #fff;
     
 }
-.btn
+.homelanding .btn
 {
     /* border: 5px solid white;  */
     border: 2px solid white; 
@@ -66,7 +66,7 @@ color: #000;
   /* background: linear-gradient(to right,#6b6bc4,#86a8e7, #3cbebe); */
   background: linear-gradient(to right,#222299,#1c3668, #085353);
 }
-.btn:hover,.btn:focus
+.homelanding .btn:hover,.homelanding .btn:focus
 {
     /* border: 5px solid lightblue;  */
     border: 2px solid lightblue; 
@@ -102,13 +102,21 @@ p,.btn
     {
         display: none;
     }
-    .landingdetails .btn
+    .landingdetails>.btn
   {
     width: 60%;
   }
 }
 @media screen and (max-width:480px)
-{
+
+
+{ .landing 
+    {
+        background-position: center;
+    } .homelanding
+    {
+        height: 90vh;
+    }
     .landingdetails
   {
     margin-left: 0 !important;
@@ -125,5 +133,8 @@ p,.btn
   }
   .homelanding h1{
       font-size: 6vh !important;
+  }
+  .secondarylanding{
+      background-size: cover ;
   }
 }

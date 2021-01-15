@@ -7,10 +7,13 @@ function Blog4() {
         <div>
         <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Consumer Goods"/>
         <div className="main row" >
-        <div className="col-md-3">
+        <div className="col-md-3 recentcontent">
 <Bloglist/>
 </div> 
         <div className="blogcontent col-md-8">
+            <div className="blogimage">
+                <img src="https://images.pexels.com/photos/2449452/pexels-photo-2449452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="img-fluid" alt="" />
+            </div>
 
 <p> The global electric vehicles market has taken a humongous step forward in the past few decades. Despite the fact that this market has been growing tremendously with rapid growth in the number of EV's worldwide, industry forecast would suggest that we have just created the map towards creating wonders.</p>
 
@@ -21,7 +24,9 @@ function Blog4() {
 <p>In the initial days we see this e-mobility technology capturing the market with a rapid speed. In 2017 and 2018 there was a rise in the EV sales which was about 65 percent. In the first quarter of 2018, the customers from Europe bought 195,000 plug-in cars, overall sales figures that the rise in the EV sales was about 42 percent higher than the one from the same period in the previous year. Hence, Europe has seen solid growth in the Electric Vehicles market (EVs).</p>
 
 <p> However, in 2019 the increase in the amount of the EV sales became 2.3 million from 2.1 million for annual growth of just 9 percent. Also,followed by declination of 25 percent in the first quarter of the year 2020. The current scenario is that rapid speed has eventually ceased- or at least temporarily paused.</p>
-
+<div className="blogimage">
+    <img src="https://images.pexels.com/photos/241544/pexels-photo-241544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" className="img-fluid" style={{width:"60%",height:"auto"}}/>
+</div>
 <p>Inspite of the downfall in sales, the global EV market penetration increased 0.3 percent from 2018 to 2019 becoming total of 2.5 percent. Hence, the future of EVs is expected to lead and with time the purchase amount of these products is becoming cost effective which would eventually capture the market and promisingly affordable to buy.</p>
 </div>
 </div>
