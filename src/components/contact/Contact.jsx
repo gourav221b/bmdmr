@@ -129,30 +129,30 @@ function Contact() {
       </button>
       <form className="form form-signup">
       <fieldset>
-            <input type="text" name="type"  className="type" id="type" defaultValue="personal quote"/>
+            <input type="text" name="type"  className="type" id="type1" defaultValue="personal quote"/>
         <div className="input-block">
             <label  htmlFor="name">Your Name</label>
-            <input id="name" name="name" type="text" required/>
+            <input id="name1" name="name" type="text" required/>
           </div>
           <div className="input-block">
             <label  htmlFor="email">E-mail</label>
-            <input id="email" name="email"type="email" required/>
+            <input id="email1" name="email"type="email" required/>
           </div>
           <div className="input-block">
             <label  htmlFor="number">Phone Number</label>
-            <input id="number" name="number"type="tel" required/>
+            <input id="number1" name="number"type="tel" required/>
           </div>
           <div className="input-block">
             <label  htmlFor="country">Your Country</label>
-            <input id="country"name="Country" type="text" required/>
+            <input id="country1"name="Country" type="text" required/>
           </div>
           <div className="input-block">
             <label  htmlFor="company">Company Name</label>
-            <input id="company"name="company name" type="text" required/>
+            <input id="company1"name="company name" type="text" required/>
           </div>
           <div className="input-block">
             <label  htmlFor="Designation">Designation</label>
-            <input id="Designation" name="Designation"type="text" />
+            <input id="Designation1" name="Designation"type="text" />
           </div>
           <div className="input-block">
             <label  htmlFor="Website">Company Website</label>
@@ -160,11 +160,11 @@ function Contact() {
           </div>
           <div className="input-block">
             <label  htmlFor="requirements">Any specific requirements?</label>
-            <input id="requirements" type="text" name="requirements"/>
+            <input id="requirements1" type="text" name="requirements"/>
           </div>
           <div className="input-block">
             <label  htmlFor="message">Your Message</label>
-            <textarea id="message" name="message" />
+            <textarea id="message1" name="message" />
           </div>
         </fieldset>
         <button type="submit" className="btn-login">Get Your Enterprise Quote</button>

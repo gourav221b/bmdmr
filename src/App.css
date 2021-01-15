@@ -32,6 +32,7 @@ nav h3{
   width: 10%;
   position: absolute;
   left: 12px;
+  top: 20px;
   font-family:'Montserrat',sans-serif;
   text-transform: uppercase;
   font-weight: bolder;
