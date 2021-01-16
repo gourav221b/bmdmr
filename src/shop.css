@@ -2,29 +2,54 @@
   .products {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 0 100px;
-    margin: 30px 0;
+    width: 100vw;
+    padding: 0 20px;
+    margin: 30px ;
+    
     align-items: flex-start;
     justify-content: space-evenly;
+    
+  } 
+  #dropdown-menu-align-right{
+    margin-left: 5vw;
+  }
+  @media screen and (max-width:480px)
+  {
+    .products 
+    {
+      flex-wrap: wrap;
+      width: 100vw;
+      padding: 0 20px;
+      margin-left: 0;
+    }
+    #dropdown-menu-align-right{
+      margin-left: 10vw;
+    }
   }
   .product {
-   min-width: 22%;
+   min-width: 23%;
    width: auto;
-    padding: 2px 12px;
+    padding: 12px 2px;
     margin: 20px 6px;
     overflow: hidden;
-    height: auto;  
+    height:auto;  
   display: flex;
+
     
    
    
   }
-  
+
   .pro {
     position: relative;
     width: 100%;
     height: 100%;
+    border-radius: 3px;
+    overflow: hidden; 
+    overflow-y: scroll;   
+    width: auto;
+    padding: 1%;
+    cursor: pointer;
     
   }
   .chemical,.consumer,.food,.healthCare,.ICT,.banking,.automotive {
@@ -35,6 +60,17 @@
     padding: 7px 15px;
     color: #fff;
     font-size: 14px;
+  }
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .toctrue
+  {
+    color: rgb(17, 160, 17);
+  }
+  .tocfalse{
+    color: rgb(221, 20, 20);
   }
   .chemical{
      background:#d18a07;
@@ -63,19 +99,6 @@
 {
   background: rgb(97, 54, 138);
 }
-  
-  .pro {
-   
-    border-radius: 3px;
-    overflow: hidden;
-    background-color: #fafafa;
-    width: auto;
-    padding: 1%;
-    cursor: pointer;
-   
-  
-  
-  }
 
   .productImage {
     background:#fafafa;
@@ -84,6 +107,39 @@
     text-align: center;
     overflow: hidden;
     /* padding: 10px; */
+  }
+  .productImage img
+  {
+    filter: blur(20%);
+  }
+  
+  .over{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ height: 200px;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #75797aa4;
+  }
+  
+  .productImage:hover .over{
+    opacity: 1;
+  }
+  
+  .showtext{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
   .productImage img {
     min-width: 100%;
@@ -97,11 +153,16 @@
     border-right: 1px solid #fafafa;
     color: #fff;
     color: #222;
+    
   }
   
   .proName {
-    margin: 12px 0;
+    margin: 12px auto;
     color: #222;
+    height: auto;
+    word-break: break-all;
+    width: 300px;
+   
   }
   
   .proPrice {
@@ -129,11 +190,45 @@
       outline: none;
       cursor: pointer;
   }
-  
+  .readMore
+  {
+    align-items: center;
+  }
+  .more
+  {
+   
+    z-index: 4;
+    /* background-color: #000; */
+  }
+  .less
+  {
+    font-size: 3vh;
+  }
+  .less:hover
+  {
+    color: red;
+    text-decoration: none !important; 
+  }
   .prodDetails
   {
     display: none; 
+    height: 420px;
+    overflow-y: scroll;
+    box-shadow: 0px 1px 11px -3px rgba(0,0,0,0.75);
     
+  }
+  .detailContent{
+    box-shadow: 0px 1px 11px -3px rgba(0,0,0,0.75);
+    padding: 20px;
+  }
+  .prodDetails::-webkit-scrollbar
+  { display: block;
+    width: 5px;
+
+  }
+  .prodDetails::-webkit-scrollbar-thumb
+  {
+    background:rgb(15, 34, 116) ;
   }
   .samplelink
   {
@@ -148,10 +243,11 @@
     text-align: left;
     font-family: 'Montserrat',sans-serif;
   }
-  .toc
+  .table
   {
     white-space: pre-line;  
 vertical-align: bottom;
+line-height: 40px;
   }
   /* Cart */
   
@@ -514,10 +610,11 @@ vertical-align: bottom;
 
   .readMore
   {
-    text-align: right;
+    /* text-align: right; */
     margin-top: 12px;
     cursor: pointer;
     color: rgb(22, 22, 153);
+    width: 100%;
    
   }
   .readMore:hover
