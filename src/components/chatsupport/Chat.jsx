@@ -7,7 +7,7 @@ function Chat() {
             $chatboxTitle = $('.chatbox__title'),
             $chatboxTitleClose = $('.chatbox__title__close'),
             $chatboxCredentials = $('.chatbox__credentials');
-          
+         $chatbox.removeClass('chatbox--tray') ;
         $chatboxTitle.on('click', function() {
             $chatbox.toggleClass('chatbox--tray');
         });
@@ -24,22 +24,7 @@ function Chat() {
         });
     });
 
-    var messages=[
-        {
-            date:"22/11/2018",
-            name:"BMDMR",
-            image:"https://www.gstatic.com/webp/gallery/2.jpg",
-            text:"How can we help you today?",
-            type:"chatbox__body__message--left"
-        },
-        {
-            date:"22/11/2018",
-            name:"Anonymous User",
-            image:"https://images.pexels.com/photos/3031396/pexels-photo-3031396.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            text:"Hello, I have a doubt regarding some services",
-            type:"chatbox__body__message--right"
-        }
-    ]
+   
     return (
         <div>
        <div className="row">
@@ -60,11 +45,15 @@ function Chat() {
     </div>
     <div className="chatbox__body">
         <label htmlFor="name">Your Name</label>
-    <input id="btn-input" type="text" name="name" className="form-control input-sm chat_set_height" placeholder="E.g John Smith" />
+    <input id="btn-inputname" type="text" name="name" className="form-control input-sm chat_set_height" placeholder="E.g John Smith" />
         <label htmlFor="email">Your Email</label>
-    <input id="btn-input" type="email" name="email" className="form-control input-sm chat_set_height" placeholder="example@example.net" />
+    <input id="btn-inputemail" type="email" name="email" className="form-control input-sm chat_set_height" placeholder="E.g example@example.net" />
+    <label htmlFor="name">Company Name</label>
+    <input id="btn-inputcompany" type="text" name="company" className="form-control input-sm chat_set_height" placeholder=" E.g DMBMR" />
+    <label htmlFor="name">Designation</label>
+    <input id="btn-inputdesignation" type="text" name="designation" className="form-control input-sm chat_set_height" placeholder="E.g  Co-Founder" />
         <label htmlFor="message">Your Message</label>
-    <textarea id="btn-input" type="text" name="message" className="form-control input-sm chat_set_height" placeholder="Hi, I want to consult you for........" />
+    <textarea id="btn-input" type="text" name="message" className="form-control input-sm chat_set_height" placeholder="E.g  Hi, I want to consult you for........" />
        
     </div>
     <div className="panel-footer">

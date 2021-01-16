@@ -7,9 +7,11 @@ import Contact from './components/contact/Contact';
 // import Details from './components/about/About';
 import Landing from './components/Landing/Landing';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
 import Industries from './components/industries/Industries';
+import Missing from './Missing';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext"
@@ -38,6 +40,8 @@ function App() {
       <Route path="/blogs" component={Blogs} />
       <Route path="/cart" component={Cart} />
       <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
+      <Route path="*" component={Missing} />
       <Route path="/blog1" component={Blog1} />
       <Route path="/blog2" component={Blog2} />
       <Route path="/blog3" component={Blog3} />

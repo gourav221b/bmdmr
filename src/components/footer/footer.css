@@ -220,6 +220,11 @@
         width: 80vw;
         margin: 30px 10vw !important;
         margin-left: -8.5vw;
+        /* transform: scale(0.8); */
+    }
+    .newsletter button{
+        font-size: 13px;
+        padding: 0 4px;
     }
     .footerContact
     {

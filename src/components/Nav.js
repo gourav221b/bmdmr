@@ -130,7 +130,7 @@ if(window.innerWidth>1100)
            <li> <NavLink style={navStyle} to='/blogs'activeClassName="SideActive">
             Blogs
            </NavLink></li>
-           <li className="sidenavlinkcomponent"> <NavLink style={navStyle} to='/login'activeClassName="SideActive">
+           <li className="sidenavlinkcomponent"> <NavLink style={navStyle} to='/login' activeClassName="SideActive">
             Login
             </NavLink></li>
     <li onClick={cartToggle} className="sidenavlinkcomponent"> <NavLink to="/cart">

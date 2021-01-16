@@ -3,7 +3,7 @@
     bottom: 0;
     right: 0;
     max-width: 350px;
-    height: 400px;
+    height: 500px;
     background-color: #fff;
     font-family: 'Lato', sans-serif;
 
@@ -18,7 +18,7 @@ z-index: 3;
 }
 
 .chatbox--tray {
-    bottom: -350px;
+    bottom: -450px;
 }
 
 .chatbox--closed {

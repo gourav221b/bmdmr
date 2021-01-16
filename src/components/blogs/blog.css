@@ -109,7 +109,7 @@
     font-size: 0.75em;
     font-family: 'Open Sans';
     margin-top: 0.5em;
-    line-height: 2em;
+    line-height: 1.8em;
 }
 
 .blogcard .tags {
@@ -374,7 +374,10 @@ table td {
     font-family: 'Roboto', sans-serif;
 }
 @media screen and (max-width:480px)
-{
+{   .blogcard
+    {
+        height: 17em;
+    }
     .blogcontent 
     {
         text-align: left;

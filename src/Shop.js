@@ -12,7 +12,7 @@ function Shop() {
   
     <div className="div_big landing secondarylanding row" id="top">
                 <div className="landingdetails col-lg-6">
-                <h1>Listings</h1>
+                <h1>Library</h1>
                 <p>Browse through to get the best deals fast.</p>
                 
                 </div>

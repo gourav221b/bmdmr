@@ -32,9 +32,9 @@ function Bcard() {
                     <h1>{blog.name}</h1>
                     <p>{blog.subtext}</p>
                     
-                    <div className="tags">
-                        <div className="tag ${blog.category}">{blog.category}</div>
-                    </div>
+                    {/* <div className="tags">
+                        <div className={`tag ${blog.category}`}>{blog.category}</div>
+                    </div> */}
                 </div>
             </a></Link>
         </div>

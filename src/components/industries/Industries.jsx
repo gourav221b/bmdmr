@@ -60,9 +60,10 @@ function Industries() {
     </div>
         ))  :<div> Services Section is undergoing review. Check back in a few days or email us to know more <br/><br/></div>}
    
-   <div className="servicecard " style={{background:"linear-gradient(to bottom, transparent,rgb(151, 151, 151))",filter:"brightness(100%)",color:"rgb(69, 107, 177)" }}>
+   {/* <div className="servicecard " style={{background:"linear-gradient(to bottom, transparent,rgb(151, 151, 151))",filter:"brightness(100%)",color:"rgb(69, 107, 177)" }}>
         <img src={consultancy} alt="consultancy"/>
-        <span style={{fontSize:"3.5vh"}}>Consult Us <i className="fa fa-arrow-right"></i></span></div> </div>
+        <span style={{fontSize:"3.5vh"}}>Consult Us <i className="fa fa-arrow-right"></i></span></div>  */}
+        </div>
         </>
     )
 }
