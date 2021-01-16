@@ -38,16 +38,18 @@ const Products = () => {
    const {dispatch}= useContext(cartContext);
   
    const [value,setValue]=useState(' ');
-  var filterquery="";
+  
    const [filter,setfilter]=useState('0');
   const handleSelect=(e)=>{
     console.log(e);
     setValue(e);
    setfilter(1)
-filterquery=`${value}`;
+   if(e=="All")
+   setfilter(0);
+
     
   }
-  console.log(filterquery)
+
   
 
     return(
@@ -59,7 +61,7 @@ filterquery=`${value}`;
       id="dropdown-menu-align-right"
       onSelect={handleSelect}
         >
-           <Dropdown.Item eventKey='' onClick={() => window.location.reload(false)} >All categories</Dropdown.Item>
+           <Dropdown.Item eventKey="All" >All categories</Dropdown.Item>
               <Dropdown.Item eventKey="Chemicals & Materials">Chemicals & Materials</Dropdown.Item>
               <Dropdown.Item eventKey="Consumer Goods">Consumer Goods</Dropdown.Item>
               <Dropdown.Item eventKey="Food & Beverages">Food & Beverages</Dropdown.Item>
@@ -67,11 +69,9 @@ filterquery=`${value}`;
               <Dropdown.Item eventKey="ICT">Internet, Communication, Technology</Dropdown.Item>
               <Dropdown.Item eventKey="Banking, Finance,Insurance">Banking, Finance, Insurance</Dropdown.Item>
               <Dropdown.Item eventKey="Automotive and Aerospace">Automotive and Aerospace</Dropdown.Item>
-              {/* <Dropdown.Divider />
-              <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
+             
       </DropdownButton>
-              <h4>{filterquery}</h4>
-              {/* <h4>{value}</h4> */}
+             <h5 id="filterquery">{filter!=1 ?" All Products" : `${value}` }</h5>
         </div>
         
         
@@ -84,7 +84,7 @@ filterquery=`${value}`;
             }} >
               <img src={product.image} alt="Not found" className="image"/>
               <div className="over">
-    <div className="showtext">Click to Read More</div>
+    <div className="showtext">Double Click to Read More...</div>
   </div>
             </div>
             <div className="productDetails ">
@@ -145,11 +145,11 @@ filterquery=`${value}`;
           <div className="product row " key={product.id}>
             <div className="pro">
           <div className="productImage" onClick={()=>{
-            readmore();
+            readmore(); console.log(products)
           }} >
             <img src={product.image} alt="Not found" className="image"/>
             <div className="over">
-  <div className="showtext">Click to Read More</div>
+  <div className="showtext">Double Click to Read More</div>
 </div>
           </div>
           <div className="productDetails ">

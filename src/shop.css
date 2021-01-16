@@ -1,4 +1,19 @@
 @import './fonts.css';
+
+.filteringDiv
+{
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#filterquery
+{
+  margin-left: 20px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: bolder;
+}
   .products {
     display: flex;
     flex-wrap: wrap;
@@ -370,6 +385,7 @@ line-height: 40px;
   .cartSummary {
     width: 25%;
     padding: 0 0 0 20px;
+    margin-bottom: 10vh;
   
   }
   
