@@ -9,6 +9,7 @@ import Contact from './components/contact/Contact'
 import Landing from './components/Landing/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import User from './components/user/User';
 import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
 import Industries from './components/industries/Industries';
@@ -42,6 +43,7 @@ function App() {
       <Route path="/cart" component={Cart} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <Route path="/user" component={User} />
       <Route path="*" component={Missing} />
       <Route path="/blog1" component={Blog1} />
       <Route path="/blog2" component={Blog2} />

@@ -77,7 +77,7 @@ function Contact() {
          <label className="label" htmlFor="company">Company Name</label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="designation" className="input-text js-input" type="text" value=""required/>
+         <input id="designation" className="input-text js-input" type="text" value="" required/>
          <label className="label" htmlFor="designation">Designation</label>
       </div>
       <div className="form-field col-lg-12 ">

@@ -100,7 +100,7 @@ const Products = () => {
               <span style={{color:"gray"}}> Published:</span> {product.month<10 ? `0${product.month}` :` ${product.month}`}/{product.year}
                </div>
                <div className="proToc flex col-xs-6">
-              <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :' '}
+              <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :'Unavailable'}
                </div></div>
             </div>
             <div className="proButton" onClick={() =>
