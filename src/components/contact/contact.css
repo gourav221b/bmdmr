@@ -83,6 +83,10 @@
   ; margin: 5vh auto;
   padding-top: 30px;
   }
+  .get-in-touch  input
+  {
+	  background: transparent;
+  }
   .contactLabel
   {
 	  width: 100vw;

@@ -17,40 +17,40 @@ function Register() {
                 </div>
                
             </div>
-            <div class="container loginSignup">
+            <div className="container loginSignup">
 
-<div class="card ">
-  <div class="left col-md-6">
+<div className="card ">
+  <div className="left col-md-6">
       <img src="https://images.pexels.com/photos/583846/pexels-photo-583846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
   </div>
-  <div class="right col-md-6">
+  <div className="right col-md-6">
     <form>
-      <div class="form-input">
+      <div className="form-input">
         <input type="text" id="name" placeholder="e.g. Username221" required/>
-        <label for="name">Name</label>
+        <label hmtlFor="name">Name</label>
       </div>
-      <div class="form-input">
+      <div className="form-input">
         <input type="email" id="email" placeholder="e.g. example@example.net" required/>
-        <label for="email">Email id</label>
+        <label hmtlFor="email">Email id</label>
       </div>
-      <div class="form-input">
+      <div className="form-input">
         <input type="tel" id="contact" placeholder="e.g. +919xxxxxx897" required/>
-        <label for="contact">Contact Number</label>
+        <label hmtlFor="contact">Contact Number</label>
       </div>
       
-      <div class="form-input">
+      <div className="form-input">
         <input type="text" id="skype" placeholder="e.g. " required/>
-        <label for="skype">Skype Id</label>
+        <label hmtlFor="skype">Skype Id</label>
       </div>
-      <div class="form-input">
+      <div className="form-input">
         <input type="password" id="password" placeholder="(8-20 characters)" minLength="8" maxLength="20" required/>
-        <label for="password">Password</label>
+        <label hmtlFor="password">Password</label>
       </div>
-      <div class="form-input">
+      <div className="form-input">
         <input type="password" id="confirmpassword" placeholder="(8-20 characters)" minLength="8" maxLength="20" required/>
-        <label for="confirmpassword">Confirm Password</label>
+        <label hmtlFor="confirmpassword">Confirm Password</label>
       </div>
-      <input type="submit" class="btn" value="Create Account"/>
+      <input type="submit" className="btn" value="Create Account"/>
      
       <div className="text-center w-100">
                       <p className="text-muted font-weight-bold">Already Registered? <Link to='/login'> <span className="text-primary ml-2">Login</span></Link></p>

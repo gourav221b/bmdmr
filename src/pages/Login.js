@@ -19,24 +19,24 @@ function Login() {
                 </div>
                
             </div>
-            <div class="container loginSignup">
+            <div className="container loginSignup">
 
-  <div class="card ">
-    <div class="left col-md-6">
+  <div className="card ">
+    <div className="left col-md-6">
         <img src="https://images.pexels.com/photos/973506/pexels-photo-973506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
     </div>
-    <div class="right col-md-6">
+    <div className="right col-md-6">
       <form>
-        <div class="form-input">
+        <div className="form-input">
           <input type="text" id="username" placeholder="e.g. Username221" required/>
-          <label for="username">username</label>
+          <label hmtlFor="username">username</label>
         </div>
-        <div class="form-input">
+        <div className="form-input">
           <input type="password" id="password" placeholder="*********" required/>
-          <label for="password">password</label>
+          <label hmtlFor="password">password</label>
         </div>
-        <input type="submit" class="btn" value="LOGIN"/>
-        <a href="#" class="forgot-password">forgot password?</a>
+        <input type="submit" className="btn" value="LOGIN"/>
+        <a href="#" className="forgot-password">forgot password?</a>
         <div className="text-center w-100">
                         <p className="text-muted font-weight-bold">Not Yet Registered? <Link to='/register'> <span className="text-primary ml-2">Join Us</span></Link></p>
                     </div>
