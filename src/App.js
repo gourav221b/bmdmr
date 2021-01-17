@@ -1,5 +1,6 @@
 import './App.css';
 import Nav from './components/Nav';
+import Chat from './components/chatsupport/Chat'
 import About from './pages/About';
 import Shop from './Shop';
 import Solution from './pages/Solution';
@@ -52,6 +53,7 @@ function App() {
     </Router>
     </CartContextProvider>
     </ProductContextProvider>
+    <Chat/>
     </div>
   );
 }

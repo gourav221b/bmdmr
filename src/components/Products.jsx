@@ -20,6 +20,7 @@ const readmore=()=>
     {   readmore.style.display="none";
     readless.style.display="flex";
     morecontent.style.display="flex";
+    morecontent.scrollIntoView()
 
     })
     readless.addEventListener('click',()=>

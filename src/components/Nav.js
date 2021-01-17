@@ -3,7 +3,7 @@ import {cartContext} from "../Global/cartContext.js"
 import {Link,NavLink} from "react-router-dom"
 import '../App.css';
 import ProductContextProvider from "../Global/productContext"
-import Chat from './chatsupport/Chat';
+
 
 const Nav= ({cartToggle})=> {    
   
@@ -148,7 +148,7 @@ if(window.innerWidth>1100)
 
     </nav>
 
-<Chat/>
+
 
 
 
