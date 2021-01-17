@@ -27,7 +27,7 @@ function Chat() {
    
     return (
         <div>
-       <div className="row">
+       <div className="row chatdiv">
 	    <div className="chatbox chatbox22 chatbox--tray">
     <div className="chatbox__title">
         <h5><a href="javascript:void()" id="chatTitle">Chat Support </a></h5>

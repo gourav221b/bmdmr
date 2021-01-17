@@ -4,7 +4,7 @@ import Chat from './components/chatsupport/Chat'
 import About from './pages/About';
 import Shop from './Shop';
 import Solution from './pages/Solution';
-import Contact from './components/contact/Contact';
+import Contact from './components/contact/Contact'
 // import Details from './components/about/About';
 import Landing from './components/Landing/Landing';
 import Login from './pages/Login';
@@ -64,7 +64,7 @@ const Home = () => {
   <div>
    <Landing/>
   <Industries/>
-  <Contact/>
+ <Contact/>
    
   </div>
   </>

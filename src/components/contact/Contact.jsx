@@ -1,178 +1,153 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Switch from 'react-switch'
 import '../../App.css'
 import './contact.css'
-var quoteType=document.getElementById('quoteType');
-var changetype=document.getElementById('changetype');
-const personal=document.querySelector('.personal');
-const enterprise=document.querySelector('.enterprise');
-function changeactivepersonal(params) {
-    quoteType.value="personal quotation";
-    changetype.innerHTML="For Personal Quotation";
-    enterprise.classList.remove('typeactive');
-    personal.classList.add('typeactive');
-}
-function changeactiveenterprise(params) {
-    changetype.innerHTML="For Enterprise Quotation";
-    quoteType.value="enterprise quotation";
-    personal.classList.remove('typeactive');
-    enterprise.classList.add('typeactive');
-} 
-const Switching=()=>{
-const switchers = document.querySelectorAll('.switcher')
-const viewEl=document.querySelector('.btn-signup');
-// function isElementOutViewport (el) {
-//     var rect = el.getBoundingClientRect();
-//     return rect.bottom < 0 || rect.right < 0 || rect.left > window.innerWidth || rect.top > window.innerHeight;
-// }
-// if(!isElementOutViewport(viewEl))
-// {   console.log('in view')
-// document.querySelector('.switcher-signup').parentElement.classList.remove('.is-active');
-// document.querySelector('.switcher-login').parentElement.classList.add('.is-active');
-// }
-// else
-// {
-//     console.log('not in view');
-// }
-switchers.forEach(item => {
-	item.addEventListener('click', function() {
-		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
-		this.parentElement.classList.add('is-active')
-	})
-})
-}
+
 function Contact() {
    
-
+  const [checked, setChecked] = useState(false);
+  const handleChange = nextChecked => {
+    setChecked(nextChecked);
+  };
+  
     return (
-        <div className="mainContactDiv">
-             <div className="divHeading"><span style={{color:"#fff"}}> Contact Us </span> <div className="divUnderline"style={{backgroundColor:"#fff"}}></div></div>
-            {/* <div className="contactWrapper row">
-                <div className="col-md-4 typebuttondiv">
-                    <div className=" typebutton personal typeactive" onClick={()=>{
-                            changeactivepersonal();
-                    }}>Get a personal quotation</div>
-                    <div className=" typebutton enterprise" onClick={()=>{
-                            changeactiveenterprise();
-                    }}>Get an enterprise quotation</div>
-                </div>
-                <div className="col-md-6 formdiv">
-                    <h3 id="changetype"> For Personal Quotation</h3>
-                <form action="#">
-                    <input type="text" name="type" className="inputs quotation" value="personal quotation" id="quoteType" required/>
-                    <input type="text" name="name" className="inputs" placeholder="Your Name" required/>
-                    <input type="text" name="country" className="inputs" placeholder="Your Country" required/>
-                    <input type="email" name="email" className="inputs" placeholder="Your Email" required/>
-                    <input type="text" name="company" className="inputs" placeholder="Company Name" required/>
-                    <input type="text" name="designation" className="inputs" placeholder="Designation" />
-                    <input type="text" className="inputs" placeholder="Any Particular Requirements?" />
-                    
-                    <textarea name="message" id="textarea" placeholder="Your Message Here"></textarea>
-                    <input type="submit"className="btn-success inputs" value="Submit"/>
-                </form>
+      <>
+      <div className="divHeading"><span> Get In Touch</span> <div className="divUnderline"></div></div>
+      <div className="contactDiv  ">
+         
+     <div className="contactLabel">
+       {/* <span>Ask for</span> */}
+      <label>
+           
+        <Switch
+          onChange={handleChange}
+          checked={checked}
+          className="react-switch contactSwitch"
+          offColor="#08f"
+          onColor="#40ecec"
+          offHandleColor="#40ecec"
+          onHandleColor="#08f"
+          handleDiameter={30}
+      height={40}
+      width={78}
+          uncheckedIcon={
+            <div style={{display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+            color:"#fff"}}>
+            <i className="fa fa-user"></i></div>
+          }
+            checkedIcon={
+              
+              <div style={{display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+              color:"#fff"}}>
+              <i className="fa fa-building" ></i></div>
+            }
+        />   
+      </label>
+      <span>{checked ? "Enterprise" : "Personal"} Quote</span>
+      </div>   <div>
+        {checked ? <section className="get-in-touch col-md-8">
+   {/* <h1 className="title">Personal Quotation</h1> */}
+   <form className="contact-form row">
+      <div className="form-field col-lg-6">
+         <input id="name" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="name"> Name</label>
+      </div>
+      <div className="form-field col-lg-6 ">
+         <input id="email" className="input-text js-input" type="email" required/>
+         <label className="label" htmlFor="email">E-mail</label>
+      </div>
+      
+       <div className="form-field col-lg-6 ">
+         <input id="phone" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="phone">Contact Number</label>
+      </div>
+      
+      <div className="form-field col-lg-6 ">
+         <input id="country" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="country">Your Country</label>
+      </div>
+      <div className="form-field col-lg-6 ">
+         <input id="company" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="company">Company Name</label>
+      </div>
+      <div className="form-field col-lg-6 ">
+         <input id="designation" className="input-text js-input" type="text" value=""required/>
+         <label className="label" htmlFor="designation">Designation</label>
+      </div>
+      <div className="form-field col-lg-12 ">
+         <input id="website" className="input-text js-input" type="text"/>
+         <label className="label" htmlFor="website">Company Website</label>
+      </div>
+      <div className="form-field col-lg-12 ">
+         <input id="requirement" className="input-text js-input" type="text"/>
+         <label className="label" htmlFor="requirement">Any Specific Requirements?  <span className="optional">(Optional)</span></label>
+      </div>
+      <div className="form-field col-lg-12">
+         <input id="message" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="message">Your Message</label>
+      </div>
+      <div className="form-field col-lg-12">
+         <input className="submit-btn" type="submit" value="Submit"/>
+      </div>
+   </form>
 
-                </div>
-            </div> */}
-            <section className="forms-section">
-   <div className="forms">
-    <div className="form-wrapper is-active">
-      <button type="button" className="switcher switcher-login" onClick={()=>{
-              Switching();
-            }}>
-         Personal Quote
-        <span className="underline"></span>
-      </button>
-      <form className="form form-login">
-        <fieldset>
-            <input type="text" name="type"  className="type" id="type" defaultValue="personal quote"/>
-        <div className="input-block">
-            <label  htmlFor="name">Your Name</label>
-            <input id="name" name="name" type="text" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="email">E-mail</label>
-            <input id="email" name="email"type="email" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="number">Phone Number</label>
-            <input id="number" name="number"type="tel" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="country">Your Country</label>
-            <input id="country"name="Country" type="text" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="company">Company Name</label>
-            <input id="company"name="company name" type="text" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="Designation">Designation</label>
-            <input id="Designation" name="Designation"type="text" />
-          </div>
-          <div className="input-block">
-            <label  htmlFor="requirements">Any specific requirements?</label>
-            <input id="requirements" type="text" name="requirements"/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="message">Your Message</label>
-            <textarea id="message" name="message" />
-          </div>
-        </fieldset>
-        <button type="submit" className="btn-login">Get Your Quote</button>
-      </form>
+</section> : <section className="get-in-touch col-md-8">
+   {/* <h1 className="title">EnterPrise Quote</h1> */}
+   
+   <form className="contact-form row">
+      <div className="form-field col-lg-6">
+         <input id="name" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="name"> Name</label>
+      </div>
+      <div className="form-field col-lg-6 ">
+         <input id="email" className="input-text js-input" type="email" required/>
+         <label className="label" htmlFor="email">E-mail</label>
+      </div>
+      
+       <div className="form-field col-lg-6 ">
+         <input id="phone" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="phone">Contact Number</label>
+      </div>
+      
+      <div className="form-field col-lg-6 ">
+         <input id="country" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="country">Your Country</label>
+      </div>
+      <div className="form-field col-lg-6 ">
+         <input id="company" className="input-text js-input" type="text"  />
+         <label className="label" htmlFor="company">Company Name <span className="optional"> (Optional)</span></label>
+      </div>
+      <div className="form-field col-lg-6 ">
+         <input id="designation" className="input-text js-input" type="text" value="" />
+         <label className="label" htmlFor="designation">Designation <span className="optional">(Optional)</span></label>
+      </div>
+      <div className="form-field col-lg-12 ">
+         <input id="website" className="input-text js-input" type="text"/>
+         <label className="label" htmlFor="website">Company Website <span className="optional">(Optional)</span></label>
+      </div>
+      <div className="form-field col-lg-12 ">
+         <input id="requirement" className="input-text js-input" type="text"/>
+         <label className="label" htmlFor="requirement">Any Specific Requirements? <span className="optional">(Optional)</span></label>
+      </div>
+      <div className="form-field col-lg-12">
+         <input id="message" className="input-text js-input" type="text" required/>
+         <label className="label" htmlFor="message">Your Message</label>
+      </div>
+      <div className="form-field col-lg-12">
+         <input className="submit-btn" type="submit" value="Submit"/>
+      </div>
+   </form>
+
+</section>}
+      </div>
     </div>
-    <div className="form-wrapper enterprise">
-      <button type="button" className="switcher switcher-signup" onClick={()=>{
-              Switching();
-            }}>
-        Enterprise Quote
-        <span className="underline"></span>
-      </button>
-      <form className="form form-signup">
-      <fieldset>
-            <input type="text" name="type"  className="type" id="type1" defaultValue="personal quote"/>
-        <div className="input-block">
-            <label  htmlFor="name">Your Name</label>
-            <input id="name1" name="name" type="text" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="email">E-mail</label>
-            <input id="email1" name="email"type="email" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="number">Phone Number</label>
-            <input id="number1" name="number"type="tel" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="country">Your Country</label>
-            <input id="country1"name="Country" type="text" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="company">Company Name</label>
-            <input id="company1"name="company name" type="text" required/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="Designation">Designation</label>
-            <input id="Designation1" name="Designation"type="text" />
-          </div>
-          <div className="input-block">
-            <label  htmlFor="Website">Company Website</label>
-            <input id="Website" name="Website"type="url" />
-          </div>
-          <div className="input-block">
-            <label  htmlFor="requirements">Any specific requirements?</label>
-            <input id="requirements1" type="text" name="requirements"/>
-          </div>
-          <div className="input-block">
-            <label  htmlFor="message">Your Message</label>
-            <textarea id="message1" name="message" />
-          </div>
-        </fieldset>
-        <button type="submit" className="btn-login">Get Your Enterprise Quote</button>
-      </form>
-    </div>
-  </div>
-</section>
-        </div>
+   </>
     )
 }
 
