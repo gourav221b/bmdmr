@@ -44,6 +44,7 @@ const Products = () => {
   const handleSelect=(e)=>{
     console.log(e);
     setValue(e);
+    window.location.hash =`?${e.toString()}`
    setfilter(1)
    if(e=="All")
    setfilter(0);

@@ -1,0 +1,194 @@
+.solutionDiv
+{
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 5vh;
+}
+
+.industryDiv,.consultancyDiv
+{
+    width: 45%;
+   min-height:105vh ;
+   
+    height: auto;
+    box-shadow:
+     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+     0 12.5px 10px rgba(0, 0, 0, 0.06),
+     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+     0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: scroll;
+}
+/* .industryDiv{
+    height: 50vh;
+    overflow-y: scroll;
+} */
+.industryCardDiv{
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 20px;
+}
+.consultancyDiv
+{
+    padding-bottom: 13vh;
+}
+
+  .solutionTitle
+{
+    font-size: 4vh;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 20px 0 5px 0;
+    background: #ffffff !important;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 2;
+    box-shadow: 2px 13px 28px -17px rgba(0,0,0,0.75);
+}
+
+.industryCard,.ConsultancyCard 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1%;
+    margin: 30px auto;
+    z-index: 1;
+    transition: all 0.3s ease;
+    border-radius: 10px; cursor: pointer;
+}
+.industryCard:hover{
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  /* background: rgba(172, 172, 216, 0.425); */
+ 
+}
+.industryCard img,.ConsultancyCard img
+{
+width:35%;
+height: auto;
+}
+
+.industryName{
+    width:50%;
+    word-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Raleway',sans-serif;
+    
+}
+.consultancydetails
+{
+    width: 80%; word-wrap: break-word;
+    hyphens: auto;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Raleway',sans-serif;
+    margin-left: 12%;
+}
+.ConsultancyCard 
+{
+    justify-content: space-between;
+    width: 100% ;
+    align-items: center;
+    cursor: pointer;
+    padding: 2% 7%;
+   border: 1px solid #000;
+    
+}
+.ConsultancyCard  img
+{
+    filter: brightness(90%);
+}
+.ConsultancyCard:hover
+{
+    background: #0db3e636;
+}
+.ConsultancyName
+{
+    font-weight: bolder;
+    /* text-transform: uppercase; */
+}
+.consultancydetails ul
+{
+list-style:circle;
+}
+.consultancydetails li{
+    font-size: 2.4vh;
+    line-height: 30px;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-weight: normal;
+}
+
+@media screen and (max-width:1100px)
+{
+    .industryDiv,.consultancyDiv{
+        width: 100%;
+        margin: 4vh auto;
+        padding: 2%;
+        height: auto;
+    }
+    .industryCard
+     {
+         margin: 30px 10px;
+         justify-content: space-around;
+
+     }
+    .industryCard img{
+        width: 30%;
+        height: auto;
+        }
+        .industryCard:hover{
+            box-shadow: 2px 14px 41px -13px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 14px 41px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 14px 41px -13px rgba(0,0,0,0.75);
+          /* background: rgba(172, 172, 216, 0.425); */
+         
+        }
+        .industryDiv,.consultancyDiv
+        {
+            padding: 0;
+        }
+        .industryCardDiv,.consultancyCardDiv{
+            padding: 2%;
+        }
+        .ConsultancyCard
+        {
+            width: 95%;
+        }
+      
+}
+/* #strategy,#research
+{
+   display: none;
+} */
+.closeform{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 4vh;
+    cursor: pointer;
+}
