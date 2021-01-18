@@ -14,7 +14,7 @@ const Nav= ({cartToggle})=> {
     };
 
    
-   console.log(shoppingCart.length)
+ 
   
     window.onscroll = function() {
 

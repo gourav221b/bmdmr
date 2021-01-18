@@ -39,7 +39,7 @@ function User() {
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="✐ Edit" />
                     </div>
                 </div>
                 <div class="row">
@@ -48,13 +48,8 @@ function User() {
                             <p>WORK LINK</p>
                             <a href="">Website Link</a><br/>
                             <a href="">Facebook Profile</a><br/>
-                            <a href="">Skype Link</a>
-                            <p>ANY OTHER THING</p>
-                            <a href="">Lorem ipsum</a><br/>
-                            <a href="">Lorem ipsum</a><br/>
-                            <a href="">Lorem ipsum</a><br/>
-                            <a href="">Lorem ipsum</a><br/>
-                            <a href="">Lorem ipsum</a><br/>
+                            
+                           
                         </div>
                     </div>
                     <div class="col-md-8" >
@@ -89,6 +84,18 @@ function User() {
                                         </div>
                                         <div class="row details">
                                             <div class="col-md-6">
+                                                <label>Password</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                {/* <p>{userpassword}</p> */}
+                                                <p>*********</p>
+                                            
+                                            
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Change Password"  style={{width:"auto"}}/>
+                    </div>
+                                        </div>
+                                        <div class="row details">
+                                            <div class="col-md-6">
                                                 <label>Phone</label>
                                             </div>
                                             <div class="col-md-6">
@@ -98,11 +105,20 @@ function User() {
                                         </div>
                                         <div class="row details">
                                             <div class="col-md-6">
-                                                <label>Designation</label>
+                                                <label>Skype Id</label>
                                             </div>
                                             <div class="col-md-6">
-                                                {/* <p>{user designation}</p> */}
-                                                <p>President</p>
+                                                {/* <p>{user skype}</p> */}
+                                                <p>SunilDhanaia67</p>
+                                            </div>
+                                        </div>
+                                        <div class="row details">
+                                            <div class="col-md-6">
+                                                <label>Company Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                {/* <p>{user company}</p> */}
+                                                <p>Book My Accountant</p>
                                             </div>
                                         </div>
                             </div>
