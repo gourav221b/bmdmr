@@ -55,8 +55,9 @@ const Products = () => {
   
 
     return(
-        <>
-        <div className="filteringDiv">
+      <>
+        <div className="mainShop ">
+        <div className="filteringDiv ">
         <DropdownButton
       alignRight
       title="Filter By: "
@@ -73,23 +74,23 @@ const Products = () => {
               <Dropdown.Item eventKey="Automotive and Aerospace">Automotive and Aerospace</Dropdown.Item>
              
       </DropdownButton>
-             <h5 id="filterquery">{filter!=1 ?" All Products" : `${value}` }</h5>
+             {/* <h5 id="filterquery">{filter!=1 ?" All Products" : `${value}` }</h5> */}
         </div>
         
         
-        {filter !=1 ?  <div className="products" style={{marginTop: '30px'}}>
+        {filter !=1 ?  <div className="products " style={{marginTop: '30px'}}>
         {products.map(product => (
             <div className="product row " key={product.id}>
-              <div className="pro">
-            <div className="productImage" onClick={()=>{
+              <div className="pro row">
+            {/* <div className="productImage" onClick={()=>{
               readmore();
             }} >
               <img src={product.image} alt="Not found" className="image"/>
               <div className="over">
     <div className="showtext">Double Click to Read More...</div>
   </div>
-            </div>
-            <div className="productDetails ">
+            </div> */}
+            <div className="productDetails col-md-8 ">
                 <div className="proName">
                  <h4>{product.name}</h4>
                 </div>
@@ -104,7 +105,7 @@ const Products = () => {
               <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :'Unavailable'}
                </div></div>
             </div>
-            <div className="proButton" onClick={() =>
+            <div className="proButton col-md-4" onClick={() =>
               {
                  dispatch({type:'ADD_TO_CART', id: product.id, products})
             
@@ -114,15 +115,15 @@ const Products = () => {
                  <button className="buyNow">add to cart</button>
                </div>
               
-               {product.productStatus === 'Chemicals & Materials' ? <div className="chemical">Chemicals & Materials</div>: ''}
-               {product.productStatus === 'Consumer Goods' ? <div className="consumer">Consumer Goods</div>: ''}
-               {product.productStatus === 'Food & Beverages' ? <div className="food">Food & Beverages</div>: ''}
-               {product.productStatus === 'HealthCare' ? <div className="healthCare">Healthcare</div>: ''}
-               {product.productStatus === 'ICT' ? <div className="ICT">ICT</div>: ''}
-               {product.productStatus === 'Banking, Finance,Insurance' ? <div className="banking">Banking, Financal Services,Insuarance</div>: ''}
-               {product.productStatus === 'Automotive and Aerospace' ? <div className="automotive">Automotive and Aerospace</div>: ''}
+               {product.productStatus === 'Chemicals & Materials' ? <div className="colorcode chemical">Chemicals & Materials</div>: ''}
+               {product.productStatus === 'Consumer Goods' ? <div className="colorcode consumer">Consumer Goods</div>: ''}
+               {product.productStatus === 'Food & Beverages' ? <div className="colorcode food">Food & Beverages</div>: ''}
+               {product.productStatus === 'HealthCare' ? <div className="colorcode healthCare">Healthcare</div>: ''}
+               {product.productStatus === 'ICT' ? <div className="colorcode ICT">ICT</div>: ''}
+               {product.productStatus === 'Banking, Finance,Insurance' ? <div className="colorcode banking">Banking, Financal Services,Insuarance</div>: ''}
+               {product.productStatus === 'Automotive and Aerospace' ? <div className="colorcode automotive">Automotive and Aerospace</div>: ''}
             </div>
-            <div className="col-md-6 ">
+            <div className="col-lg-12 ">
             <div className="readMore" onClick={()=>{
               readmore();
             }}><span className="more"> </span> <span className="less">&times;</span></div>
@@ -140,7 +141,7 @@ const Products = () => {
         ))}
         
         </div>
-      :  <div className="products" style={{marginTop: '30px'}}>
+      :  <div className="products " style={{marginTop: '30px'}}>
       {products.filter(productAll => 
   
   productAll.productStatus == `${value}`).map(product => (
@@ -207,6 +208,7 @@ const Products = () => {
       </div>
     }
        
+        </div>
         </>
     )
 

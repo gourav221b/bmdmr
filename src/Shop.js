@@ -3,10 +3,11 @@ import './App.css';
 import './shop.css';
 import './components/Landing/landing.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Products from "./components/Products"
+import Products from "./components/Product1"
 import Cart from "./components/Cart"
 import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext"
+import Product1 from './components/Product1';
 function Shop() {
   return ( <div>
   
@@ -21,7 +22,7 @@ function Shop() {
   
       <Router>
           <Switch>
-          <Route path="/shop" exact component={Products} />
+          <Route path="/shop" exact component={Product1} />
           <Route path="/cart" exact component={Cart} />
         </Switch>
       </Router>

@@ -58,7 +58,20 @@ nav li:hover
   border-radius: 50%;
   cursor: pointer;
 }
-
+.navDropdowns
+{
+  background: transparent !important;
+  border: transparent !important;
+  font-weight: bolder;
+}
+.navDropdowns:focus
+{
+  border: none !important;
+  outline: none !important;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
 .shoppingCartTotal
 {
   position: absolute;

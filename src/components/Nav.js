@@ -1,6 +1,7 @@
 import React, {useContext,usestate} from "react"
 import {cartContext} from "../Global/cartContext.js"
 import {Link,NavLink} from "react-router-dom"
+import {Dropdown} from 'react-bootstrap'
 import '../App.css';
 import ProductContextProvider from "../Global/productContext"
 
@@ -124,8 +125,18 @@ if(window.innerWidth>1100)
             <li> <NavLink style={navStyle} to='/shop' activeClassName="SideActive">
            Shop
            </NavLink></li>
-            <li><NavLink style={navStyle} to='/solution'activeClassName="SideActive">
-           Solutions
+            <li><NavLink   to='/solution'activeClassName="SideActive">
+            <Dropdown className="dropdown">
+  <Dropdown.Toggle id="dropdown-basic" className="navDropdowns">
+ Solutions
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-menu">
+    <Dropdown.Item href="#/action-1">Reports</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Consultancy</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
           </NavLink> </li>
            <li> <NavLink style={navStyle} to='/blogs'activeClassName="SideActive">
             Blogs

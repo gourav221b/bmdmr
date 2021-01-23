@@ -1,10 +1,10 @@
 @import './fonts.css';
 
-.mainShop
+.mainshop
 {
   display: flex ;
-  flex-direction: row ;
-  align-items: flex-start ;
+  flex-direction: row !important;
+  align-items: center ;
   justify-content: center ;
   padding: 0;
   width: 100vw;
@@ -15,59 +15,22 @@
 }
 .filteringDiv
 {
-  width:fit-content;
-  padding: 20px 50px;
-  display: none;
-  flex-direction: row;
+  width: 10vw;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 5vw;
-  /* border: 2px solid black; */
-  border-radius: 50px;
-  background: rgba(252, 252, 246, 0.795);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-
-  /* border: 2px solid black; */
-  
- 
-}
-#dropdown-menu-align-right
-{
-  border-radius: 50px;
-  padding:12px 20px;
+  justify-content: flex-start;
+  border: 2px solid black;
 }
 #filterquery
 {
-  
-  margin-top: 12px;
-  margin-left: 12px;
+  margin-left: 20px;
   font-family: 'Montserrat';
   text-transform: uppercase;
-  font-weight: bolder; 
-  text-align: center;
-}
-#listgroup
-{
-  width: 20%;
-  margin-top: 2%;
-  position: sticky;
-  top: 20px;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-.valueName
-{
-  width:80%;
-  text-align: center;
-  background: #007BFF;
-  padding: 20px 0;
-  color: #fff;
   font-weight: bolder;
-  border-radius: 5q;
 }
   .products {
-   
-    width: 70%;
+    border: 2px solid black;
+    width: 10vw;
     display: flex;
     flex-wrap: wrap;
     /* width: 100vw; */
@@ -76,25 +39,34 @@
     
     align-items: flex-start;
     justify-content: space-evenly;
-    /* margin-left: 5vw; */
-   
     
   } 
   
- 
+  #dropdown-menu-align-right{
+    margin-left: 5vw;
+  }
+  @media screen and (max-width:800px)
+  {
+    .products 
+    {
+      flex-wrap: wrap;
+      width: 100vw;
+      padding: 0 20px;
+      margin-left: 0;
+    }
+    #dropdown-menu-align-right{
+      margin-left: 10vw;
+    }
+  }
   .product {
    /* min-width: 23%; */
-   width: 80%;
+   width: 40vw;
     /* padding: 12px 2px;
     margin: 20px 6px; */
     overflow: hidden;
     height:auto;  
-  display: flex; 
-  /* border: 2px solid black; */
-  margin: 20px auto;
-  border-radius: 5q;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-  
+  display: flex;
+
   }
 
   .pro {
@@ -108,8 +80,6 @@
     padding: 1%;
     cursor: pointer;
     flex-direction: row;
-    align-items: center;
-     /* border: 2px solid; */
     
 
   }
@@ -208,46 +178,39 @@
   }
   .productDetails {
     padding: 15px 10px;
-    text-align: left;
+    text-align: center;
     background: #ffff;
     border-left: 1px solid #fafafa;
     border-right: 1px solid #fafafa;
     color: #fff;
     color: #222;
-    width: 100vw;
-   
+    width: 70%;
     
   }
-  .productrow>div
-  {
-margin:  15px ;
-  }
+  
   .proName {
     margin: 12px auto;
     color: #222;
     height: auto;
     word-break: break-all;
-    width: auto;
+    width: 300px;
    
   }
   
   .proPrice {
-    /* margin: 15px 0; */
-    color:rgb(240, 77, 77);
+    margin: 15px 0;
+    color:orangered;
     font-size: 22px;
-    font-weight: bold
+    font-weight: 30;
   }
   
   .proButton {
     width: 100%;
-    background: #007BFF;
+    background: #f57224;
     margin: 0 auto;
     text-align: center;
     padding: 14px 0;
     cursor: pointer;
-    transform: scale(0.9);
-    border-radius: 50px;
-    height: 60px;
    
   }
   
@@ -261,26 +224,19 @@ margin:  15px ;
   }
   .readMore
   {
-    align-items: flex-end;
+    align-items: center;
   }
-  .productRead:hover
+  .more
   {
-    text-decoration: underline;
+   
+    z-index: 4;
+    /* background-color: #000; */
   }
   .less
   {
-    font-size: 6vh;
-    text-align: right;
-     z-index: 4;
+    font-size: 3vh;
   }
- 
-  .less span
-  {
-    position: absolute;
-    right: 10px; 
-    top: -8px; 
-  }
-  .less span:hover
+  .less:hover
   {
     color: red;
     text-decoration: none !important; 
@@ -288,15 +244,13 @@ margin:  15px ;
   .prodDetails
   {
     display: none; 
-    height: 500px;
+    height: 420px;
     overflow-y: scroll;
-   
-    
-    /* box-shadow: 0px 1px 11px -3px rgba(0,0,0,0.75); */
+    box-shadow: 0px 1px 11px -3px rgba(0,0,0,0.75);
     
   }
   .detailContent{
-    /* box-shadow: 0px 1px 11px -3px rgba(0,0,0,0.75); */
+    box-shadow: 0px 1px 11px -3px rgba(0,0,0,0.75);
     padding: 20px;
   }
   .prodDetails::-webkit-scrollbar
@@ -320,16 +274,9 @@ margin:  15px ;
   {
     text-align: left;
     font-family: 'Montserrat',sans-serif;
-    /* font-size: 13px; */
-  }
-  .prodDetails h4
-  {
-    background: #fff;
-    margin-bottom: 20px;
   }
   .table
   {
-
     white-space: pre-line;  
 vertical-align: bottom;
 line-height: 40px;
@@ -564,29 +511,6 @@ line-height: 40px;
   }
   
   @media(max-width: 800px){
-    .products 
-    {
-      flex-wrap: wrap;
-      width: 100vw;
-      padding: 0 20px;
-      margin-left: 0;
-    }
-    #dropdown-menu-align-right{
-      margin-left: 10vw;
-    }
-    .mainShop
-    {
-      flex-direction: column;
-    }
-    .filteringDiv
-    {
-      flex-direction: row;
-      margin-left: 0;
-    }
-    #filterquery
-    {
-      margin-left: 12px;
-    }
       .products{
           padding: 0;
       }
@@ -649,50 +573,19 @@ line-height: 40px;
       color: #999;
       text-align: center;
     }
-   
   }
   @media(max-width: 480px){
-   *{
-    /* border: 2px solid black; */
-   }
-  .mainShop
-  {
-    width: 97vw;
-    margin: 0 1.5%;
-  }
-  .filteringDiv
-  { display: flex;
-    flex-direction: row;
-    width: fit-content;
-    padding-left: 0;
-    }
-    .products
-    {
-      width: 90%;
-      margin: 0 3%;
-      padding: 0;
-      
-      
-    }
-    #listgroup
-    {
-      display: none;
-    }
+   
 .product{
-   width:100%;
-   margin: 30px 0%;
+   width: 80%;
+   margin: 30px 10%;
    box-shadow: 0px 0px 24px -14px rgba(0,0,0,0.75);
    /* border: 0.4px solid rgba(0, 0, 0, 0.329); */
    border-radius: 2px;
 }
-
-.valueName
+.productImage,.productImage img
 {
-  display: none;
-}
-.productDetails
-{
-  width: 90%;
+  width: 100%;
 }
 
   }
