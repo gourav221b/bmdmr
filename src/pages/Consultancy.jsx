@@ -1,24 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Switch from 'react-switch'
+import '../App.css'
+import '../components/Landing/landing.css'
+
 import{Link} from 'react-router-dom'
-import Industries from '../components/industries/Industries'
+
 import '../components/solutions/solution.css'
 import '../components/contact/contact.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../components/Landing/landing.css';
-import Shop from '../components/Product1';
-import chemical from '../components/industries/icons/chemical.png';
-import consumer from '../components/industries/icons/consumer.png';
-import food from '../components/industries/icons/food.png';
-import HealthCare from '../components/industries/icons/healthcare.png';
-import ICT from '../components/industries/icons/ICT.png';
-import banking from '../components/industries/icons/banking.png';
-import automotive from '../components/industries/icons/automotive.png';
 import Strategy from '../components/industries/icons/strategy.svg';
-import Research from '../components/industries/icons/research.svg';
-const strategy =document.querySelector('#strategy');
+import Research from '../components/industries/icons/research.svg'; 
+
+function Consultancy() {
+    window.scrollTo(0,0)
+    const strategy =document.querySelector('#strategy');
 const research =document.querySelector('#research');
-function Solution() {
-   
     function  showstrat() {
         document.querySelector('#strategy').style.display="block";
         document.querySelector('#strategy').scrollIntoView();
@@ -36,56 +33,17 @@ function Solution() {
         document.querySelector('#research').style.display="none";
     }
     return (
-        <>
-        <div className="div_big landing secondarylanding row" id="top">
+      <>
+       <div className="div_big landing secondarylanding row" id="top">
                 <div className="landingdetails col-lg-6">
-                <h1>Our Solutions</h1>
-                <p>The best for your business.</p>
-                
-                </div>
-                
+                <h1>Consultancy</h1>
+                <p>Get in touch with us</p>              
+                </div>                
             </div>
-         <div className="solutionDiv">
-            <div className="industryDiv ">
-                <div className="solutionTitle"><span>Reports</span><div className="divUnderline"></div></div>
-                <div className="industryCardDiv row">
-              
-                   <Link to="/shop/Chemicals&Materials" className="industryCard col-md-6 col-lg-5" category="Chemicals & Materials"  >
-                    <img src={chemical} alt="chemical" className="img-fluid"/>
-                    <div className="industryName">Chemicals & Materials</div></Link>
-                
-               
-                   <Link to="/shop/ConsumerGoods" className="industryCard col-md-6 col-lg-5" category="Consumer Goods"  >
-                    <img src={consumer} alt="consumer" className="img-fluid"/>
-                    <div className="industryName">Consumer Goods</div></Link>
-               
-           
-                   <Link to="/shop/Food&Bevarages" className="industryCard col-md-6 col-lg-5" category="Food & Beverages"  >
-                    <img src={food} alt="food" className="img-fluid"/>
-                    <div className="industryName">Food & Beverages</div></Link>
-              
-                   <Link to="/shop/HealthCare" className="industryCard col-md-6 col-lg-5" category="HealthCare"  >
-                    <img src={HealthCare} alt="HealthCare" className="img-fluid"/>
-                    <div className="industryName">Healthcare</div></Link>
-              
-                   <Link to="/shop/ICT" className="industryCard col-md-6 col-lg-5" category="ICT"  >
-                    <img src={ICT} alt="ICT" className="img-fluid"/>
-                    <div className="industryName">Internet, Comms & Technology</div></Link>
-              
-                   <Link to="/shop/BFS" className="industryCard col-md-6 col-lg-5" category="Banking, Finance, Insurance"  >
-                    <img src={banking} alt="banking" className="img-fluid"/>
-                    <div className="industryName">Banking, Financial Services & Insurance</div></Link>
-                
-                   <Link to="/shop/Automotive&Aerospace" className="industryCard col-md-6 col-lg-5" category="Automotive and Aerospace"  >
-                    <img src={automotive} alt="automotive" className="img-fluid"/>
-                    <div className="industryName">Automotive & Aerospace</div></Link>
-              
-                </div>
-            </div>
-            <div className="consultancyDiv">
-            <div className="solutionTitle"><span>consultancy</span><div className="divUnderline"></div></div>
+            <div className="consultancyDiv" style={{width:"100vw",margin:"0",boxShadow:"none",padding:"0%"}}>
+            {/* <div className="solutionTitle"><span>consultancy</span><div className="divUnderline"></div></div> */}
             <div className="industryCardDiv ConsultancyCardDiv row" title="Click to continue to Strategy Consultancy" > 
-                <div className="ConsultancyCard col-md-10"onClick={
+                <div className="ConsultancyCard col-md-5"onClick={
                ()=>{
                 showstrat() }
              } >
@@ -104,7 +62,7 @@ Planning</li>
 
                 </div>
                
-                <div className="ConsultancyCard col-md-10" title="Click to continue to Advanced Formative Research"  onClick={
+                <div className="ConsultancyCard col-md-5" title="Click to continue to Advanced Formative Research"  onClick={
                ()=>{
                 showresearch() }
              }> 
@@ -224,9 +182,9 @@ Planning</li>
 </section>
             </div>
 
-         </div>
-        </>
+         
+   </>
     )
 }
 
-export default Solution
+export default Consultancy

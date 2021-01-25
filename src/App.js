@@ -4,11 +4,13 @@ import Chat from './components/chatsupport/Chat'
 import About from './pages/About';
 import Shop from './Shop';
 import Solution from './pages/Solution';
+import Consultancy from './pages/Consultancy';
 import Contact from './components/contact/Contact'
 // import Details from './components/about/About';
 import Landing from './components/Landing/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
+
 import User from './components/user/User';
 import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
@@ -37,18 +39,44 @@ function App() {
       
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/shop" component={Shop} />
+
+{/* ROUTES FOR SHOPS */}
+      <Route path="/shop" component={Shop}  /> 
       <Route path="/solution" component={Solution} />
-      <Route path="/blogs" component={Blogs} />
+      <Route path="/consultancy" component={Consultancy} />
+      <Route path="/shop/AllCategories" exact component={Shop}/>
+      <Route path="/shop/Chemicals&Materials" exact component={Shop}/>
+      <Route path="/shop/ConsumerGoods" exact component={Shop}/>
+      <Route path="/shop/Food&Bevarages" exact component={Shop}/>
+      <Route path="/shop/HealthCare" exact component={Shop}/>
+      <Route path="/shop/ICT" exact component={Shop}/>
+      <Route path="/shop/BFS" exact component={Shop}/>
+      <Route path="/shop/Automotive&Aerospace" exact component={Shop}/>
       <Route path="/cart" component={Cart} />
+
+{/* ROUTES END FOR SHOPS */}
+
+      <Route path="/blogs" component={Blogs} />
+      <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/user" component={User} />
-      <Route path="*" component={Missing} />
+
+    {/* ROUTES FOR ADDING BLOG PAGES !!!! CHANGE CODE BELOW ONLY*/}
       <Route path="/blog1" component={Blog1} />
       <Route path="/blog2" component={Blog2} />
       <Route path="/blog3" component={Blog3} />
       <Route path="/blog4" component={Blog4} />
+
+
+
+      {/* END ROUTES OF BLOG PAGES. MODIFY ABOVE THIS ONLY */}
+
+
+
+
+
+      <Route path="*" component={Missing} />
       </Switch>
       <Footer/>
 
@@ -66,7 +94,7 @@ const Home = () => {
   <div>
    <Landing/>
   <Industries/>
- <Contact/>
+
    
   </div>
   </>

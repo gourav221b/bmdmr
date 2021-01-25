@@ -22,7 +22,7 @@ function Bcard() {
        {bloglist.length ? bloglist.map(blog => (
       <div className="filterDiv col-md-4" key={blog.id} data-category={blog.category}>
         <div>
-         <Link to={blog.url}><a className="blogcard col-lg-10" style={{ 
+         <Link to={blog.url} className="blogcard col-lg-10" style={{ 
       background: `url("${blog.image}") #0000008c`,
       backgroundBlendMode:"overlay",
       backgroundPosition:"center",
@@ -36,7 +36,7 @@ function Bcard() {
                         <div className={`tag ${blog.category}`}>{blog.category}</div>
                     </div> */}
                 </div>
-            </a></Link>
+            </Link>
         </div>
     </div> 
         )) :<div> Blog Section is currently empty. Check back in a few days <br/><br/></div>}

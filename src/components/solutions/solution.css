@@ -192,3 +192,7 @@ list-style:circle;
     font-size: 4vh;
     cursor: pointer;
 }
+.form-field textarea{
+    height: auto;
+    background: transparent;
+}

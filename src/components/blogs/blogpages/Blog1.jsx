@@ -3,7 +3,7 @@ import '../blog.css';
 import Blogheader from './Blogheader'
 import Bloglist from './Bloglist';
 function Blog1() {
- 
+
     return (
         <div>
         <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Consumer Goods"/>

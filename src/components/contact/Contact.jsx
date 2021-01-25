@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Switch from 'react-switch'
 import '../../App.css'
+import '../Landing/landing.css'
 import './contact.css'
 
 function Contact() {
@@ -12,6 +13,12 @@ function Contact() {
   
     return (
       <>
+       <div className="div_big landing secondarylanding row" id="top">
+                <div className="landingdetails col-lg-6">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us</p>              
+                </div>                
+            </div>
       <div className="divHeading"><span> Get In Touch</span> <div className="divUnderline"></div></div>
       <div className="contactDiv  ">
          

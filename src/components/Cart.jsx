@@ -4,8 +4,7 @@ import axios from "axios"
 import {cartContext} from '../Global/cartContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import document from "../assets/Untitled.png"
-import document2 from "../assets/Untitled2.png"
+import '../shop.css';
 toast.configure();
 const Cart = (props) => {
  
@@ -40,10 +39,8 @@ const Cart = (props) => {
        <div className="cartContainer">
        <div className="cartDetails">
            {shoppingCart.length ? shoppingCart.map(product => (
-       <div className="cart" key={product.id}>
-        <span className="cartProImage"><img src={product.image} alt=""/>
-           <span className="imageCount">{product.qty}</span>
-        </span>
+       <div className="cart" key={product.id} style={{background:"#fff"}}>
+      
         <span className="cartProductName">{product.name}</span>
         <span className="cartProductPrice">Rs.{product.price}.00</span>
         {/* <span className="inc" onClick={() => dispatch({type: 'INC', id:product.id})}><i className="fas fa-plus"></i></span>

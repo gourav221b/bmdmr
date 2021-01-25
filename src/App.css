@@ -6,14 +6,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-body
+/* body
 {
   background: #EEF2F7;
   padding: 0;
   margin: 0;
-}
+} */
 #root,.container{
-  background: transparent;
+  background: #f1f1f1;
 }
 nav{
   display: flex;

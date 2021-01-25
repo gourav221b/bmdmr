@@ -26,8 +26,9 @@ text-align: left;
 }
 .secondarylanding
 {   
-    height: 70vh !important;
-    background: url('/src/assets/banner-bg.webp') no-repeat scroll center center;
+    height:40vh;
+    /* background: url('/src/assets/banner-bg.webp') no-repeat scroll center center; */
+    background: #f1f1f1;
     background-size: cover;
     width: 100vw;
    

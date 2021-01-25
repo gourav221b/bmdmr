@@ -7,6 +7,7 @@ import {Dropdown,ListGroup} from 'react-bootstrap'
 
 const readmore=()=>
 {
+  
   const bought=document.querySelectorAll('.readMore');
    const more=document.querySelectorAll('.prodDetails')
  more.forEach((morecontent)=>
@@ -15,7 +16,7 @@ const readmore=()=>
     var readsecond=morecontent.previousElementSibling.lastChild;
     var readless=morecontent.previousElementSibling.lastChild.lastChild;
     var prodimage=morecontent.parentElement.parentElement.firstElementChild.firstElementChild;
-   
+   console.log(readmore,readsecond,readless,prodimage)
   
     prodimage.addEventListener('click',()=>
     {   readmore.style.display="none";
@@ -41,23 +42,31 @@ const readmore=()=>
 
 
 const Product1 = () => {
+  
    const {products} = useContext(productContext);
    const {dispatch}= useContext(cartContext);
   
-   const [value,setValue]=useState(' ');
+   const [value,setValue]=useState(window.location.pathname.split('/')[2]);
+   const [open, setOpen] = useState(false);
+   const [filter,setfilter]=useState(1);
+  //  console.log("VALUE IS",value)
+  // if(value!="AllCategories")
+  // setfilter(1);
   
-   const [filter,setfilter]=useState('0');
   const handleSelect=(e)=>{
     console.log(e);
     setValue(e);
-    window.location.hash =`?${e.toString()}`
+
+    document.querySelector('.valueName').scrollIntoView();
    setfilter(1)
-   if(e=="All Categories")
+
+   if(e=="AllCategories")
    setfilter(0);
 
     
   }
 
+  
   var cartbtn =document.querySelectorAll('.proButton');
   cartbtn.forEach((btn)=>{
       btn.addEventListener('click',()=>{
@@ -67,6 +76,19 @@ const Product1 = () => {
       })
      
   })
+  var str=`${value}`;
+  var res;
+  switch(str)
+  {
+    case 'Chemicals&Materials': res="Chemicals & Materials"; break;
+    case 'ConsumerGoods': res="Consumer Goods"; break;
+    case 'Food&Beverages': res="Food & Beverages"; break;
+    case 'HealthCare': res="Healthcare"; break;
+    case 'ICT': res="ICT"; break;
+    case 'BFS': res="Banking, Finance, Insurance"; break;
+    case 'Automotive&Aerospace': res="Automotive & Aerospace"; break;
+    default: res="All Categories";break;
+  }
 
     return(
       <> <div className="filteringDiv ">
@@ -76,17 +98,17 @@ const Product1 = () => {
       id="dropdown-menu-align-right"
       onSelect={handleSelect}
         >
-           <Dropdown.Item eventKey="All Categories" >All categories</Dropdown.Item>
-              <Dropdown.Item eventKey="Chemicals & Materials">Chemicals & Materials</Dropdown.Item>
-              <Dropdown.Item eventKey="Consumer Goods">Consumer Goods</Dropdown.Item>
-              <Dropdown.Item eventKey="Food & Beverages">Food & Beverages</Dropdown.Item>
+           <Dropdown.Item eventKey="AllCategories" >All categories</Dropdown.Item>
+              <Dropdown.Item eventKey="Chemicals&Materials">Chemicals & Materials</Dropdown.Item>
+              <Dropdown.Item eventKey="ConsumerGoods">Consumer Goods</Dropdown.Item>
+              <Dropdown.Item eventKey="Food&Beverages">Food & Beverages</Dropdown.Item>
               <Dropdown.Item eventKey="HealthCare">HealthCare</Dropdown.Item>
               <Dropdown.Item eventKey="ICT">Internet, Communication, Technology</Dropdown.Item>
-              <Dropdown.Item eventKey="Banking, Finance, Insurance">Banking, Finance, Insurance</Dropdown.Item>
-              <Dropdown.Item eventKey="Automotive and Aerospace">Automotive and Aerospace</Dropdown.Item>
+              <Dropdown.Item eventKey="BFS">Banking, Finance, Insurance</Dropdown.Item>
+              <Dropdown.Item eventKey="Automotive&Aerospace">Automotive and Aerospace</Dropdown.Item>
              
       </DropdownButton>
-             <h5 id="filterquery">{filter!=1 ?" All Products" : `${value}` }</h5>
+             <h5 id="filterquery">{filter!=1 ?" All Categories" : `${res}` }</h5>
         </div>
         <div className="mainShop">
        
@@ -98,14 +120,14 @@ const Product1 = () => {
       onSelect={handleSelect}
      
         >
-           <ListGroup.Item eventKey="All Categories">All categories</ListGroup.Item>
-              <ListGroup.Item eventKey="Chemicals & Materials">Chemicals & Materials</ListGroup.Item>
-              <ListGroup.Item eventKey="Consumer Goods">Consumer Goods</ListGroup.Item>
-              <ListGroup.Item eventKey="Food & Beverages">Food & Beverages</ListGroup.Item>
+            <ListGroup.Item eventKey="AllCategories" >All categories</ListGroup.Item>
+              <ListGroup.Item eventKey="Chemicals&Materials">Chemicals & Materials</ListGroup.Item>
+              <ListGroup.Item eventKey="ConsumerGoods">Consumer Goods</ListGroup.Item>
+              <ListGroup.Item eventKey="Food&Beverages">Food & Beverages</ListGroup.Item>
               <ListGroup.Item eventKey="HealthCare">HealthCare</ListGroup.Item>
               <ListGroup.Item eventKey="ICT">Internet, Communication, Technology</ListGroup.Item>
-              <ListGroup.Item eventKey="Banking, Finance, Insurance">Banking, Finance, Insurance</ListGroup.Item>
-              <ListGroup.Item eventKey="Automotive and Aerospace">Automotive and Aerospace</ListGroup.Item>
+              <ListGroup.Item eventKey="BFS">Banking, Finance, Insurance</ListGroup.Item>
+              <ListGroup.Item eventKey="Automotive&Aerospace">Automotive and Aerospace</ListGroup.Item>
              
       </ListGroup >
         
@@ -150,18 +172,11 @@ const Product1 = () => {
             </div>
             
               
-               {product.productStatus === 'Chemicals & Materials' ? <div className="colorcode chemical">Chemicals & Materials</div>: ''}
-               {product.productStatus === 'Consumer Goods' ? <div className="colorcode consumer">Consumer Goods</div>: ''}
-               {product.productStatus === 'Food & Beverages' ? <div className="colorcode food">Food & Beverages</div>: ''}
-               {product.productStatus === 'HealthCare' ? <div className="colorcode healthCare">Healthcare</div>: ''}
-               {product.productStatus === 'ICT' ? <div className="colorcode ICT">ICT</div>: ''}
-               {product.productStatus === 'Banking, Finance,Insurance' ? <div className="colorcode banking">Banking, Financal Services,Insuarance</div>: ''}
-               {product.productStatus === 'Automotive and Aerospace' ? <div className="colorcode automotive">Automotive and Aerospace</div>: ''}
             </div>
             <div className="col-lg-12 " style={{padding:0}}>
             <div className="readMore" onClick={()=>{
               readmore();
-            }}><span className="more"> </span> <span className="less"><h4 style={{background:"#fff",position:"sticky",top:"0",pointerEvents:"none"}}> &nbsp; TABLE OF CONTENT</h4> <span>&times;</span></span></div>
+            }}><span className="more"> </span> <span className="less"><h5 style={{position:"sticky",top:"0",pointerEvents:"none",textDecoration:"none"}}> &nbsp; TABLE OF CONTENT</h5> <span>&times;</span></span></div>
                <div className="prodDetails">
                  <div className="detailLeft col-md-12">
                  
@@ -177,7 +192,7 @@ const Product1 = () => {
         
         </div>
       :  <div className="products " style={{marginTop: '30px'}}>
-          <h2 className="valueName">{value}</h2>
+          <h2 className="valueName">{res}</h2>
       {products.filter(productAll => 
   
   productAll.productStatus == `${value}`).map(product => (
@@ -210,9 +225,7 @@ const Product1 = () => {
                <div className="proButton col-md-4" onClick={() =>
               {
                  dispatch({type:'ADD_TO_CART', id: product.id, products})
-                   
-                 
-           }
+                   }
             }>
                  <button className="buyNow">add to cart</button>
                </div>
@@ -220,18 +233,11 @@ const Product1 = () => {
             </div>
             
               
-               {product.productStatus === 'Chemicals & Materials' ? <div className="colorcode chemical">Chemicals & Materials</div>: ''}
-               {product.productStatus === 'Consumer Goods' ? <div className="colorcode consumer">Consumer Goods</div>: ''}
-               {product.productStatus === 'Food & Beverages' ? <div className="colorcode food">Food & Beverages</div>: ''}
-               {product.productStatus === 'HealthCare' ? <div className="colorcode healthCare">Healthcare</div>: ''}
-               {product.productStatus === 'ICT' ? <div className="colorcode ICT">ICT</div>: ''}
-               {product.productStatus === 'Banking, Finance,Insurance' ? <div className="colorcode banking">Banking, Financal Services,Insuarance</div>: ''}
-               {product.productStatus === 'Automotive and Aerospace' ? <div className="colorcode automotive">Automotive and Aerospace</div>: ''}
             </div>
             <div className="col-lg-12 " style={{padding:0}}>
             <div className="readMore" onClick={()=>{
               readmore();
-            }}><span className="more"> </span> <span className="less"><h4 style={{background:"#fff",position:"sticky",top:"0",pointerEvents:"none"}}> &nbsp; TABLE OF CONTENT</h4> <span>&times;</span></span></div>
+            }}><span className="more"> </span> <span className="less"><h5 style={{position:"sticky",top:"0",pointerEvents:"none",textDecoration:"none"}}> &nbsp; TABLE OF CONTENT</h5> <span>&times;</span></span></div>
                <div className="prodDetails">
                  <div className="detailLeft col-md-12">
                  

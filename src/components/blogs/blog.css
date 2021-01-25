@@ -63,7 +63,7 @@
 .blogcard {
     font-family: 'Heebo', sans-serif;
     /* background-blend-mode: darken !important; */
-    height: 20em;
+    height: fit-content;
     /* width: 13em; */
     font-size: 1.5em;
     color: white;
@@ -91,6 +91,7 @@
     text-decoration: none;
     margin-left:-8px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .blogcard:hover {
@@ -112,7 +113,7 @@
     line-height: 1.8em;
 }
 
-.blogcard .tags {
+/* .blogcard .tags {
     display: flex;
 }
 
@@ -140,7 +141,7 @@
     padding: 1em;
     line-height: 1em;
     opacity: .8;
-}
+} */
 
 .blogcard:before,
 .blogcard:after {
@@ -401,3 +402,4 @@ table td {
     height: auto;
     overflow-y: scroll;
 }
+

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './industries.css';
 import '../../App.css'
 import chemical from './icons/chemical.png';
@@ -15,37 +16,44 @@ function Industries() {
         {
             id:1,
             name:"Chemicals and Materials",
-            image:chemical
+            image:chemical,
+            link:"/shop/Chemicals&Materials"
         },
         {
             id:2,
             name:"Consumer Goods",
-            image:consumer
+            image:consumer,
+            link:"/shop/ConsumerGoods"
         },
         {
             id:3,
             name:"Food & Beverages",
-            image:food
+            image:food,
+            link:"/shop/Food&Bevarages"
         },
         {
             id:4,
             name:"HealthCare",
-            image:HealthCare
+            image:HealthCare,
+            link:"/shop/HealthCare"
         },
         {
             id:5,
             name:"Internet, Communication & Technology",
-            image:ICT
+            image:ICT,
+            link:"/shop/ICT"
         },
         {
             id:6,
             name:"Banking, Financial Services & Insurance",
-            image:banking
+            image:banking,
+            link:"/shop/BFS"
         },
         {
             id:7,
             name:"Automotive & Aerospace",
-            image:automotive
+            image:automotive,
+            link:"/shop/Automotive&Aerospace"
         }
     ]
     return (
@@ -53,11 +61,11 @@ function Industries() {
     <div className="divHeading"><span> Industries We Serve </span> <div className="divUnderline"></div></div>
     <div className="industriesWrapper">
     {industries.length ? industries.map(service => (
-        <div className="servicecard" key={service.id}>
+       <Link to={service.link}className="servicecard" key={service.id} onClick={()=>{window.scrollTo(0,0)}}>
             <img src={service.image} alt={service.name}/>
             <span>{service.name}</span>
 
-    </div>
+    </Link>
         ))  :<div> Services Section is undergoing review. Check back in a few days or email us to know more <br/><br/></div>}
    
    {/* <div className="servicecard " style={{background:"linear-gradient(to bottom, transparent,rgb(151, 151, 151))",filter:"brightness(100%)",color:"rgb(69, 107, 177)" }}>
