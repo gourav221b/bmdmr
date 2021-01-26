@@ -1,0 +1,113 @@
+
+.sampleWrapper
+{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    left: 0;
+    background: rgba( 21, 62, 109, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.0px );
+    -webkit-backdrop-filter: blur( 9.0px );
+    
+}
+.closeModal
+{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+}
+
+.sample-section .title {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .sample-section .input-wrapper {
+    position: relative;
+    width: 500px;
+    height: 12vh;
+    overflow: hidden;
+  }
+  
+  .sample-section .input-wrapper input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff !important;
+    border-radius: 5px;
+    color: #fefefe;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 60px 0 20px;
+  }
+  .sample-section .input-wrapper .arrow-btn {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-55%, -50%);
+    border: none;
+    outline: none;
+    width: 200%;
+    height: 100%;
+    background: transparent;
+    background: blueviolet;
+    border-radius: 5px 0 0 5px;
+    transition: all 500ms ease-in-out;
+    clip-path: circle(25px at 50% 50%);
+    cursor: pointer;
+  }
+  .sample-section .input-wrapper .arrow-btn.clip-path, .sample-section .input-wrapper .arrow-btn:hover {
+    background: #1369eb;
+    clip-path: circle(200% at 50% 50%);
+  }
+  .sample-section .input-wrapper .arrow-btn .bi-arrow-right-short {
+    width: 40px;
+    height: 40px;
+    color: #fefefe;
+  }
+  .sampleWrapper ::placeholder{
+      color: #fff;
+  }
+  @media screen and (max-width:480px)
+  {
+    .sample-section
+    {
+      width: 90vw;
+      margin: 0 5vw;
+    }
+    .sample-section .input-wrapper
+    {
+      height: 11vh;
+    }
+    .sample-section .input-wrapper input 
+    {
+     width: 90vw;
+    }
+    .sample-section .input-wrapper .arrow-btn
+    {
+      left: 70%;
+      
+    }
+    .sample-section .input-wrapper .arrow-btn.clip-path, .sample-section .input-wrapper .arrow-btn:hover {
+      background:transparent;
+      clip-path: none;
+
+    }
+    .sample-section .title
+    {
+      font-size: 20px;
+    }
+  }

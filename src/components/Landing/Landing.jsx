@@ -9,7 +9,8 @@ function landing() {
 
     return (
         <div>
-            <Particles style={{position:"absolute"}}
+            {/* <div className="transparent" style={{width:"100vw",height:"30vh",display:"none",position:"absolute",top:"10vh",left:"0",zIndex:"3"}}></div> */}
+            <Particles style={{position:"absolute",top:"30vh",left:"0",width:"50vw"}}
     params={{
 	    "particles": {
 	        "number": {
@@ -31,7 +32,7 @@ function landing() {
             <div className="div_big landing homelanding row" id="top">
                 <div className="landingdetails col-lg-7">
                 <h1>BMDMR.COM</h1>
-                <p>BMA Market Research is an India based research and consulting company. The company provides
+                <p>DMBMR is an India based research and consulting company. The company provides
                     syndicated research reports, customized research reports, and consulting services. </p>
                 <Link to="/about"><Button className=" btn"> Learn More</Button></Link>
                 </div>

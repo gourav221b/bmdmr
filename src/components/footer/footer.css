@@ -88,9 +88,9 @@
     color: #ffffff;
 }
 .leftDiv>.title,
-.rightDiv>.title
+.rightDiv>.title,.newslettertitle
  {
-  color: rgb(73, 159, 216);
+  color: rgb(73, 159, 216) !important;
 }
 
 .leftDiv .footerService {
@@ -101,6 +101,10 @@
     text-decoration: none;
     color: #fff;
 }
+.leftDiv>ul>li {
+    color: #8a8484;
+}
+
 .leftDiv>ul>li>span {
     color: #ffffff;
 }
@@ -156,7 +160,7 @@
 }
 .footerrow2 >.title
 {
-    color:#8a8484  !important;
+    color:#8a8484  ;
     margin-top: 13px;
 }
 .newsletter {

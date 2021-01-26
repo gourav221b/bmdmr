@@ -145,7 +145,7 @@ nav li:hover
   list-style: none;
   position: absolute;
   right: 30px;
-  top: 0;
+  top: -10px;
 }
 
 .navlinks li

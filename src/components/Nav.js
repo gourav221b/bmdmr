@@ -5,6 +5,7 @@ import {NavDropdown,Button,Collapse} from 'react-bootstrap'
 import '../App.css';
 import './nav.css';
 import ProductContextProvider from "../Global/productContext"
+import Logo from '../assets/cost.svg'
 
 
 const Nav= ({cartToggle})=> {    
@@ -95,7 +96,9 @@ if(window.innerWidth>1100)
   return (
     <>
     <nav>
-        <Link to="/" style={navStyle}><h3>Dhanania</h3></Link>
+        <Link to="/" style={navStyle}><h3>Dhanania</h3>
+        {/* <img src={Logo} className="logo" alt="logo"/> */}
+        </Link>
       <div className="hamburgerMenu" id="hamMenu"><i className="fa fa-bars"></i></div>
       <div className="sidenav" id="sidenav">
         <div className="closebtn" id="closebtn">&times;</div>
@@ -135,21 +138,24 @@ if(window.innerWidth>1100)
       </div>
       <Collapse in={open2}>
         <div id="collapseReport" className="" >
-        <div> Chemicals & Materials</div>
-        <div>Consumer Goods</div>
-        <div>Food & Beverages</div>
-        <div>HealthCare</div>
-        <div>Internet, Communication & Technology</div>
-        <div>Banking, Financial Services & Insurance</div>
-        <div>Automotive & Aerospace</div>
+        <div><Link className="dropdowngray"to="/shop/Chemicals&Materials"> Chemicals & Materials</Link></div>
+        <div><Link className="dropdowngray"to="/shop/ConsumerGoods">Consumer Goods</Link></div>
+        <div><Link className="dropdowngray"to="/shop/Food&Bevarages">Food & Beverages</Link></div>
+        <div><Link className="dropdowngray"to="/shop/HealthCare">HealthCare</Link></div>
+        <div><Link className="dropdowngray"to="/shop/ICT">Internet, Comms & Technology</Link></div>
+        <div><Link className="dropdowngray"to="/shop/BFS">Banking, Finance & Insurance</Link></div>
+        <div><Link className="dropdowngray"to="/shop/Automotive&Aerospace">Automotive & Aerospace</Link></div>
         </div>
         </Collapse>
         <NavLink to="/consultancy" className="sidenavcomponent " activeClassName="SideActive" style={{color:"#fff"}}>Consultancy</NavLink>
         </div>
       </Collapse>
             </li>
-          <li className="sidenavlinkcomponent sidenavcomponent">  <NavLink style={navStyle} to='/blogs' activeClassName="SideActive">
-            Blogs
+          <li className="sidenavlinkcomponent sidenavcomponent">  <NavLink style={navStyle} to='/insights' activeClassName="SideActive">
+            Insights
+            </NavLink></li>
+            <li className="sidenavlinkcomponent sidenavcomponent">  <NavLink style={navStyle} to='/career' activeClassName="SideActive">
+            Career
             </NavLink></li>
              <li className="sidenavlinkcomponent sidenavcomponent"><NavLink style={navStyle} to='/login' activeClassName="SideActive">
            Login
@@ -187,8 +193,11 @@ if(window.innerWidth>1100)
              <NavLink to="/consultancy"  activeClassName="dropdownActive" className="dropdownitem">Consultancy</NavLink>
            </div>
           </li>
-           <li> <NavLink style={navStyle} to='/blogs'activeClassName="SideActive">
-            Blogs
+           <li> <NavLink style={navStyle} to='/insights'activeClassName="SideActive">
+            Insights
+           </NavLink></li>
+           <li> <NavLink style={navStyle} to='/career'activeClassName="SideActive">
+            Career
            </NavLink></li>
            <li> <NavLink style={navStyle} to='/contact'activeClassName="SideActive">
             Contact

@@ -2,6 +2,7 @@ import React from 'react'
 import './missing.css';
 import {Link} from 'react-router-dom'
 function Missing() {
+  window.scrollTo(0,0);
     return (
         <div>
             <main className='cont'>

@@ -6,7 +6,7 @@ function Blog1() {
 
     return (
         <div>
-        <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Consumer Goods"/>
+        <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Chemicals & Materials"/>
   
         <div className="main row" >
         <div className="col-md-3 recentcontent">

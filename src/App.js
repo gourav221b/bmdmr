@@ -18,7 +18,11 @@ import Industries from './components/industries/Industries';
 import Missing from './Missing';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductContextProvider from "./Global/productContext"
-import CartContextProvider from "./Global/cartContext"
+import CartContextProvider from "./Global/cartContext";
+import Insights from './pages/Insights';
+import Article from './pages/Article';
+import Press from './pages/PressRelease'
+import Career from './pages/Career'
 import Blogs from './pages/Blogs';
 import Blog1 from './components/blogs/blogpages/Blog1'
 import Blog2 from './components/blogs/blogpages/Blog2'
@@ -55,8 +59,14 @@ function App() {
       <Route path="/cart" component={Cart} />
 
 {/* ROUTES END FOR SHOPS */}
-
+      <Route path="/insights" component={Insights}/>
       <Route path="/blogs" component={Blogs} />
+      <Route path="/article" component={Article} />
+      <Route path="/pressRelease" component={Press} />
+      
+
+
+      <Route path="/career" component={Career} />
       <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
@@ -79,6 +89,7 @@ function App() {
       <Route path="*" component={Missing} />
       </Switch>
       <Footer/>
+      
 
     </Router>
     </CartContextProvider>

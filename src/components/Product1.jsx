@@ -4,7 +4,8 @@ import {productContext} from "../Global/productContext"
 import {cartContext} from "../Global/cartContext"
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Dropdown,ListGroup} from 'react-bootstrap'
-
+import Sample from '../components/samplemodal/SampleModal'
+import '../components/samplemodal/sample.css'
 const readmore=()=>
 {
   
@@ -15,9 +16,12 @@ const readmore=()=>
     var readmore=morecontent.previousElementSibling.firstChild;
     var readsecond=morecontent.previousElementSibling.lastChild;
     var readless=morecontent.previousElementSibling.lastChild.lastChild;
-    var prodimage=morecontent.parentElement.parentElement.firstElementChild.firstElementChild;
-   console.log(readmore,readsecond,readless,prodimage)
-  
+    var prodimage=morecontent.parentElement.parentElement.firstElementChild.firstElementChild.firstElementChild.nextElementSibling.firstElementChild;
+    var sample= prodimage.parentElement.nextElementSibling;
+    var samplemodal=readmore.parentElement.parentElement.nextElementSibling;
+    var sampleicon= samplemodal.firstElementChild;
+    var closebtn=samplemodal.firstElementChild.firstElementChild;
+  // console.log(sampleicon)
     prodimage.addEventListener('click',()=>
     {   readmore.style.display="none";
     readless.style.display="flex";
@@ -35,8 +39,19 @@ const readmore=()=>
     morecontent.style.display="none";
 
     })
+    sample.addEventListener('click',()=>
+    {
+      samplemodal.style.display="flex";
+      sampleicon.style.display="inline-block";
+      
+    })
+    closebtn.addEventListener('click',()=>
+    {
+      samplemodal.style.display="none";
+ 
+    })
    })
-
+  
  
 }
 
@@ -89,7 +104,20 @@ const Product1 = () => {
     case 'Automotive&Aerospace': res="Automotive & Aerospace"; break;
     default: res="All Categories";break;
   }
+ 
+  const showbtn=document.querySelector('.showMore')
 
+// function showmore()
+// {  
+//   const productDiv=document.querySelectorAll('.products') 
+//   productDiv.forEach((prod)=>{
+  
+//       prod.style.height=`fit-content`
+ 
+
+//   })
+ 
+// }
     return(
       <> <div className="filteringDiv ">
         <DropdownButton
@@ -131,10 +159,12 @@ const Product1 = () => {
              
       </ListGroup >
         
-        {filter !=1 ?  <div className="products " style={{marginTop: '30px'}}>
+        {filter !=1 ? <> <div className="products " style={{marginTop: '30px'}}>
             <h2 className="valueName">All Categories</h2>
         {products.map(product => (
+          <>
             <div className="product row " key={product.id}>
+             
               <div className="pro row">
            
             <div className="productDetails col-md-12 ">
@@ -143,10 +173,18 @@ const Product1 = () => {
                 </div>
                 <div className="proToc " onClick={()=>{
                    readmore()
-               }}>
+               }} >
                    {product.categorisation}
-               <span style={{color:"blue"}} className="productRead"> Read More </span>
+               <span style={{color:"blue"}} className="productRead"> Read More </span>  </div>
+               <div className="proSample" style={{marginTop:"10px"}} onClick={()=>{
+                  readmore();
+               }}>
+
+                 <span className="samplerequest"><i className="fa fa-bell" aria-hidden="true"></i> Request A Sample</span>
+                 
                </div>
+               
+             
               
                <div className="row productrow" style={{display:"flex",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-around",marginTop:"40px", width:"100%"}}>
                <div className="proDate flex">
@@ -155,6 +193,7 @@ const Product1 = () => {
                <div className="proToc flex">
               <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :<i className="fa fa-square-o" ></i>}
                </div>
+               
                <div className="proPrice flex">
                    <span>Price:</span>
                    Rs.{product.price}.00
@@ -187,17 +226,65 @@ const Product1 = () => {
              </div>
                  </div>
 
-        </div></div>
-        ))}
-        
         </div>
-      :  <div className="products " style={{marginTop: '30px'}}>
+       
+         <div className="sampleWrapper">
+         <section className="sample-section">
+             <h1 className="closeModal" id="closemodal" onClick={()=>{
+               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
+             }}>&times;</h1>
+<h1 className="title">Ask A Free Sample For</h1>
+<h1 className="title" style={{fontStyle:"oblique"}}>{product.name}</h1>
+<div className="input-wrapper">
+<input type="text" name="name"  placeholder="Enter your Name*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="phone"  placeholder="Enter your Phone Number*" required/>
+</div>
+<div className="input-wrapper">
+<input type="email" name="email" id="sample" placeholder="Enter your Active Email*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="company"  placeholder="Your Company* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="designation"  placeholder="Your Designation* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="skypeId"  placeholder="Your Skype Id" />
+</div>
+<div className="input-wrapper">
+   <input type="text" defaultValue={product.name} style={{display:'none'}} name="type"/>
+   <input type="text" defaultValue={product.id} style={{display:'none'}} name="id"/>
+{/* <input type="email" name="email" id="sample" placeholder="Enter your Active Email Address" required/> */}
+<button className="btn arrow-btn" onClick={()=>{
+               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
+             }}>
+ <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+   <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+ </svg>
+</button>
+</div>
+</section>
+     </div>
+     </div>
+     </>
+       
+       ))}
+        
+       
+        
+                  </div> </>
+      : 
+       <div className="products " style={{marginTop: '30px'}}>
           <h2 className="valueName">{res}</h2>
       {products.filter(productAll => 
   
   productAll.productStatus == `${value}`).map(product => (
       
-    <div className="product row " key={product.id}>
+    <>
+            <div className="product row " key={product.id}>
+             
               <div className="pro row">
            
             <div className="productDetails col-md-12 ">
@@ -206,10 +293,18 @@ const Product1 = () => {
                 </div>
                 <div className="proToc " onClick={()=>{
                    readmore()
-               }}>
+               }} >
                    {product.categorisation}
-               <span style={{color:"blue"}} className="productRead"> Read More </span>
+               <span style={{color:"blue"}} className="productRead"> Read More </span>  </div>
+               <div className="proSample" style={{marginTop:"10px"}} onClick={()=>{
+                  readmore();
+               }}>
+
+                 <span className="samplerequest"><i className="fa fa-bell" aria-hidden="true"></i> Request A Sample</span>
+                 
                </div>
+               
+             
               
                <div className="row productrow" style={{display:"flex",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-around",marginTop:"40px", width:"100%"}}>
                <div className="proDate flex">
@@ -218,6 +313,7 @@ const Product1 = () => {
                <div className="proToc flex">
               <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :<i className="fa fa-square-o" ></i>}
                </div>
+               
                <div className="proPrice flex">
                    <span>Price:</span>
                    Rs.{product.price}.00
@@ -225,7 +321,9 @@ const Product1 = () => {
                <div className="proButton col-md-4" onClick={() =>
               {
                  dispatch({type:'ADD_TO_CART', id: product.id, products})
-                   }
+                   
+                 
+           }
             }>
                  <button className="buyNow">add to cart</button>
                </div>
@@ -248,13 +346,57 @@ const Product1 = () => {
              </div>
                  </div>
 
-        </div></div>
-        ))}
+        </div>
+       
+         <div className="sampleWrapper">
+         <section className="sample-section">
+             <h1 className="closeModal" id="closemodal" onClick={()=>{
+               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
+             }}>&times;</h1>
+<h1 className="title">Ask A Free Sample For</h1>
+<h1 className="title" style={{fontStyle:"oblique"}}>{product.name}</h1>
+
+<div className="input-wrapper">
+<input type="text" name="name"  placeholder="Enter your Name*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="phone"  placeholder="Enter your Phone Number*" required/>
+</div>
+<div className="input-wrapper">
+<input type="email" name="email"  placeholder="Enter your Active Email*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="company"  placeholder="Your Company* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="designation"  placeholder="Your Designation* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="skypeId"  placeholder="Your Skype Id" />
+</div>
+<div className="input-wrapper">
+   <input type="text" defaultValue={product.name} style={{display:'none'}} name="type"/>
+   <input type="text" defaultValue={product.id} style={{display:'none'}} name="id"/>
+{/* <input type="email" name="email"  placeholder="Enter your Active Email Address" required/> */}
+<button className="btn arrow-btn" onClick={()=>{
+               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
+             }}>
+ <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+   <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+ </svg>
+</button>
+</div>
+</section>
+     </div>
+     </div>
+     </>))}
       
       </div>
     }
+
        
         </div>
+       
         </>
     )
 

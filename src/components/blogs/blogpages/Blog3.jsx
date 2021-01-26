@@ -5,7 +5,7 @@ import Bloglist from './Bloglist';
 function Blog4() {
     return (
         <div>
-        <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Consumer Goods"/>
+        <Blogheader name="Electric Vehicles Industry: Analyst Insights" tag="Food & Bevarages"/>
         <div className="main row" >
         <div className="col-md-3 recentcontent">
 <Bloglist/>

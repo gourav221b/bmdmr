@@ -1,0 +1,89 @@
+.insightDivWrapper
+{
+    width: 90vw;
+    margin: 0 5vw;
+} 
+.insightDiv
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    
+}
+
+.insightImg
+{
+    width: 90%;
+    height: auto;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  padding: 0;
+}
+.insightDetail
+{
+   
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+  
+}
+.insightDetail>p
+
+{
+    width: 90%;
+    margin: 20px auto;
+    text-align: justify;
+    
+}
+.insightBtn
+{
+    text-decoration: none;
+    padding: 12px 20px;
+    color: #fff;
+    background: #043f80;
+    transition: 0.4s ease;
+   
+  font-family: 'Poppins','Roboto Condensed','Raleway',sans-serif;
+}
+.insightBtn:hover
+{
+    background: transparent;
+    color: #043f80;
+    border: 1px solid;
+    text-decoration: none;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
+@media screen and (min-width:480px){
+
+    .insightImg
+    {
+        width: 100%;
+    }
+.insightDiv:nth-of-type(2n)
+{
+    flex-direction: row-reverse;
+}
+.insightDetail
+{ text-align: left;
+    word-wrap: break-word;
+    align-items: center;
+    justify-content: center;
+}
+}

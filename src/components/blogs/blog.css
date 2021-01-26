@@ -393,6 +393,9 @@ table td {
         align-items: center;
         justify-content: center;
     }
+    #blogtitle{
+        font-size: 150%;
+    }
 }
 .recentcontent {
     margin: 2%;

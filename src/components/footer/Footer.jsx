@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer div_big" id="footer">
         <section className="footerContact ">
             <div className="email ">
-                <a className="contactfoot" >info@bookmyaccountant.com</a>
+                <a className="contactfoot" href="mailto:info@bookmyaccountant.com">info@bookmyaccountant.com</a>
             </div>
             <div className="number ">
                 <a className="contactfoot"> +91 9x xxxx 0xxx</a>
@@ -15,61 +15,70 @@ function Footer() {
         </section>
         <section className="footerrow1 ">
             <div className="leftDiv ">
+                <div className="title ">Here We Are:</div>
+                <ul>
+                    <li>
+                        114/1A, Cotton Street, Burra Bazar, 1st Floor,<br />
+                        <span>Kolkata</span> – 700007</li>
+                    <li>
+                        891/A, BNRK Tower, 7th A Main Road, 1st Block Koramangala, 3rd Floor, Near Wipro Signal, <br/><span>Bengaluru </span>– 560034</li>
+                    <li>
+                        Near Purulia Income tax building , Sahebandh Road,<br /><span>Purulia</span>-723101
+                    </li>
+                    <li>
+                        House No. 15, Phase 1, Harsh Vihar, Daldal Seoni Road,<br/>
+                        <span>Raipur </span> – 492007
+                    </li>
+                </ul>
+               
+            </div>
+            <div className="rightDiv ">
                 <div className="title ">Services We Provide:</div>
                 <ul>
                     <li>
-                        <Link to="" className="footerService">
+                        <Link to="/shop/Chemicals&Materials" className="footerService" onClick={()=>{
+                            window.scrollTo(0,0);
+                        }} >
                     Chemicals & Materials</Link>
                         <br />
                        </li>
                     <li>
-                        <Link to="" className="footerService">
+                        <Link to="/shop/ConsumerGoods" className="footerService" onClick={()=>{
+                            window.scrollTo(0,0);
+                        }} >
                     Consumer Goods </Link>
                     </li>
                     <li>
-                        <Link to="" className="footerService">
+                        <Link to="/shop/Food&Bevarages" className="footerService" onClick={()=>{
+                            window.scrollTo(0,0);
+                        }} >
                     Food & Beverages</Link>
                     </li>
                     <li>
-                        <Link to="" className="footerService">
+                        <Link to="/shop/HealthCare" className="footerService" onClick={()=>{
+                            window.scrollTo(0,0);
+                        }} >
                     HealthCare</Link>
                     </li>
                     <li>
-                        <Link to="" className="footerService">
+                        <Link to="/shop/ICT" className="footerService" onClick={()=>{
+                            window.scrollTo(0,0);
+                        }} >
                     Internet, Communication & Technology</Link>
                     </li>
                         <li>
-                            <Link to="" className="footerService"> Banking, Financial Services & Insurance</Link>
+                            <Link to="/shop/BFS" className="footerService"  onClick={()=>{
+                                window.scrollTo(0,0);
+                            }}> 
+                            Banking, Financial Services & Insurance</Link>
 
                     </li>
                         <li>
-                            <Link to="" className="footerService"> Automotive & Aerospace</Link>
+                            <Link to="/shop/Automotive&Aerospace" className="footerService"  onClick={()=>{
+                                window.scrollTo(0,0);
+                            }}> 
+                            Automotive & Aerospace</Link>
 
-
-                    </li>
-                </ul>
-            </div>
-            <div className="rightDiv ">
-                <div className="title ">Important Links:</div>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://www.incometaxindiaefiling.gov.in ">Income Tax E-filing</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.gst.gov.in ">GST Portal</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.cbic.gov.in ">Central Board of Indirect Taxes</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.mca.gov.in ">MCA21-ROC Compliance</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.tin-nsdl.com/services ">PAN - TAN Online Application</a>
-
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp ">Online Income Tax Payment</a>
 
                     </li>
                 </ul>
@@ -101,7 +110,7 @@ function Footer() {
           
         </section>
         <section className="footerrow2 ">
-            <div className="title white-text" >SUBSCRIBE TO OUR NEWSLETTER</div>
+            <div className="title newslettertitle" >SUBSCRIBE TO OUR NEWSLETTER</div>
             <form  className="gform newsletter " method="POST ">
                 <input type="email " className="newsletterinput newsletteremail " name="email " id="email " placeholder="Email address " />
                 <button type="submit" className="newsletterinput newsletterbutton " >

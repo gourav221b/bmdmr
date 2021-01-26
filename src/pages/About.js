@@ -13,7 +13,7 @@ function About() {
                 
             </div>
             <div className="aboutdetails">
-            <p>BMA Market Research is an India based research and consulting company. The company provides
+            <p>DMBMR is an India based research and consulting company. The company provides
 syndicated research reports, customized research reports, and consulting services. We are focused to
 exhume the excellent opportunities in the market and promote efficient information for your business
 to thrive in the market. BMA provide accurate solutions to the complex business challenges and execute

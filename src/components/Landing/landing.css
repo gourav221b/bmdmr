@@ -47,6 +47,7 @@ color: #000;
 {
     height: auto;
     width: 30%;
+   
 }
 .landingdetails
 {
@@ -64,7 +65,7 @@ color: #000;
     width: auto;
   
   border-radius: 50px;
-  padding: 12px 20px;
+  padding: 12px 30px;
   /* background: linear-gradient(to right,#6b6bc4,#86a8e7, #3cbebe); */
   background: linear-gradient(to right,#222299,#1c3668, #085353);
 }
