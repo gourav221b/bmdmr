@@ -273,7 +273,7 @@ margin:  15px ;
     text-align: right;
      z-index: 4;
   }
- 
+
   .less span
   {
     position: absolute;
@@ -285,6 +285,13 @@ margin:  15px ;
     color: red;
     text-decoration: none !important; 
   }
+  .customtitle
+  {
+    text-transform: uppercase;
+    color: rgb(15, 34, 116);
+    font-weight: bolder;
+  }
+ 
   .prodDetails
   {
     display: none; 
@@ -333,6 +340,23 @@ margin:  15px ;
     white-space: pre-line;  
 vertical-align: bottom;
 line-height: 40px;
+  }
+  .custom
+  {
+    border-top: 1px solid #000;
+    padding-top: 20px;
+  }
+  .customization>span:hover
+  {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .green
+  {
+    color: rgb(17, 160, 17);
+  }
+  .red {
+    color: rgb(226, 39, 70);
   }
   /* Cart */
   
@@ -759,4 +783,21 @@ transition: all 0.3s ease;
 .sampleModal
 {
   display: none;
+}
+.closeCustomize>span:last-of-type
+{
+  position: absolute;
+  right: 10px;
+  font-size: 6vh;
+  cursor: pointer;
+}
+.closeCustomize>span:last-of-type:hover
+{
+  color: red;
+  transition: all 0.5s ease;
+}
+.custom
+{ 
+  display: none;
+  height: auto;
 }

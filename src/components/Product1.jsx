@@ -21,7 +21,10 @@ const readmore=()=>
     var samplemodal=readmore.parentElement.parentElement.nextElementSibling;
     var sampleicon= samplemodal.firstElementChild;
     var closebtn=samplemodal.firstElementChild.firstElementChild;
-  // console.log(sampleicon)
+    var customizebtn= sample.nextElementSibling;
+    var customizationtable= morecontent.nextElementSibling;
+    var customcloser= morecontent.nextElementSibling.firstElementChild;
+  // console.log("Custom:",customcloser)
     prodimage.addEventListener('click',()=>
     {   readmore.style.display="none";
     readless.style.display="flex";
@@ -50,7 +53,18 @@ const readmore=()=>
       samplemodal.style.display="none";
  
     })
+    customizebtn.addEventListener('click',()=>
+    {
+      customizationtable.style.display="block";
+      customizationtable.scrollIntoView()
+    })
+    customcloser.addEventListener('click',()=>
+    {
+      customizationtable.style.display="none"
+    })
+
    })
+   
   
  
 }
@@ -118,6 +132,7 @@ const Product1 = () => {
 //   })
  
 // }
+readmore();
     return(
       <> <div className="filteringDiv ">
         <DropdownButton
@@ -176,14 +191,18 @@ const Product1 = () => {
                }} >
                    {product.categorisation}
                <span style={{color:"blue"}} className="productRead"> Read More </span>  </div>
-               <div className="proSample" style={{marginTop:"10px"}} onClick={()=>{
+               <div className="proSample" style={{marginTop:"10px",marginRight:"50px", display:"inline-block"}} onClick={()=>{
                   readmore();
                }}>
 
-                 <span className="samplerequest"><i className="fa fa-bell" aria-hidden="true"></i> Request A Sample</span>
+                 <span className="samplerequest"><i className="fa fa-bell" ></i> Request A Sample</span>
                  
                </div>
-               
+               <div className="proCustomize" onClick={()=>{
+                 readmore();
+               }} style={{display:"inline-block"}}>
+                 <span className="customization">{product.customize==true?<i className="fa fa-check-square green" ></i>:<i className="fa fa-window-close red" ></i>} <span>Customization {product.customize==true?"Available":"Unavailable"}</span></span>
+               </div>
              
               
                <div className="row productrow" style={{display:"flex",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-around",marginTop:"40px", width:"100%"}}>
@@ -191,7 +210,7 @@ const Product1 = () => {
               <span style={{color:"gray"}}> Published:</span> {product.month<10 ? `0${product.month}` :` ${product.month}`}/{product.year}
                </div>
                <div className="proToc flex">
-              <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :<i className="fa fa-square-o" ></i>}
+              <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square green-o toctrue" ></i> :<i className="fa fa-square-o" ></i>}
                </div>
                
                <div className="proPrice flex">
@@ -225,7 +244,10 @@ const Product1 = () => {
                   </div>
              </div>
                  </div>
-
+                  <div className="detailLeft col-md-12 custom">
+                    <div className="closeCustomize"> <span className="customtitle">Customizations: </span><span onClick={()=>{readmore();}}>&times;</span></div>
+                    <div className="table">{product.customize==true?`${product.customTable}`:"Unavailable for this product"}</div>
+                    </div>
         </div>
        
          <div className="sampleWrapper">
@@ -274,7 +296,8 @@ const Product1 = () => {
         
        
         
-                  </div> </>
+                  </div> 
+                  </>
       : 
        <div className="products " style={{marginTop: '30px'}}>
           <h2 className="valueName">{res}</h2>
@@ -296,14 +319,18 @@ const Product1 = () => {
                }} >
                    {product.categorisation}
                <span style={{color:"blue"}} className="productRead"> Read More </span>  </div>
-               <div className="proSample" style={{marginTop:"10px"}} onClick={()=>{
+               <div className="proSample" style={{marginTop:"10px",marginRight:"50px",display:"inline-block"}} onClick={()=>{
                   readmore();
                }}>
 
-                 <span className="samplerequest"><i className="fa fa-bell" aria-hidden="true"></i> Request A Sample</span>
+                 <span className="samplerequest"><i className="fa fa-bell" ></i> Request A Sample</span>
                  
                </div>
-               
+               <div className="proCustomize" onClick={()=>{
+                 readmore();
+               }} style={{display:"inline-block"}}>
+                 <span className="customization">{product.customize==true?<i className="fa fa-check-square green" ></i>:<i className="fa fa-window-close red" ></i>} <span>Customization {product.customize==true?"Available":"Unavailable"}</span></span>
+               </div>
              
               
                <div className="row productrow" style={{display:"flex",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-around",marginTop:"40px", width:"100%"}}>
@@ -311,7 +338,7 @@ const Product1 = () => {
               <span style={{color:"gray"}}> Published:</span> {product.month<10 ? `0${product.month}` :` ${product.month}`}/{product.year}
                </div>
                <div className="proToc flex">
-              <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square-o toctrue" aria-hidden="true"></i> :<i className="fa fa-square-o" ></i>}
+              <span style={{color:"gray"}}> TOC:</span> {product.toc== true? <i className="fa fa-check-square green-o toctrue" ></i> :<i className="fa fa-square-o" ></i>}
                </div>
                
                <div className="proPrice flex">
@@ -345,8 +372,13 @@ const Product1 = () => {
                   </div>
              </div>
                  </div>
-
-        </div>
+                 <div className="detailLeft col-md-12 custom">
+                    <div className="closeCustomize"> <span className="customtitle">Customizations: </span><span onClick={()=>{readmore();}}>&times;</span></div>
+                    <div className="table">{product.customize==true?`${product.customTable}`:"Unavailable for this Product"}</div>
+                   
+                  </div>
+                 </div>
+               
        
          <div className="sampleWrapper">
          <section className="sample-section">

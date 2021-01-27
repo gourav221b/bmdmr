@@ -31,8 +31,8 @@ function landing() {
 	}} />
             <div className="div_big landing homelanding row" id="top">
                 <div className="landingdetails col-lg-7">
-                <h1>BMDMR.COM</h1>
-                <p>DMBMR is an India based research and consulting company. The company provides
+                <h1 style={{pointerEvents:"none"}}>BMDMR.COM</h1>
+                <p style={{ pointerEvents:"none"}}>DMBMR is an India based research and consulting company. The company provides
                     syndicated research reports, customized research reports, and consulting services. </p>
                 <Link to="/about"><Button className=" btn"> Learn More</Button></Link>
                 </div>

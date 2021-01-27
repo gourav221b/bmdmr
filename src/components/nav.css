@@ -12,10 +12,11 @@
     position: absolute;
     background: #fff;
     padding:4%;
-    width: auto;
+    width: max-content;
     border-radius: 4px;
     text-decoration: none;
     z-index: 6;
+    
 }
 .dropdownitem:hover
 {
@@ -43,7 +44,9 @@
     cursor: pointer;
 transform: translateX(30%);
 z-index: 6;
+
 }
+
 .dropdown:hover .dropdownItems,.dropdown:focus .dropdownItems ,.dropdownItemsright:hover
 {
 display: flex;
@@ -91,3 +94,28 @@ display: flex;
     text-decoration: none;
     color: #fff;
 }
+#collapseInsight
+{
+  /* display: flex; */
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  background: #fff;
+  width: max-content;
+  padding:  2%;
+  border-radius: 5px;
+}
+/* .NavDropdown
+{
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    color: #007BFF;
+    cursor: pointer;
+}
+.reportDropDown
+{
+    position: relative;
+    left: 150px;
+    background: #fff;
+} */
