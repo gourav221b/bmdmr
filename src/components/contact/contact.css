@@ -49,7 +49,7 @@
   }
   .contact-form .label {
 	position: absolute;
-	left: 20px;
+	/* left: 20px; */
 	bottom: 11px;
 	font-size: 18px;
 	line-height: 26px;
@@ -92,7 +92,7 @@
   }
   .contactLabel
   {
-	  width: 100vw;
+	  width: auto;
 	  display: flex;
 	  align-items: center;
 	  justify-content: center;
@@ -119,4 +119,56 @@
 	   {
 		font-size: 16px;
 	   }
+  }
+  .contactWrapper
+  {
+	  margin-top: 50px;
+	  display: flex;
+	  flex-wrap: wrap;
+	  align-items: flex-start;
+	  justify-content: space-evenly;
+  }
+  .contactDetails
+  {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start;
+	  justify-content: flex-start;
+	  margin-top: 4%;
+  }
+
+  .contactpageInfo
+  {
+	  max-width: 90vw;
+	  word-wrap: break-word;
+	  margin-left:10% ;
+	  margin-bottom: 16px;
+	  display: flex;
+	  align-items: flex-start;
+	  justify-content: space-around;
+	  font-size: 3.2vh;
+	  font-family: 'Domine',serif;
+	  
+  }
+  .contactpageInfo>i
+  {
+	  margin-right: 12px;
+	  font-size: 3.6vh;
+  }
+  @media screen and (max-width:480px)
+  {
+	.contactpageInfo{
+		margin-left: 0;
+		margin-bottom: 12px;
+	}
+	.ContactWrapper
+	{
+		padding: 0;
+		margin: 20px 0;
+	}
+	 .contactLabel
+	 {		 margin-top: 10vh;
+		 margin-left: -20px;
+	 }
+
   }

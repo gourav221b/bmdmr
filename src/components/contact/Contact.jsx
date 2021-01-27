@@ -20,7 +20,13 @@ function Contact() {
                 </div>                
             </div>
       <div className="divHeading"><span> Get In Touch</span> <div className="divUnderline"></div></div>
-      <div className="contactDiv  ">
+      <div className="contactWrapper row">
+         <div className="contactDetails col-md-4">
+            <div className="contactEmail contactpageInfo"><i className="fa fa-envelope" aria-hidden="true"></i>info@bookmyaccountant.com</div>
+            <div className="contactphone contactpageInfo"><i className="fa fa-phone-square" aria-hidden="true"></i>+94xxx-xx-xx1</div>
+            <div className="contactaddress contactpageInfo"><i className="fa fa-map-marker" aria-hidden="true"></i>114/1A, Cotton Street, Burra Bazar, 1st Floor, Kolkata – 700007</div>
+         </div>
+      <div className="contactDiv col-md-6 ">
          
      <div className="contactLabel">
        {/* <span>Ask for</span> */}
@@ -58,7 +64,7 @@ function Contact() {
       </label>
       <span>{checked ? "Enterprise" : "Personal"} Quote</span>
       </div>   <div>
-        {checked ? <section className="get-in-touch col-md-8">
+        {checked ? <section className="get-in-touch col-md-12">
    {/* <h1 className="title">Personal Quotation</h1> */}
    <form className="contact-form row">
       <div className="form-field col-lg-6">
@@ -153,6 +159,7 @@ function Contact() {
 
 </section>}
       </div>
+    </div>
     </div>
    </>
     )
