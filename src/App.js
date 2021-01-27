@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Chat from './components/chatsupport/Chat'
 import About from './pages/About';
@@ -16,7 +17,9 @@ import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
 import Industries from './components/industries/Industries';
 import Missing from './Missing';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Strategy from './components/consultancy/Strategy';
+import Formative from './components/consultancy/Formative';
 import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext";
 import Insights from './pages/Insights';
@@ -59,12 +62,18 @@ function App() {
       <Route path="/cart" component={Cart} />
 
 {/* ROUTES END FOR SHOPS */}
+
+{/* ROUTES FOR CONSULTANCY */}
+      <Route path="/strategy" component={Strategy}></Route>
+      <Route path="/formative" component={Formative}></Route>
+{/* ROUTES END FOR CONSULTANCY */}
+{/* ROUTES FOR INSIGHT */}
       <Route path="/insights" component={Insights}/>
       <Route path="/blogs" component={Blogs} />
       <Route path="/article" component={Article} />
       <Route path="/pressRelease" component={Press} />
       
-
+{/* ROUTES END FOR INSIGHT */}
 
       <Route path="/career" component={Career} />
       <Route path="/contact" component={Contact} />

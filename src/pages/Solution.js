@@ -50,33 +50,33 @@ function Solution() {
                 <div className="solutionTitle"><span>Reports</span><div className="divUnderline"></div></div>
                 <div className="industryCardDiv row">
               
-                   <Link to="/shop/Chemicals&Materials" className="industryCard col-md-6 col-lg-5" category="Chemicals & Materials"  >
+                   <Link to="/Chemicals&Materials" className="industryCard col-md-6 col-lg-5" category="Chemicals & Materials"  >
                     <img src={chemical} alt="chemical" className="img-fluid"/>
                     <div className="industryName">Chemicals & Materials</div></Link>
                 
                
-                   <Link to="/shop/ConsumerGoods" className="industryCard col-md-6 col-lg-5" category="Consumer Goods"  >
+                   <Link to="/ConsumerGoods" className="industryCard col-md-6 col-lg-5" category="Consumer Goods"  >
                     <img src={consumer} alt="consumer" className="img-fluid"/>
                     <div className="industryName">Consumer Goods</div></Link>
                
            
-                   <Link to="/shop/Food&Bevarages" className="industryCard col-md-6 col-lg-5" category="Food & Beverages"  >
+                   <Link to="/Food&Bevarages" className="industryCard col-md-6 col-lg-5" category="Food & Beverages"  >
                     <img src={food} alt="food" className="img-fluid"/>
                     <div className="industryName">Food & Beverages</div></Link>
               
-                   <Link to="/shop/HealthCare" className="industryCard col-md-6 col-lg-5" category="HealthCare"  >
+                   <Link to="/HealthCare" className="industryCard col-md-6 col-lg-5" category="HealthCare"  >
                     <img src={HealthCare} alt="HealthCare" className="img-fluid"/>
                     <div className="industryName">Healthcare</div></Link>
               
-                   <Link to="/shop/ICT" className="industryCard col-md-6 col-lg-5" category="ICT"  >
+                   <Link to="/ICT" className="industryCard col-md-6 col-lg-5" category="ICT"  >
                     <img src={ICT} alt="ICT" className="img-fluid"/>
                     <div className="industryName">Internet, Comms & Technology</div></Link>
               
-                   <Link to="/shop/BFS" className="industryCard col-md-6 col-lg-5" category="Banking, Finance, Insurance"  >
+                   <Link to="/BFS" className="industryCard col-md-6 col-lg-5" category="Banking, Finance, Insurance"  >
                     <img src={banking} alt="banking" className="img-fluid"/>
                     <div className="industryName">Banking, Financial Services & Insurance</div></Link>
                 
-                   <Link to="/shop/Automotive&Aerospace" className="industryCard col-md-6 col-lg-5" category="Automotive and Aerospace"  >
+                   <Link to="/Automotive&Aerospace" className="industryCard col-md-6 col-lg-5" category="Automotive and Aerospace"  >
                     <img src={automotive} alt="automotive" className="img-fluid"/>
                     <div className="industryName">Automotive & Aerospace</div></Link>
               
@@ -126,7 +126,7 @@ Planning</li>
                 
             </div>
             <div className="consultancyForm" >
-            <section className="get-in-touch col-md-8" id="strategy">
+            <section className="get-in-touch col-md-8" id="strategy" style={{display:"none"}}>
    <h3 className="title">Strategy Consultancy</h3>
    <div className="closeform" onClick={()=>closeForm()}>&times;</div>
    <form className="contact-form row">
@@ -174,7 +174,8 @@ Planning</li>
    </form>
 
 </section>
-            <section className="get-in-touch col-md-8" id="research">
+          
+            <section className="get-in-touch col-md-8" id="research" style={{display:"none"}}>
    <h3 className="title">Advanced Formative Research</h3>
    <div className="closeform" onClick={()=>closeForm()}>&times;</div>
    <form className="contact-form row">

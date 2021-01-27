@@ -181,10 +181,10 @@ list-style:circle;
         }
       
 }
-#strategy,#research
+/* #strategy,#research
 {
    display: none;
-}
+} */
 .closeform{
     position: absolute;
     right: 20px;

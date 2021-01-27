@@ -162,8 +162,8 @@ if(window.innerWidth>1100)
       </div>
       <Collapse in={open3}>
         <div id="collapseReport" className="" >
-        <div><Link className="dropdowngray"to="/shop/Chemicals&Materials"> Strategy Consulting</Link></div>
-        <div><Link className="dropdowngray"to="/shop/ConsumerGoods">Advanced Formative Research</Link></div>
+        <div><Link className="dropdowngray"to="/strategy"> Strategy Consulting</Link></div>
+        <div><Link className="dropdowngray"to="/formative">Advanced Formative Research</Link></div>
       
         </div>
         </Collapse>
@@ -225,8 +225,8 @@ if(window.innerWidth>1100)
              <span className="dropdownright">
              <NavLink to="/consultancy"  activeClassName="dropdownActive" className="dropdownitem">Consultancy <i className="fa fa-caret-right"></i></NavLink>
              <div className="dropdownItemsright" style={{borderRadius:"4px"}}>
-            <Link style={{fontSize:"18px"}} to="/shop/Chemicals&Materials"> Strategy Consulting</Link>
-            <Link style={{fontSize:"18px"}} to="/shop/ConsumerGoods">Advanced Formative Research</Link>
+            <Link style={{fontSize:"18px"}} to="/strategy"> Strategy Consulting</Link>
+            <Link style={{fontSize:"18px"}} to="/formative">Advanced Formative Research</Link>
             
              </div>
              </span>
