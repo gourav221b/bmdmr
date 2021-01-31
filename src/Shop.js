@@ -8,6 +8,7 @@ import Cart from "./components/Cart"
 import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext"
 import Product1 from './components/Product1';
+import './form-submission-handler';
 function Shop() {
   return ( <div>
   

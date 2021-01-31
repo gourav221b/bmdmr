@@ -43,7 +43,9 @@ function Chat() {
             </span>
         </button>
     </div>
+    <form action="https://script.google.com/macros/s/AKfycbyKL713vC9EhQtXYXrffnVhmD4e6tNPQYBinfeMM1oLxtQmZ90vOhcn7g/exec" className="gform">
     <div className="chatbox__body">
+        
         <label htmlFor="name">Your Name</label>
     <input id="btn-inputname" type="text" name="name" className="form-control input-sm chat_set_height" placeholder="E.g John Smith" />
         <label htmlFor="email">Your Email</label>
@@ -54,18 +56,20 @@ function Chat() {
     <input id="btn-inputdesignation" type="text" name="designation" className="form-control input-sm chat_set_height" placeholder="E.g  Co-Founder" />
         <label htmlFor="message">Your Message</label>
     <textarea id="btn-input" type="text" name="message" className="form-control input-sm chat_set_height" placeholder="E.g  Hi, I want to consult you for........" />
-       
+   
     </div>
     <div className="panel-footer">
                                        
 						
                         <span className="input-group-btn">
-                            <button className="btn btn-success bt_bg btn-sm" id="btn-chat">
-                                Send</button>
+                            <input type="submit" className="btn btn-success bt_bg btn-sm" id="btn-chat" defaultValue="Send"/>
+                                
                         </span>
                     </div>
                
-</div>
+ </form>
+ </div>
+
 	    
 	</div>
         </div>

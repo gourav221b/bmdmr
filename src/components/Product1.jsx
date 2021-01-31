@@ -6,6 +6,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Dropdown,ListGroup} from 'react-bootstrap'
 import Sample from '../components/samplemodal/SampleModal'
 import '../components/samplemodal/sample.css'
+import '../form-submission-handler'
 const readmore=()=>
 {
   
@@ -257,6 +258,7 @@ readmore();
              }}>&times;</h1>
 <h1 className="title">Ask A Free Sample For</h1>
 <h1 className="title" style={{fontStyle:"oblique"}}>{product.name}</h1>
+<form action="https://script.google.com/macros/s/AKfycbwcb7p3xl6UyFLlvcwpNNq6IqTmMVNMLB3r1KLxhzTiSty4LPoiw7227Q/exec" className="gform">
 <div className="input-wrapper">
 <input type="text" name="name"  placeholder="Enter your Name*" required/>
 </div>
@@ -279,14 +281,17 @@ readmore();
    <input type="text" defaultValue={product.name} style={{display:'none'}} name="type"/>
    <input type="text" defaultValue={product.id} style={{display:'none'}} name="id"/>
 {/* <input type="email" name="email" id="sample" placeholder="Enter your Active Email Address" required/> */}
-<button className="btn arrow-btn" onClick={()=>{
-               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
-             }}>
+<button type="submit" className="btn arrow-btn" >
  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
    <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
  </svg>
 </button>
 </div>
+ <div style={{display:"none"}} class="thankyou_message" id="demo">
+ <h2>
+ </h2>
+</div>
+</form>
 </section>
      </div>
      </div>
@@ -387,7 +392,7 @@ readmore();
              }}>&times;</h1>
 <h1 className="title">Ask A Free Sample For</h1>
 <h1 className="title" style={{fontStyle:"oblique"}}>{product.name}</h1>
-
+<form action="https://script.google.com/macros/s/AKfycbwcb7p3xl6UyFLlvcwpNNq6IqTmMVNMLB3r1KLxhzTiSty4LPoiw7227Q/exec" className="gform">
 <div className="input-wrapper">
 <input type="text" name="name"  placeholder="Enter your Name*" required/>
 </div>
@@ -410,14 +415,17 @@ readmore();
    <input type="text" defaultValue={product.name} style={{display:'none'}} name="type"/>
    <input type="text" defaultValue={product.id} style={{display:'none'}} name="id"/>
 {/* <input type="email" name="email"  placeholder="Enter your Active Email Address" required/> */}
-<button className="btn arrow-btn" onClick={()=>{
-               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
-             }}>
+<button type="submit" className="btn arrow-btn" >
  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
    <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
  </svg>
 </button>
 </div>
+ <div style={{display:"none"}} class="thankyou_message" id="demo">
+ <h2>
+ </h2>
+</div>
+</form>
 </section>
      </div>
      </div>

@@ -28,6 +28,7 @@
   .contact-form .form-field {
 	position: relative;
 	margin: 32px 0;
+	padding-top: 12px;
   }
   .contact-form .input-text {
 	display: block;
@@ -35,9 +36,10 @@
 	height: 36px;
 	border-width: 0 0 2px 0;
 	border-color: var(--theme-color);
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 26px;
 	font-weight: 400;
+	padding-top: 4px;
   }
   .contact-form .input-text:focus {
 	outline: none;
@@ -99,6 +101,7 @@
 	  font-family: 'Montserrat','Poppins',sans-serif;
 	  text-transform: uppercase;
 	  font-weight: bolder;
+
   }
   .contactSwitch{
 	  margin: 2px  12px 0;

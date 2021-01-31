@@ -66,95 +66,104 @@ function Contact() {
       </div>   <div>
         {checked ? <section className="get-in-touch col-md-12">
    {/* <h1 className="title">Personal Quotation</h1> */}
-   <form className="contact-form row">
-      <div className="form-field col-lg-6">
-         <input id="name" className="input-text js-input" type="text" required/>
+   <form className="contact-form row gform" action=" https://script.google.com/macros/s/AKfycbzEDvBzEGUsmI6JscD60-p16QbliQu3CQXRBCvrqiSfxD_bbvF7-xE5Ig/exec" >
+   <div className="form-field col-lg-6">
+         <input id="name" className="input-text js-input" type="text" name="name" required/>
          <label className="label" htmlFor="name"> Name</label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="email" className="input-text js-input" type="email" required/>
+         <input id="email" className="input-text js-input" type="email" name="email" required/>
          <label className="label" htmlFor="email">E-mail</label>
       </div>
       
        <div className="form-field col-lg-6 ">
-         <input id="phone" className="input-text js-input" type="text" required/>
+         <input id="phone" className="input-text js-input" type="text" name=" contact number"required/>
          <label className="label" htmlFor="phone">Contact Number</label>
       </div>
       
       <div className="form-field col-lg-6 ">
-         <input id="country" className="input-text js-input" type="text" required/>
+         <input id="country" className="input-text js-input" type="text" name="country" required/>
          <label className="label" htmlFor="country">Your Country</label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="company" className="input-text js-input" type="text" required/>
-         <label className="label" htmlFor="company">Company Name</label>
+         <input id="company" className="input-text js-input" type="text" name="company"  />
+         <label className="label" htmlFor="company">Company Name </label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="designation" className="input-text js-input" type="text" value="" required/>
-         <label className="label" htmlFor="designation">Designation</label>
+         <input id="designation" className="input-text js-input" type="text" name="designation" defaultValue="" />
+         <label className="label" htmlFor="designation">Designation </label>
       </div>
       <div className="form-field col-lg-12 ">
-         <input id="website" className="input-text js-input" type="text"/>
-         <label className="label" htmlFor="website">Company Website</label>
+         <input id="website" className="input-text js-input" type="text" name="website"/>
+         <label className="label" htmlFor="website">Company Website </label>
       </div>
       <div className="form-field col-lg-12 ">
-         <input id="requirement" className="input-text js-input" type="text"/>
-         <label className="label" htmlFor="requirement">Any Specific Requirements?  <span className="optional">(Optional)</span></label>
+         <input id="requirement" className="input-text js-input" type="text" name="requirements"/>
+         <label className="label" htmlFor="requirement">Any Specific Requirements? <span className="optional">(Optional)</span></label>
       </div>
       <div className="form-field col-lg-12">
-         <input id="message" className="input-text js-input" type="text" required/>
+         <input id="message" className="input-text js-input" type="text" name="message" required/>
          <label className="label" htmlFor="message">Your Message</label>
       </div>
+     
       <div className="form-field col-lg-12">
          <input className="submit-btn" type="submit" value="Submit"/>
       </div>
+      <div style={{display:"none"}} class="thankyou_message" id="demo">
+ 
+</div>
    </form>
 
 </section> : <section className="get-in-touch col-md-8">
    {/* <h1 className="title">EnterPrise Quote</h1> */}
    
-   <form className="contact-form row">
+   <form className="contact-form row gform" action="https://script.google.com/macros/s/AKfycbxS7XBX23GkDgqj2HanlRDZe-S1x_WgjnKdy5p70asnW1ZHfeO_91Ebcw/exec">
       <div className="form-field col-lg-6">
-         <input id="name" className="input-text js-input" type="text" required/>
+         <input id="name" className="input-text js-input" type="text" name="name" required/>
          <label className="label" htmlFor="name"> Name</label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="email" className="input-text js-input" type="email" required/>
+         <input id="email" className="input-text js-input" type="email" name="email" required/>
          <label className="label" htmlFor="email">E-mail</label>
       </div>
       
        <div className="form-field col-lg-6 ">
-         <input id="phone" className="input-text js-input" type="text" required/>
+         <input id="phone" className="input-text js-input" type="text" name=" contact number"required/>
          <label className="label" htmlFor="phone">Contact Number</label>
       </div>
       
       <div className="form-field col-lg-6 ">
-         <input id="country" className="input-text js-input" type="text" required/>
+         <input id="country" className="input-text js-input" type="text" name="country" required/>
          <label className="label" htmlFor="country">Your Country</label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="company" className="input-text js-input" type="text"  />
+         <input id="company" className="input-text js-input" type="text" name="company"  />
          <label className="label" htmlFor="company">Company Name <span className="optional"> (Optional)</span></label>
       </div>
       <div className="form-field col-lg-6 ">
-         <input id="designation" className="input-text js-input" type="text" value="" />
+         <input id="designation" className="input-text js-input" type="text" name="designation" defaultValue="" />
          <label className="label" htmlFor="designation">Designation <span className="optional">(Optional)</span></label>
       </div>
       <div className="form-field col-lg-12 ">
-         <input id="website" className="input-text js-input" type="text"/>
+         <input id="website" className="input-text js-input" type="text" name="website"/>
          <label className="label" htmlFor="website">Company Website <span className="optional">(Optional)</span></label>
       </div>
       <div className="form-field col-lg-12 ">
-         <input id="requirement" className="input-text js-input" type="text"/>
+         <input id="requirement" className="input-text js-input" type="text" name="requirements"/>
          <label className="label" htmlFor="requirement">Any Specific Requirements? <span className="optional">(Optional)</span></label>
       </div>
       <div className="form-field col-lg-12">
-         <input id="message" className="input-text js-input" type="text" required/>
+         <input id="message" className="input-text js-input" type="text" name="message" required/>
          <label className="label" htmlFor="message">Your Message</label>
       </div>
+     
       <div className="form-field col-lg-12">
          <input className="submit-btn" type="submit" value="Submit"/>
       </div>
+      <div style={{display:"none"}} class="thankyou_message" id="demo">
+ <h2>
+ </h2>
+</div>
    </form>
 
 </section>}

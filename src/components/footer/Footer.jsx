@@ -111,8 +111,8 @@ function Footer() {
         </section>
         <section className="footerrow2 ">
             <div className="title newslettertitle" >SUBSCRIBE TO OUR NEWSLETTER</div>
-            <form  className="gform newsletter " method="POST ">
-                <input type="email " className="newsletterinput newsletteremail " name="email " id="email " placeholder="Email address " />
+            <form  className="gform newsletter " action="https://script.google.com/macros/s/AKfycbwVosn6NLAj2sdVpgm5ElGSgLHRuR3TbOTwoOLSCFvIsmLawRFnUACa/exec">
+                <input type="email " className="newsletterinput newsletteremail " name="email " id="email " placeholder="Email address " required/>
                 <button type="submit" className="newsletterinput newsletterbutton " >
             SUBSCRIBE
           </button>

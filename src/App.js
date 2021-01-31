@@ -31,6 +31,8 @@ import Blog1 from './components/blogs/blogpages/Blog1'
 import Blog2 from './components/blogs/blogpages/Blog2'
 import Blog3 from './components/blogs/blogpages/Blog3'
 import Blog4 from './components/blogs/blogpages/Blog4'
+
+import'./form-submission-handler';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 

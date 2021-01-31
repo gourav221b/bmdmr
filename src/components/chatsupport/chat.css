@@ -9,7 +9,7 @@
     bottom: 0;
     right: 0;
     width: 350px;
-    height: 500px;
+    height: auto;
     background-color: #fff;
     font-family: 'Lato', sans-serif;
 
@@ -26,11 +26,11 @@ z-index: 3;
 }
 
 .chatbox--tray {
-    bottom: -450px;
+    bottom: -530px;
 }
 
 .chatbox--closed {
-    bottom: -400px;
+    bottom: -490px;
 }
 
 .chatbox .form-control:focus {
