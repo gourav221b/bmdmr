@@ -6,13 +6,13 @@ function Formative() {
         <>
         <div className="div_big landing secondarylanding row" id="top">
                 <div className="landingdetails col-lg-6">
-                <h1>Advanced Formative Research</h1>
+                <h1>Advanced  Research</h1>
                 {/* <p>Knowledge is the power that will set you above your competition</p>               */}
                 </div>                
             </div>
             
             <section className="get-in-touch col-md-8" id="research">
-   <h3 className="title">Advanced Formative Research</h3>
+   <h3 className="title">Advanced  Research</h3>
    {/* <div className="closeform" onClick={()=>closeForm()}>&times;</div> */}
    <form className="contact-form row gform" action="https://script.google.com/macros/s/AKfycbwfuhh_Popd8l1vUn6StUGZdKpX1XIW1gaVoZQbJGF3le1QDsASTzWtFw/exec">
       <div className="form-field col-lg-6">

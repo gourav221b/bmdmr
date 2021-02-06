@@ -151,6 +151,7 @@ if(window.innerWidth>1100)
         <div><Link className="dropdowngray"to="/shop/ICT">Internet, Comms & Technology</Link></div>
         <div><Link className="dropdowngray"to="/shop/BFS">Banking, Finance & Insurance</Link></div>
         <div><Link className="dropdowngray"to="/shop/Automotive&Aerospace">Automotive & Aerospace</Link></div>
+        <div><Link className="dropdowngray"to="/shop/Energy&Power">Energy & Power</Link></div>
         </div>
         </Collapse>
         <div
@@ -158,12 +159,12 @@ if(window.innerWidth>1100)
         aria-controls="collapseReport"
         aria-expanded={open3}
         style={{color:"#fff"}} >               
-      Consultancy <i className="fa fa-caret-right"></i>
+      Consulting <i className="fa fa-caret-right"></i>
       </div>
       <Collapse in={open3}>
         <div id="collapseReport" className="" >
         <div><Link className="dropdowngray"to="/strategy"> Strategy Consulting</Link></div>
-        <div><Link className="dropdowngray"to="/formative">Advanced Formative Research</Link></div>
+        <div><Link className="dropdowngray"to="/formative">Advanced  Research</Link></div>
       
         </div>
         </Collapse>
@@ -208,10 +209,10 @@ if(window.innerWidth>1100)
            Shop
            </NavLink></li> */}
             <li className="dropdown">
-           <NavLink style={navStyle} to="/solution" activeClassName="SideActive"> Solutions  <i className="fa fa-caret-down"></i></NavLink>
+           <span style={navStyle} to="/solution" activeClassName="SideActive"> Solutions  <i className="fa fa-caret-down"></i></span>
            <div className="dropdownItems">
              <span className="dropdownright">
-             <NavLink to="/shop/AllCategories"  activeClassName="dropdownActive" className="dropdownitem" >Reports &nbsp;<i className="fa fa-caret-right"></i></NavLink>
+             <span  activeClassName="dropdownActive" className="dropdownitem" style={{color:"#007BFF",cursor:"pointer"}} >Reports &nbsp;<i className="fa fa-caret-right"></i></span>
              <div className="dropdownItemsright" style={{borderRadius:"4px"}}>
             <Link style={{fontSize:"16px"}} to="/shop/Chemicals&Materials"> Chemicals & Materials</Link>
             <Link style={{fontSize:"16px"}} to="/shop/ConsumerGoods">Consumer Goods</Link>
@@ -220,13 +221,14 @@ if(window.innerWidth>1100)
             <Link style={{fontSize:"16px"}} to="/shop/ICT">ICT</Link>
             <Link style={{fontSize:"16px"}} to="/shop/BFS">BFI</Link>
             <Link style={{fontSize:"16px"}} to="/shop/Automotive&Aerospace">Automotive & Aerospace</Link>
+            <Link style={{fontSize:"16px"}} to="/shop/Energy&Power">Energy & Power</Link>
              </div>
              </span>
              <span className="dropdownright">
-             <NavLink to="/consultancy"  activeClassName="dropdownActive" className="dropdownitem">Consultancy <i className="fa fa-caret-right"></i></NavLink>
+             <span style={{color:"#007BFF",cursor:"pointer"}}  className="dropdownitem">Consulting <i className="fa fa-caret-right"></i></span>
              <div className="dropdownItemsright" style={{borderRadius:"4px"}}>
             <Link style={{fontSize:"18px"}} to="/strategy"> Strategy Consulting</Link>
-            <Link style={{fontSize:"18px"}} to="/formative">Advanced Formative Research</Link>
+            <Link style={{fontSize:"18px"}} to="/formative">Advanced  Research</Link>
             
              </div>
              </span>

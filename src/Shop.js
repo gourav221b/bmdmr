@@ -31,6 +31,7 @@ function Shop() {
           <Route path="/shop/ICT" exact component={Product1}/>
           <Route path="/shop/BFS" exact component={Product1}/>
           <Route path="/shop/Automotive&Aerospace" exact component={Product1}/>
+          <Route path="/shop/Energy&Power" exact component={Product1}/>
           <Route path="/cart" exact component={Cart} />
         </Switch>
       </Router>

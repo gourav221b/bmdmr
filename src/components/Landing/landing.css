@@ -16,6 +16,8 @@
     background-blend-mode: darken;
     
 }
+
+
 .homelanding{
 align-items: center;
 text-align: left;
@@ -55,7 +57,12 @@ color: #000;
     margin-left: 6%;
     /* color: #000; */
     color: #fff;
+    margin-top: 10%;
+  
     
+}
+.secondarylanding .landingdetails{
+    margin-top: 0%;
 }
 .homelanding .btn
 {

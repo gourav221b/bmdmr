@@ -1,4 +1,6 @@
 import './App.css';
+import React from 'react';
+import {Button} from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Chat from './components/chatsupport/Chat'
@@ -17,6 +19,8 @@ import Cart from './components/Cart'
 import Footer from './components/footer/Footer';
 import Industries from './components/industries/Industries';
 import Missing from './Missing';
+ 
+import Custom from './components/customModal/CustomModal'
 
 import Strategy from './components/consultancy/Strategy';
 import Formative from './components/consultancy/Formative';
@@ -37,6 +41,7 @@ import'./form-submission-handler';
 
 
 function App() {
+
   return ( 
   <div className="App">
     <ProductContextProvider>
@@ -111,13 +116,14 @@ function App() {
 }
 
 const Home = () => {
+  
   return(
     <>
   <div>
    <Landing/>
   <Industries/>
+ 
 
-   
   </div>
   </>
   )

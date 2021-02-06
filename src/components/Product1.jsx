@@ -6,6 +6,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Dropdown,ListGroup} from 'react-bootstrap'
 import Sample from '../components/samplemodal/SampleModal'
 import '../components/samplemodal/sample.css'
+import Custom from '../components/customModal/CustomModal'
 import '../form-submission-handler'
 const readmore=()=>
 {
@@ -56,13 +57,10 @@ const readmore=()=>
     })
     customizebtn.addEventListener('click',()=>
     {
-      customizationtable.style.display="block";
-      customizationtable.scrollIntoView()
+      customizationtable.style.display="flex";
+      
     })
-    customcloser.addEventListener('click',()=>
-    {
-      customizationtable.style.display="none"
-    })
+  
 
    })
    
@@ -72,7 +70,7 @@ const readmore=()=>
 
 
 const Product1 = () => {
-  
+  const [modalShow, setModalShow] = React.useState(false);
    const {products} = useContext(productContext);
    const {dispatch}= useContext(cartContext);
   
@@ -117,6 +115,7 @@ const Product1 = () => {
     case 'ICT': res="ICT"; break;
     case 'BFS': res="Banking, Finance, Insurance"; break;
     case 'Automotive&Aerospace': res="Automotive & Aerospace"; break;
+    case 'Energy&Power': res="Energy and Power"; break;
     default: res="All Categories";break;
   }
  
@@ -150,6 +149,7 @@ readmore();
               <Dropdown.Item eventKey="ICT">Internet, Communication, Technology</Dropdown.Item>
               <Dropdown.Item eventKey="BFS">Banking, Finance, Insurance</Dropdown.Item>
               <Dropdown.Item eventKey="Automotive&Aerospace">Automotive and Aerospace</Dropdown.Item>
+              <Dropdown.Item eventKey="Energy&Power">Energy and Power</Dropdown.Item>
              
       </DropdownButton>
              <h5 id="filterquery">{filter!=1 ?" All Categories" : `${res}` }</h5>
@@ -172,6 +172,7 @@ readmore();
               <ListGroup.Item eventKey="ICT">Internet, Communication, Technology</ListGroup.Item>
               <ListGroup.Item eventKey="BFS">Banking, Finance, Insurance</ListGroup.Item>
               <ListGroup.Item eventKey="Automotive&Aerospace">Automotive and Aerospace</ListGroup.Item>
+              <ListGroup.Item eventKey="Energy&Power">Energy and Power</ListGroup.Item>
              
       </ListGroup >
         
@@ -202,7 +203,12 @@ readmore();
                <div className="proCustomize" onClick={()=>{
                  readmore();
                }} style={{display:"inline-block"}}>
-                 <span className="customization">{product.customize==true?<i className="fa fa-check-square green" ></i>:<i className="fa fa-window-close red" ></i>} <span>Customization {product.customize==true?"Available":"Unavailable"}</span></span>
+                 <span className="customization">{product.customize==true?<i className="fa fa-check-square green" ></i>:<i className="fa fa-window-close red" ></i>} <span onClick={() => setModalShow(true)}>Customization {product.customize==true?"Available":"Unavailable"}</span> 
+              
+</span>
+
+      
+      
                </div>
              
               
@@ -245,10 +251,51 @@ readmore();
                   </div>
              </div>
                  </div>
-                  <div className="detailLeft col-md-12 custom">
-                    <div className="closeCustomize"> <span className="customtitle">Customizations: </span><span onClick={()=>{readmore();}}>&times;</span></div>
-                    <div className="table">{product.customize==true?`${product.customTable}`:"Unavailable for this product"}</div>
-                    </div>
+                 <div className="sampleWrapper customWrapper">
+         <section className="sample-section custom-section">
+             <h1 className="closeModal" id="closemodal" onClick={()=>{
+               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
+             }}>&times;</h1>
+<h1 className="title">Request Customization for</h1>
+<h1 className="title" style={{fontStyle:"oblique"}}>{product.name}</h1>
+<form action="https://script.google.com/macros/s/AKfycbwcb7p3xl6UyFLlvcwpNNq6IqTmMVNMLB3r1KLxhzTiSty4LPoiw7227Q/exec" className="gform">
+<div className="input-wrapper">
+<input type="text" name="name"  placeholder="Enter your Name*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="phone"  placeholder="Enter your Phone Number*" required/>
+</div>
+<div className="input-wrapper">
+<input type="email" name="email"  placeholder="Enter your Active Email*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="company"  placeholder="Your Company* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="designation"  placeholder="Your Designation* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="skypeId"  placeholder="Your Skype Id" />
+</div>
+<div className="input-wrapper">
+   <input type="text" defaultValue={product.name} style={{display:'none'}} name="type"/>
+   <input type="text" defaultValue={product.id} style={{display:'none'}} name="id"/>
+{/* <input type="email" name="email"  placeholder="Enter your Active Email Address" required/> */}
+<button type="submit" className="btn arrow-btn" >
+ <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+   <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+ </svg>
+</button>
+</div>
+ <div style={{display:"none"}} class="thankyou_message" id="demo">
+ <h2>
+ </h2>
+</div>
+</form>
+</section>
+     </div>
+     
+    
         </div>
        
          <div className="sampleWrapper">
@@ -295,6 +342,7 @@ readmore();
 </section>
      </div>
      </div>
+     
      </>
        
        ))}
@@ -334,7 +382,15 @@ readmore();
                <div className="proCustomize" onClick={()=>{
                  readmore();
                }} style={{display:"inline-block"}}>
-                 <span className="customization">{product.customize==true?<i className="fa fa-check-square green" ></i>:<i className="fa fa-window-close red" ></i>} <span>Customization {product.customize==true?"Available":"Unavailable"}</span></span>
+                 <span className="customization">{product.customize==true?<i className="fa fa-check-square green" ></i>:<i className="fa fa-window-close red" ></i>} <span onClick={() => setModalShow(true)}>Customization {product.customize==true?"Available":"Unavailable"}</span> 
+</span>
+      {/* <Custom
+        show={modalShow}
+        name={product.name}
+        id={product.id}
+        onHide={() => setModalShow(false)}
+      /> */}
+               
                </div>
              
               
@@ -377,11 +433,54 @@ readmore();
                   </div>
              </div>
                  </div>
-                 <div className="detailLeft col-md-12 custom">
-                    <div className="closeCustomize"> <span className="customtitle">Customizations: </span><span onClick={()=>{readmore();}}>&times;</span></div>
-                    <div className="table">{product.customize==true?`${product.customTable}`:"Unavailable for this Product"}</div>
-                   
-                  </div>
+                 <div className="sampleWrapper customWrapper">
+         <section className="sample-section custom-section">
+             <h1 className="closeModal" id="closemodal" onClick={()=>{
+               document.querySelector('#closemodal').parentElement.parentElement.style.display="none";
+             }}>&times;</h1>
+<h1 className="title">Request Customization for</h1>
+<h1 className="title" style={{fontStyle:"oblique"}}>{product.name}</h1>
+<form action="https://script.google.com/macros/s/AKfycbwcb7p3xl6UyFLlvcwpNNq6IqTmMVNMLB3r1KLxhzTiSty4LPoiw7227Q/exec" className="gform">
+<div className="input-wrapper">
+<input type="text" name="name"  placeholder="Enter your Name*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="phone"  placeholder="Enter your Phone Number*" required/>
+</div>
+<div className="input-wrapper">
+<input type="email" name="email"  placeholder="Enter your Active Email*" required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="company"  placeholder="Your Company* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="designation"  placeholder="Your Designation* " required/>
+</div>
+<div className="input-wrapper">
+<input type="text" name="skypeId"  placeholder="Your Skype Id" />
+</div>
+<div className="input-wrapper">
+<input type="text" name="message"  placeholder="Describe your needs" />
+</div>
+<div className="input-wrapper">
+   <input type="text" defaultValue={product.name} style={{display:'none'}} name="type"/>
+   <input type="text" defaultValue={product.id} style={{display:'none'}} name="id"/>
+{/* <input type="email" name="email"  placeholder="Enter your Active Email Address" required/> */}
+<button type="submit" className="btn arrow-btn" >
+ <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+   <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+ </svg>
+</button>
+</div>
+ <div style={{display:"none"}} class="thankyou_message" id="demo">
+ <h2>
+ </h2>
+</div>
+</form>
+</section>
+     </div>
+     
+    
                  </div>
                
        
@@ -428,7 +527,11 @@ readmore();
 </form>
 </section>
      </div>
+     
+     
+    
      </div>
+     
      </>))}
       
       </div>

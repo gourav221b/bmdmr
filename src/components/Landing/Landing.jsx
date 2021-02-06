@@ -10,7 +10,7 @@ function landing() {
     return (
         <div>
             {/* <div className="transparent" style={{width:"100vw",height:"30vh",display:"none",position:"absolute",top:"10vh",left:"0",zIndex:"3"}}></div> */}
-            <Particles style={{position:"absolute",top:"30vh",left:"0",width:"50vw"}}
+            <Particles style={{position:"absolute",top:"33vh",left:"0",width:"50vw",zIndex:"0"}}
     params={{
 	    "particles": {
 	        "number": {
